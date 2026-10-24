@@ -17,6 +17,7 @@ export default function MachineScreen() {
   const machine = machines.find(m => m.id === id);
   const [address, setAddress] = useState(machine?.address ?? '');
   const [token, setToken] = useState('');
+  const [advanced, setAdvanced] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   if (!machine) return <UnknownRoute title="Unknown machine" detail="This machine is not registered." />;
@@ -35,9 +36,10 @@ export default function MachineScreen() {
     <GlassPanel style={styles.stack}>
       <Text style={styles.body}>The Astra workstation service runs independently of this project. Your paired phone connects directly over the local network. Check the address below, then tap Connect.</Text>
       <Text style={styles.label}>BRIDGE ADDRESS</Text>
-      <TextInput accessibilityLabel="Bridge address" value={address} onChangeText={setAddress} autoCapitalize="none" autoCorrect={false} keyboardType="url" placeholder="http://192.168.1.42:8765" placeholderTextColor={colors.textFaint} style={styles.input} />
-      <Text style={styles.label}>OPTIONAL TOKEN · LEAVE EMPTY FOR THIS PHONE</Text>
-      <TextInput accessibilityLabel="Pairing token" value={token} onChangeText={setToken} secureTextEntry autoCapitalize="none" autoCorrect={false} placeholder="Not required for the local phone service" placeholderTextColor={colors.textFaint} style={styles.input} />
+      <TextInput accessibilityLabel="Bridge address" value={address} onChangeText={setAddress} autoCapitalize="none" autoCorrect={false} keyboardType="url" placeholder="http://192.168.1.164:8765" placeholderTextColor={colors.textFaint} style={styles.input} />
+      {advanced ? <><Text style={styles.label}>OPTIONAL TOKEN</Text>
+      <TextInput accessibilityLabel="Pairing token" value={token} onChangeText={setToken} secureTextEntry autoCapitalize="none" autoCorrect={false} placeholder="Not required for this phone" placeholderTextColor={colors.textFaint} style={styles.input} /></> : null}
+      <Button label={advanced ? "Hide advanced options" : "Advanced options"} variant="secondary" compact onPress={() => setAdvanced(value => !value)} />
       <Button label="Connect" icon="server" loading={busy} onPress={() => void pair()} />
       {status ? <Button label="Use this machine" variant="secondary" onPress={() => { selectMachine(id); void refresh(); setMessage('Machine selected.'); }} /> : null}
       <Text accessibilityLiveRegion="polite" style={styles.body}>{message ?? connectionErrors[id] ?? ''}</Text>

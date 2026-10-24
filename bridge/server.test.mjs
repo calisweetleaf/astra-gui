@@ -33,11 +33,21 @@ test('real authenticated HTTP → native PTY → VT screen → input, reconnect 
   await t.test('credential protection and browser-origin rejection', async () => {
     assert.equal((await stat(bridge.tokenPath)).mode & 0o777, 0o600);
     assert.equal((await fetch(base + '/v1/health')).status, 401);
+    assert.equal((await request('/v1/health', undefined, { headers: { Authorization: '', 'X-Forwarded-For': '127.0.0.1' } })).status, 401);
     assert.equal((await request('/v1/health', undefined, { headers: { Origin: 'https://untrusted.invalid' } })).status, 403);
     const health = await request('/v1/health');
     assert.equal(health.status, 200); assert.equal(health.body.protocol, 1);
     assert.equal(health.body.providers.droid.available, true);
     assert.notEqual(health.body.providers.antigravity.binary, '/usr/local/bin/antigravity');
+  });
+  await t.test('trusted local phone mode connects without token entry', async () => {
+    const local = await createBridge({ root, cwd: root, stateDir: join(root, 'local-state'), trustedClients: ['127.0.0.1'] });
+    await new Promise(resolve => local.server.listen(0, '127.0.0.1', resolve));
+    try {
+      const url = 'http://127.0.0.1:' + local.server.address().port + '/v1/health';
+      assert.equal((await fetch(url)).status, 200);
+      assert.equal((await fetch(url, { headers: { Origin: 'https://untrusted.invalid' } })).status, 403);
+    } finally { await local.close(); }
   });
   await t.test('workspace containment and malformed arguments', async () => {
     assert.equal((await request('/v1/sessions', { provider: 'droid', settings: { extra: { workspace: '/', arguments: '[]' } } })).status, 403);

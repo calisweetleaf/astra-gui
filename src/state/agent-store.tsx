@@ -51,6 +51,7 @@ export function AgentProvider({ children }: { children: React.ReactNode }) {
           const next = seedMachines.map(m => {
             const value = (addresses as Record<string, unknown>)[m.id];
             if (m.id === 'kubuntu' && value === 'http://192.168.1.42:8765') return m;
+            if (m.id === 'windows' && value === 'http://192.168.1.64:8765') return m;
             return typeof value === 'string' && validAddress(value) ? { ...m, address: value } : m;
           });
           machinesRef.current = next; setMachines(next);

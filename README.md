@@ -16,26 +16,36 @@ The build embeds the application bundle and fonts. No Expo Go, Metro server, Exp
 
 The build script uses `JAVA_HOME`, `ANDROID_HOME`, and `GRADLE_USER_HOME` when supplied. On this workstation their defaults point to the toolchain installed under `~/.cache/astra-native-build/`. It limits Gradle to one worker and a 1 GiB heap, and Metro to a 768 MiB Node heap. The SDK/JDK/cache are on the internal drive, not removable storage or RAM-backed /tmp.
 
-## Run the workstation bridge
+## Workstation service
+
+The installed workstation backend is independent of this checkout:
+
+- Runtime: `~/.local/share/astra-bridge/`
+- State: `~/.local/state/astra/`
+- User service: `astra-bridge.service`
+- Current laptop endpoint: `http://192.168.1.164:8765`
+- Current paired Galaxy S24 Ultra: `192.168.1.242`
+
+The installed service starts with the desktop user session. Closing the terminal or this project does not stop it. Check or restart it with:
 
 ```sh
-npm run bridge
+systemctl --user status astra-bridge
+systemctl --user restart astra-bridge
 ```
 
-The safe default listens only on 127.0.0.1:8765. To connect from the phone on a trusted private LAN, explicitly bind the workstation's LAN address:
+The native app connects to the laptop automatically. This phone is trusted directly; there is no required token-entry or account-login flow. Optional token-mode settings are hidden under Advanced options.
+
+To update the installed bridge from this source:
 
 ```sh
-ASTRA_HOST=192.168.1.42 npm run bridge
+ASTRA_PHONE_IP=192.168.1.242 npm run install:bridge
 ```
 
-Use the workstation's actual address, not the example above. There is no automatic firewall change, port forwarding, public exposure, or discovery broadcast.
+The installer deploys the actual executable runtime and its two dependencies, not another checkout or a backup. If the phone's DHCP address changes, update `ASTRA_PHONE_IP` and rerun the installer. If the laptop's address changes, edit its address in Astra's connection screen.
 
-1. Open Astra → Connect workstation.
-2. Enter the bridge address.
-3. Enter the token from the workstation's `.astra/bridge-token` file.
-4. Select the machine, open an available provider, and start a native session.
+For development only, `npm run bridge` starts a checkout-local instance on loopback. Do not run it on the same port while the installed service is active.
 
-The token is stored using Android's secure credential storage, not AsyncStorage. Provider credentials remain on the workstation; Astra starts the installed provider executable with its existing authentication and configuration. HTTP on a LAN does not encrypt traffic: use only a trusted private network or an encrypted tunnel. Do not expose this bridge to the Internet.
+Agent credentials remain on the laptop. The local service accepts this phone and loopback directly; other clients require the optional token. No firewall, router, or public relay configuration was changed.
 
 ## What works
 

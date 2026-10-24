@@ -1,85 +1,63 @@
-# Validation Gate Record — Astra UI
+# Astra validation — native Android and workstation service
 
+Updated 2026-10-24.
+
+## Current checks
+
+| Check | Result | Exercised scope |
+| --- | --- | --- |
+| Real bridge integration | PASS — 10 tests | Real HTTP listeners, credential checks, trusted-local mode without token entry, origin refusal, workspace containment, PTY stdin/output/resize/stop/reattachment, actual Git diffs |
+| Installed CLI launch | PASS | Actual Droid, Codex, OpenCode and AntiGravity agy executables launched through native PTYs using --help; no model call |
+| Expo lint | PASS with --no-cache | Current native TypeScript/TSX source |
+| TypeScript | PASS | tsc --noEmit |
+| Native Android release | PASS — final rebuild completed in 35 seconds | ARM64, native React Native renderer, embedded Hermes bundle |
+| Private APK signing | PASS — final APK verified | Private Astra signing identity, APK v2 and v3 signatures |
+| Installed bridge service | PASS | Enabled and running as the desktop user; executable and dependencies installed outside this checkout |
+| Live service request | PASS | HTTP 200 from installed service on loopback without a token; four available native CLIs reported |
+| Deployed runtime PTY | PASS | The installed service launched Codex --help, rendered the real terminal screen and observed exit 0. Its disposable record was cleared by a guarded service restart only after confirming no user sessions existed. |
+| Device installation | NOT RUN | Operator explicitly owns installation; no APK was sent or installed by the agent |
+| On-device UI / network validation | NOT RUN | No ADB device or connected UI surface is available; earlier screenshots are not proof of the final APK |
+| DeepSeek Harness runtime | UNAVAILABLE | Source checkout exists, but no installed runnable CLI or node_modules was found; not presented as connected |
+| Real model inference | NOT RUN | CLI startup tests do not establish model-response behavior |
+
+## Service placement and routing
+
+- Unit: `~/.config/systemd/user/astra-bridge.service`
+- Executable runtime: `~/.local/share/astra-bridge/server.mjs`
+- Dependencies: installed in `~/.local/share/astra-bridge/node_modules/`
+- Working directory: `/home/daeron`
+- State: `~/.local/state/astra/`
+- Listener: `0.0.0.0:8765`
+- Current laptop LAN endpoint: `192.168.1.164:8765`
+- Paired/reachable Galaxy S24 Ultra: `192.168.1.242`, observed through KDE Connect and its established socket
+- Direct trusted clients: that phone and loopback; no mandatory pairing-token entry
+- The old illustrative `192.168.1.42` laptop address is corrected and migrated in the client.
+- No firewall or router rules were changed. Host INPUT policy was observed as ACCEPT.
+
+## Build constraints and recovery
+
+The first Android build coincided with RAM and swap exhaustion. The SDK, JDK and Gradle cache were moved from RAM-backed /tmp to the internal-drive build cache. Subsequent builds use one Gradle worker, a bounded JVM heap and a bounded Metro Node heap. No SD-card storage is used.
+
+One build failed while resolving Google Maven dependencies because DNS temporarily failed. A later full native build completed successfully. The final rebuild completed successfully in 35 seconds and incorporates local-phone mode, corrected endpoint defaults and the privacy manifest settings.
+
+The final APK was inspected with Android build-tools aapt. Its packaged manifest has allowBackup=false, is not debuggable, and requests only INTERNET, VIBRATE and the app-specific non-exported receiver permission. External-storage, overlay and biometric permissions are absent. The ARM64 Hermes library and embedded Android bundle are present; the embedded bundle contains the corrected 192.168.1.164 endpoint and optional/hidden token flow. Final artifact: Astra.apk, 45,351,265 bytes; APK v2/v3 signatures verify with the private Astra certificate.
+
+An AntiGravity desktop-launcher --help probe unexpectedly initiated its setup wizard and created two data copies. Their creation times and contents were checked against the intact original; only those newly created copies were removed. The bridge uses the actual agy terminal executable, not that desktop launcher.
+
+## Dependency observations
+
+The isolated installed bridge audited four packages with zero reported vulnerabilities during installation. The application dependency audit still reports existing Expo-toolchain/router transitive advisories; no forced SDK downgrade, blanket override or disabled check was used.
+
+## Commands used
+
+```sh
+npm run test:bridge
+npm run lint -- --no-cache
+npm run typecheck
+npm run build:apk
+npm run build:apk -- --skip-prebuild
+ASTRA_PHONE_IP=192.168.1.242 npm run install:bridge
+systemctl --user show astra-bridge.service
 ```
-DOCUMENT TITLE: Astra UI — Verification & Quality Gate Ledger
-Classification: INTERNAL
-Version: 2.0
-Date: 2026-10-23
-Author/Origin: Colony / Defense-Grade-Doc-Engine (chronicler-1)
-Status: EXECUTED — 2026-10-23 DUSK (PARENT)
-```
 
-> **Verification Posture:** All eight gates were executed by the Parent at Dusk on 2026-10-23. Results below record exactly what ran and what was not exercised; nothing is marked passed without direct command output.
-
-## Gate Summary Matrix
-
-| Gate ID | Gate Name | Command / Method | Status |
-| --- | --- | --- | --- |
-| G-01 | TypeScript Typecheck | `npm run typecheck` (`npx tsc --noEmit`) | `PASSED` |
-| G-02 | Lint | `npx expo lint` | `PASSED` (7 initial errors fixed, re-run clean) |
-| G-03 | Expo SDK Dependency Check | `npx expo install --check` | `PASSED` (after `expo install --fix` to expo ~57.0.31) |
-| G-04 | Expo Doctor | `npx expo-doctor` | `PASSED` (21/21 after fixes) |
-| G-05 | Web Static Export | `npm run export` (`npx expo export --platform web`) | `PASSED` |
-| G-06 | Android Bundle Export | `npx expo export --platform android` | `PASSED` (JS/Hermes bundle only, no APK) |
-| G-07 | Browser Interaction Pass | Headless/live browser route & persistence verification | `PASSED (PARTIAL)` — routes rendered; click-through and persistence NOT exercised |
-| G-08 | Rendered Screenshots | Viewport captures across target widths | `PASSED` (9 captures in `previews/`; on-device NOT RUN) |
-
----
-
-## 1. Typecheck (`typecheck`)
-
-- **Status:** `PASSED`
-- **Command:** `npm run typecheck` (`npx tsc --noEmit`)
-- **Acceptance Criteria:** Zero TypeScript compilation or strict-mode errors across `src/app/`, `src/components/`, `src/providers/`, `src/transport/`, `src/state/`, and `src/theme/`.
-- **Evidence:** `TSC_EXIT=0` after the integration cut (10 legacy files retired) and after all lint fixes, 2026-10-23.
-
-## 2. Lint (`lint`)
-
-- **Status:** `PASSED`
-- **Command:** `npx expo lint`
-- **Acceptance Criteria:** Zero lint errors across all TypeScript and TSX source files.
-- **Evidence:** Initial run: 7 errors (5× `react-hooks/refs` StatusDot.tsx:14 ref-during-render; 2× set-state-in-effect in useTransportReplay.ts:35 and machines/[id].tsx:44). Fixed via Surgeon (useState factory for the Animated.Value, setState moved into the async run, render-time sync pattern). Re-run: exit 0, zero findings.
-
-## 3. Expo Dependency Check (`expo install --check`)
-
-- **Status:** `PASSED`
-- **Command:** `npx expo install --check`
-- **Acceptance Criteria:** All installed Expo and React Native packages match Expo SDK 57 version constraints.
-- **Evidence:** Initial: expo 57.0.26 vs expected ~57.0.31. `npx expo install --fix` applied. Re-run: "Dependencies are up to date".
-
-## 4. Expo Doctor (`expo-doctor`)
-
-- **Status:** `PASSED`
-- **Command:** `npx expo-doctor`
-- **Acceptance Criteria:** All project configuration, Metro bundler, and SDK health checks pass without actionable errors.
-- **Evidence:** Initial: 2 failures (invalid legacy `splash` key in app.json schema; missing expo-router peers expo-constants/expo-linking). splash removed via Surgeon, peers installed. Final run: 21/21 checks passed.
-
-## 5. Web Export (`web export`)
-
-- **Status:** `PASSED`
-- **Command:** `npm run export` (`npx expo export --platform web`)
-- **Acceptance Criteria:** Metro bundles all Expo Router routes and assets cleanly into `dist/` for web without bundling or font-resolution errors.
-- **Evidence:** index.html + assets exported cleanly. Re-exported once after the Android export clobbered `dist/` (note: exports share the output dir; web must be the last export or use distinct `--output-dir`).
-
-## 6. Android Bundle Export (`android bundle export`)
-
-- **Status:** `PASSED`
-- **Command:** `npx expo export --platform android`
-- **Acceptance Criteria:** Hermes/JavaScript Android bundle and bundled font assets export cleanly without missing module or asset errors (note: this verifies JS/asset bundling, not a signed EAS APK build).
-- **Evidence:** `_expo/static/js/android/entry-1bf5c5085b457a800849a1d991d56a00.hbc` (2.9MB) + metadata exported. No signed APK was built.
-
-## 7. Browser Interaction Pass (`browser interaction pass`)
-
-- **Status:** `PASSED (PARTIAL)`
-- Evidence: all six routes rendered and hydrated on-contract under headless Chrome (flatpak, `--no-sandbox --disable-crashpad`) against a static server with SPA fallback: `/`, `/agent/droid`, `/agent/droid/session/droid-s1`, `/agent/droid/settings`, `/approvals`, `/machines/kubuntu`. NOT exercised: click-through interaction (agent-browser CDP daemon hung inside the sandbox) and AsyncStorage persistence flows.
-- **Scope:**
-  - Command deck (`/`): rig selector switching, active provider navigation (`droid`, `codex`), planned provider inspection (`opencode`, `antigravity`, `deepseek`).
-  - Provider workspace (`/agent/[provider]`): session list navigation, diff view (`/agent/[provider]/changes`), schema settings (`/agent/[provider]/settings`).
-  - Session stream (`/agent/[provider]/session/[sid]`): stream rendering, slash-command autocomplete, prompt submission via `Composer`.
-  - Cross-agent approvals (`/approvals`): approve/reject interaction.
-  - Machine detail (`/machines/[id]`): LAN endpoint edit and persistence across reload (`astra.rig-addresses.v2`), per-agent settings persistence across reload (`astra.agent-settings.v1`), and zero uncaught page/console errors.
-
-## 8. Rendered Screenshots (`rendered screenshots`)
-
-- **Status:** `PASSED`
-- Evidence: 9 headless-Chrome captures in `previews/`: `astra-deck-320/430/768/1280.png`, `astra-workspace-430.png`, `astra-session-430.png`, `astra-settings-430.png`, `astra-approvals-430.png`, `astra-machine-430.png`. All rendered on-contract (obsidian canvas, hairline glass cards, restrained blue-violet, labeled statuses). Physical device / Expo Go: NOT RUN.
+`--skip-prebuild` is appropriate only when the native project has already been generated from the current app configuration. Native/config changes require normal Expo prebuild; generated Android source is not hand-edited.
