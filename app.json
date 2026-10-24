@@ -2,6 +2,7 @@
   "expo": {
     "name": "Astra",
     "slug": "astra-ui",
+    "scheme": "astra",
     "version": "0.1.0",
     "orientation": "default",
     "userInterfaceStyle": "dark",
@@ -10,6 +11,14 @@
     },
     "android": {
       "package": "dev.astra.personal",
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ],
       "softwareKeyboardLayoutMode": "resize",
       "predictiveBackGestureEnabled": false
     },
@@ -18,11 +27,12 @@
       "name": "Astra"
     },
     "plugins": [
-      "expo-font"
+      "expo-font",
+      "expo-router",
+      "expo-secure-store",
+      "./plugins/with-astra-icon.cjs",
+      ["expo-build-properties", { "android": { "usesCleartextTraffic": true } }]
     ],
-    "backgroundColor": "#000000",
-    "splash": {
-      "backgroundColor": "#000000"
-    }
+    "backgroundColor": "#05070B"
   }
 }

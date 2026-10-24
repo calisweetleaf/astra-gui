@@ -1,3 +1,9 @@
+# Astra-UI
+
+## Notes
+
+> This codebase was made by Daeron in order to have a custom command center where he can from his mobile device (s24-ultra, so an .apk) but have a totally private research app, where from his phone he can manage Codex, Droid, Opencode, Google-AntiGravity, and Deepseek-Harness with room for expansion. The idea is simple, have a local network/backend running on this device, while having an apk that connects directly. This experience should be seemless, like it is a "million" dollar or billion dollar UI, this is not a dedicated somnus core system thus only Agents will be working within this codebase. The idea is to be able to open up different sessions, merely stream the data not even have local actions but make it so daeron can run his command center from his phone, since he is using frontier sota models using his own agentic tooling in order to advance his real infrustructure. The design should be not only lightweight, but genuinely thought out. Each Agent should be able to have its settings/config edited the full works essentially.
+
 This is an Expo/React Native mobile application. Prioritize mobile-first patterns, performance, and cross-platform compatibility.
 
 ## Expo has changed — do not trust your training data

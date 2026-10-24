@@ -39,3 +39,9 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Local bridge credentials and native output
+.astra/
+artifacts/
+/Astra.apk
+/Astra.apk.idsig
