@@ -1,0 +1,71 @@
+.panel-content {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+
+
+        /* Metrics Dashboard */
+        .metrics-dashboard {
+            padding: 20px;
+        }
+
+
+
+        .header-btn.active {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+
+
+        .file-item.active {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+
+
+        .editor-tab.active {
+            background: var(--dark-800);
+            color: var(--accent-blue);
+        }
+
+
+
+        .panel-tab.active {
+            color: var(--accent-blue);
+            background: var(--dark-700);
+        }
+
+
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+
+
+        .metric-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+
+
+        .metric-value {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+
+
+        .cpu-metric { color: var(--accent-blue); }

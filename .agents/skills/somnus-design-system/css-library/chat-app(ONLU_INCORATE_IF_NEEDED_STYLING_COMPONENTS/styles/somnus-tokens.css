@@ -1,0 +1,108 @@
+/* Somnus Design Tokens: Colors */
+/* Shared color variables and lightweight utilities */
+
+:root,
+[data-theme="dark"] {
+  /* Base Palette */
+  --dark-950: #0a0a0f;
+  --dark-900: #0f0f1a;
+  --dark-800: #1a1a2e;
+  --dark-700: #16213e;
+  --dark-600: #1f2937;
+  --dark-500: #334155;
+  --light-100: #f8fafc;
+  --light-200: #e2e8f0;
+  --light-300: #cbd5e1;
+  --light-400: #94a3b8;
+  --light-500: #64748b;
+
+  /* Accents */
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-yellow: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-green: #10b981;
+  --accent-cyan: #06b6d4;
+
+  /* Glass */
+  --glass-bg: rgba(31, 41, 55, 0.7);
+  --glass-border: rgba(148, 163, 184, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* Semantic (Dark) */
+  --surface-0: var(--dark-950);
+  --surface-1: var(--dark-900);
+  --surface-2: var(--dark-800);
+  --surface-3: var(--dark-700);
+  --text-primary: var(--light-100);
+  --text-secondary: var(--light-400);
+  --text-muted: var(--light-500);
+  --border-subtle: var(--glass-border);
+  --focus-ring: color-mix(in oklab, var(--accent-blue) 60%, transparent);
+  --link: var(--accent-blue);
+  --link-hover: color-mix(in oklab, var(--accent-blue) 80%, white 10%);
+  --primary: var(--accent-blue);
+  --success: var(--accent-green);
+  --warning: var(--accent-yellow);
+  --danger: var(--accent-red);
+  --info: var(--accent-cyan);
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  /* Semantic (Light) */
+  --surface-0: #ffffff;
+  --surface-1: var(--light-100);
+  --surface-2: var(--light-200);
+  --surface-3: var(--light-300);
+  --text-primary: #0f172a; /* slate-900 */
+  --text-secondary: #334155; /* slate-700 */
+  --text-muted: #475569; /* slate-600 */
+  --border-subtle: rgba(15, 23, 42, 0.12);
+  --focus-ring: color-mix(in oklab, var(--accent-blue) 45%, transparent);
+  --link: #2563eb; /* slightly darker blue in light */
+  --link-hover: #1d4ed8;
+
+  /* Keep accents; adjust glass for light */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+  color-scheme: light;
+}
+
+/* Lightweight utilities (optional) */
+.bg-surface-0 { background: var(--surface-0); }
+.bg-surface-1 { background: var(--surface-1); }
+.bg-surface-2 { background: var(--surface-2); }
+.bg-surface-3 { background: var(--surface-3); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+
+.border-subtle { border-color: var(--border-subtle) !important; }
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.shadow-glass { box-shadow: var(--glass-shadow) !important; }
+
+/* Focus ring utility */
+.focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+/* Link utility */
+.link {
+  color: var(--link);
+  text-decoration: none;
+}
+.link:hover { color: var(--link-hover); }

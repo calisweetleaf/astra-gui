@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Somnus Components Catalog</title>
+    <style>
+      
+      body{font-family:Inter,system-ui,sans-serif;background:var(--surface-0);color:var(--text-primary);}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;padding:24px;}
+      .comp{background:var(--surface-1);border:1px solid var(--border-subtle);border-radius:12px;padding:16px;}
+      .comp h2{font-size:14px;margin:0 0 12px;color:var(--text-secondary);}
+      .preview{background:var(--surface-0);border:1px dashed var(--border-subtle);border-radius:8px;padding:12px;}
+    </style>
+  </head>
+  <body>
+    <div class="grid"><section class="comp"><h2>FileExplorer</h2><div class="preview"><div class="sidebar-section file-explorer">
+                    <div class="section-header">
+                        <i class="fas fa-folder"></i> Workspace Files
+                    </div></div></section><section class="comp"><h2>MetricsDashboard</h2><div class="preview"><div class="metrics-dashboard panel-content-section active" id="metrics-panel">
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-value cpu-metric" id="cpu-usage">0%</div></div></section><section class="comp"><h2>ArtifactRightPanel</h2><div class="preview"><div class="artifact-right-panel">
+                <div class="panel-tabs">
+                    <button class="panel-tab active" data-panel="metrics">
+                        <i class="fas fa-chart-line"></i>
+                        Metrics
+                    </button>
+                    <button class="panel-tab" data-panel="video">
+                        <i class="fas fa-video"></i>
+                        Video
+                    </button>
+                    <button class="panel-tab" data-panel="training">
+                        <i class="fas fa-brain"></i>
+                        AI Training
+                    </button>
+                    <button class="panel-tab" data-panel="research">
+                        <i class="fas fa-search"></i>
+                        Research
+                    </button>
+                    <button class="panel-tab" data-panel="git">
+                        <i class="fab fa-git-alt"></i>
+                        Git
+                    </button>
+                </div></div></section><section class="comp"><h2>TrainingPanel</h2><div class="preview"><div class="training-panel panel-content-section" id="training-panel">
+                        <div class="training-status">
+                            <h4 style="margin-bottom: 12px; color: var(--accent-green);">
+                                <i class="fas fa-brain"></i> AI Model Training
+                            </h4>
+                            <div class="training-progress">
+                                <div class="progress-bar" id="training-progress-bar"></div></div></section><section class="comp"><h2>EnvSelector</h2><div class="preview"><div class="env-selector">
+                                <div class="env-dropdown" id="env-dropdown">
+                                    <div class="env-option">
+                                        <div class="env-icon unlimited-env">∞</div></div></section><section class="comp"><h2>ArtifactHeader</h2><div class="preview"><div class="artifact-header">
+            <div class="header-left">
+                <div class="artifact-icon">
+                    <i class="fas fa-rocket"></i>
+                </div></div></section><section class="comp"><h2>ResearchPanel</h2><div class="preview"><div class="research-panel panel-content-section" id="research-panel">
+                        <div class="research-controls">
+                            <h4 style="margin-bottom: 12px; color: var(--accent-cyan);">
+                                <i class="fas fa-search"></i> Browser Research
+                            </h4>
+                            <input type="text" class="research-input" placeholder="Enter research query..." id="research-query">
+                            <button class="research-btn" id="start-research">
+                                <i class="fas fa-globe"></i> Start Visual Research
+                            </button>
+                        </div></div></section><section class="comp"><h2>MonacoContainer</h2><div class="preview"><div class="monaco-container" id="monaco-container">
+                    <!-- Monaco Editor will be mounted here -->
+                </div></div></section><section class="comp"><h2>ExecutionTerminal</h2><div class="preview"><div class="execution-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-title">
+                            <i class="fas fa-terminal"></i> Unlimited Execution Terminal
+                        </div></div></section><section class="comp"><h2>ArtifactMain</h2><div class="preview"><div class="artifact-main">
+            <!-- Left Sidebar -->
+            <div class="artifact-sidebar">
+                <!-- Execution Environment -->
+                <div class="sidebar-section">
+                    <div class="section-header">
+                        <i class="fas fa-rocket"></i> Execution Environment
+                    </div></div></section><section class="comp"><h2>TerminalControls</h2><div class="preview"><div class="terminal-controls">
+                            <button class="terminal-btn clear" id="clear-terminal">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <button class="terminal-btn expand" id="expand-terminal">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                            </button>
+                        </div></div></section><section class="comp"><h2>EditorTabs</h2><div class="preview"><div class="editor-tabs">
+                    <div class="editor-tab active">
+                        <i class="fab fa-python" style="color: var(--accent-blue);"></i>
+                        <span>main.py</span>
+                        <div class="tab-close"><i class="fas fa-times"></i></div></div></section><section class="comp"><h2>ArtifactContainer</h2><div class="preview"><div class="artifact-container">
+        <!-- Header -->
+        <div class="artifact-header">
+            <div class="header-left">
+                <div class="artifact-icon">
+                    <i class="fas fa-rocket"></i>
+                </div></div></section><section class="comp"><h2>ExecutionStatus</h2><div class="preview"><div class="execution-status">
+                    <div class="status-indicator"></div></div></section><section class="comp"><h2>PanelTabs</h2><div class="preview"><div class="panel-tabs">
+                    <button class="panel-tab active" data-panel="metrics">
+                        <i class="fas fa-chart-line"></i>
+                        Metrics
+                    </button>
+                    <button class="panel-tab" data-panel="video">
+                        <i class="fas fa-video"></i>
+                        Video
+                    </button>
+                    <button class="panel-tab" data-panel="training">
+                        <i class="fas fa-brain"></i>
+                        AI Training
+                    </button>
+                    <button class="panel-tab" data-panel="research">
+                        <i class="fas fa-search"></i>
+                        Research
+                    </button>
+                    <button class="panel-tab" data-panel="git">
+                        <i class="fab fa-git-alt"></i>
+                        Git
+                    </button>
+                </div></div></section><section class="comp"><h2>GitPanel</h2><div class="preview"><div class="git-panel panel-content-section" id="git-panel">
+                        <div class="git-controls">
+                            <h4 style="margin-bottom: 12px; color: var(--accent-purple);">
+                                <i class="fab fa-github"></i> Git Repository
+                            </h4>
+                            <input type="text" class="git-input" placeholder="Enter GitHub repository URL..." id="git-url">
+                            <button class="git-btn" id="clone-repo">
+                                <i class="fas fa-download"></i> Clone Repository
+                            </button>
+                        </div></div></section><section class="comp"><h2>ArtifactSidebar</h2><div class="preview"><div class="artifact-sidebar">
+                <!-- Execution Environment -->
+                <div class="sidebar-section">
+                    <div class="section-header">
+                        <i class="fas fa-rocket"></i> Execution Environment
+                    </div></div></section><section class="comp"><h2>PanelContent</h2><div class="preview"><div class="panel-content">
+                    <!-- Metrics Panel -->
+                    <div class="metrics-dashboard panel-content-section active" id="metrics-panel">
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-value cpu-metric" id="cpu-usage">0%</div></div></section><section class="comp"><h2>MetricsGrid</h2><div class="preview"><div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-value cpu-metric" id="cpu-usage">0%</div></div></section></div>
+  </body>
+</html>

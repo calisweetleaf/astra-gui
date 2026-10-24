@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Somnus Components Catalog</title>
+    <style>
+      :root{
+  --dark-900: #0a0a0f;
+  --dark-800: #1a1a2e;
+  --dark-700: #16213e;
+  --dark-600: #0f3460;
+  --light-100: #ffffff;
+  --light-200: #f8fafc;
+  --light-300: #e2e8f0;
+  --light-400: #94a3b8;
+  --accent-cyan: #06b6d4;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-green: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-orange: #f97316;
+  --accent-pink: #ec4899;
+  --glass-bg: rgba(16, 23, 42, 0.8);
+  --glass-border: rgba(148, 163, 184, 0.1);
+  --glass-hover: rgba(148, 163, 184, 0.05);
+  --blur-strength: blur(20px);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-elevated: 0 12px 48px rgba(0, 0, 0, 0.15);
+  --shadow-intense: 0 20px 64px rgba(0, 0, 0, 0.2);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+      body{font-family:Inter,system-ui,sans-serif;background:var(--surface-0);color:var(--text-primary);}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;padding:24px;}
+      .comp{background:var(--surface-1);border:1px solid var(--border-subtle);border-radius:12px;padding:16px;}
+      .comp h2{font-size:14px;margin:0 0 12px;color:var(--text-secondary);}
+      .preview{background:var(--surface-0);border:1px dashed var(--border-subtle);border-radius:8px;padding:12px;}
+    </style>
+  </head>
+  <body>
+    <div class="grid"><section class="comp"><h2>IntelligencePanel</h2><div class="preview"><div class="intelligence-panel">
+            <div class="panel-header">
+                <div class="panel-title">AI Intelligence</div></div></section><section class="comp"><h2>InsightCard</h2><div class="preview"><div class="insight-card">
+                        <div class="insight-header">
+                            <div class="insight-type">${insight.type}</div></div></section><section class="comp"><h2>ProjectsList</h2><div class="preview"><div class="projects-list" id="projects-list">
+                <!-- Projects will be populated here -->
+            </div></div></section><section class="comp"><h2>CreateProjectButton</h2><div class="preview"><button class="create-project-btn" id="create-project">
+                    <i class="fas fa-plus"></i>
+                    Create
+                </button></div></section><section class="comp"><h2>WorkspaceTabs</h2><div class="preview"><div class="workspace-tabs">
+                <div class="workspace-tab active" data-tab="vm-dashboard">
+                    <i class="fas fa-server"></i>
+                    VM Dashboard
+                </div></div></section><section class="comp"><h2>ProjectsSidebar</h2><div class="preview"><div class="projects-sidebar">
+            <div class="sidebar-header">
+                <div>
+                    <div class="sidebar-title">Project Workspaces</div></div></section><section class="comp"><h2>SidebarHeader</h2><div class="preview"><div class="sidebar-header">
+                <div>
+                    <div class="sidebar-title">Project Workspaces</div></div></section><section class="comp"><h2>ProjectMetrics</h2><div class="preview"><div class="project-metrics">
+                            <div class="metric-item">
+                                <div class="metric-value">${project.metrics.artifacts}</div></div></section><section class="comp"><h2>MonitoringCharts</h2><div class="preview"><div class="monitoring-charts">
+                <div class="chart-container">
+                    <div class="chart-title">Resource Usage</div></div></section><section class="comp"><h2>MonitoringPanel</h2><div class="preview"><div class="monitoring-panel">
+            <div class="panel-header">
+                <div class="panel-title">System Monitoring</div></div></section><section class="comp"><h2>ProjectHeader</h2><div class="preview"><div class="project-header">
+                            <div class="project-info">
+                                <div class="project-name">${project.name}</div></div></section><section class="comp"><h2>ProjectsHeader</h2><div class="preview"><div class="projects-header">
+            <div class="header-title" id="header-title">Quantum Research Project</div></div></section><section class="comp"><h2>WorkspaceContent</h2><div class="preview"><div class="workspace-content active" id="vm-dashboard">
+                <div class="vm-dashboard">
+                    <div class="vm-overview" id="vm-overview">
+                        <!-- VM cards will be populated here -->
+                    </div></div></section><section class="comp"><h2>SearchContainer</h2><div class="preview"><div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search projects..." id="project-search">
+                    <i class="fas fa-search search-icon"></i>
+                </div></div></section><section class="comp"><h2>VMCard</h2><div class="preview"><div class="vm-card">
+                        <div class="vm-header">
+                            <div class="vm-name">${project.name} VM</div></div></section><section class="comp"><h2>ActivityItem</h2><div class="preview"><div class="activity-item">
+                        <div class="activity-icon ${activity.type}">
+                            <i class="fas fa-${this.getActivityIcon(activity.type)}"></i>
+                        </div></div></section><section class="comp"><h2>ProjectsWorkspace</h2><div class="preview"><div class="projects-workspace">
+            <!-- Workspace Tabs -->
+            <div class="workspace-tabs">
+                <div class="workspace-tab active" data-tab="vm-dashboard">
+                    <i class="fas fa-server"></i>
+                    VM Dashboard
+                </div></div></section><section class="comp"><h2>ProjectsContainer</h2><div class="preview"><div class="projects-container">
+        <!-- Enhanced Projects Sidebar -->
+        <div class="projects-sidebar">
+            <div class="sidebar-header">
+                <div>
+                    <div class="sidebar-title">Project Workspaces</div></div></section><section class="comp"><h2>FilterButton</h2><div class="preview"><button class="filter-btn active" data-type="all">All</button></div></section><section class="comp"><h2>IntelligenceInsights</h2><div class="preview"><div class="intelligence-insights">
+                <div class="category-header">
+                    <i class="fas fa-lightbulb"></i>
+                    Insights & Recommendations
+                </div></div></section><section class="comp"><h2>ActivityFeed</h2><div class="preview"><div class="activity-feed">
+                <div class="category-header" style="margin-bottom: 12px;">
+                    <i class="fas fa-stream"></i>
+                    Recent Activity
+                </div></div></section><section class="comp"><h2>VMDashboard</h2><div class="preview"><div class="vm-dashboard">
+                    <div class="vm-overview" id="vm-overview">
+                        <!-- VM cards will be populated here -->
+                    </div></div></section></div>
+  </body>
+</html>

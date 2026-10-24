@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Somnus Components Catalog</title>
+    <style>
+      :root{
+  --dark-900: #0a0a0f;
+  --dark-800: #1a1a2e;
+  --dark-700: #16213e;
+  --dark-600: #0f3460;
+  --light-100: #ffffff;
+  --light-200: #f8fafc;
+  --light-300: #e2e8f0;
+  --light-400: #94a3b8;
+  --accent-cyan: #06b6d4;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-green: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --glass-bg: rgba(16, 23, 42, 0.8);
+  --glass-border: rgba(148, 163, 184, 0.1);
+  --glass-hover: rgba(148, 163, 184, 0.05);
+  --blur-strength: blur(20px);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-elevated: 0 12px 48px rgba(0, 0, 0, 0.15);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+      body{font-family:Inter,system-ui,sans-serif;background:var(--surface-0);color:var(--text-primary);}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;padding:24px;}
+      .comp{background:var(--surface-1);border:1px solid var(--border-subtle);border-radius:12px;padding:16px;}
+      .comp h2{font-size:14px;margin:0 0 12px;color:var(--text-secondary);}
+      .preview{background:var(--surface-0);border:1px dashed var(--border-subtle);border-radius:8px;padding:12px;}
+    </style>
+  </head>
+  <body>
+    <div class="grid"><section class="comp"><h2>ExportPanel</h2><div class="preview"><div class="export-panel">
+            <div class="panel-header">
+                <div class="panel-title">Export & Actions</div></div></section><section class="comp"><h2>Tab</h2><div class="preview"><div class="tab active" data-tab="sources">
+                    <i class="fas fa-list"></i>
+                    Sources
+                    <span class="tab-badge" id="sources-badge">12</span>
+                </div></div></section><section class="comp"><h2>MetricCard</h2><div class="preview"><div class="metric-card">
+                                <div class="metric-value" id="credibility-score">8.7</div></div></section><section class="comp"><h2>SidebarHeader</h2><div class="preview"><div class="sidebar-header">
+                <div class="sidebar-title">Research Engine</div></div></section><section class="comp"><h2>TerminalContainer</h2><div class="preview"><div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <div class="terminal-dot red"></div></div></section><section class="comp"><h2>ResearchHeader</h2><div class="preview"><div class="research-header">
+            <div class="query-section">
+                <div class="query-input-group" style="flex: 1;">
+                    <div class="query-input-label">Research Query</div></div></section><section class="comp"><h2>KnowledgePanel</h2><div class="preview"><div class="knowledge-panel">
+            <div class="panel-header">
+                <div class="panel-title">Knowledge Graph</div></div></section><section class="comp"><h2>ResearchContainer</h2><div class="preview"><div class="research-container">
+        <!-- Enhanced Research Sidebar -->
+        <div class="research-sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">Research Engine</div></div></section><section class="comp"><h2>SourceCard</h2><div class="preview"><div class="source-card" data-source-id="${source.id}">
+                        <div class="source-header">
+                            <div>
+                                <div class="source-title">${source.title}</div></div></section><section class="comp"><h2>SidebarSections</h2><div class="preview"><div class="sidebar-sections">
+                <!-- Research Controls -->
+                <div class="sidebar-section">
+                    <div class="section-header">
+                        <i class="fas fa-cogs"></i>
+                        Research Controls
+                    </div></div></section><section class="comp"><h2>KnowledgeGraphContainer</h2><div class="preview"><div class="knowledge-graph-container">
+                <div class="graph-controls">
+                    <button class="graph-mode active" data-mode="network">Network</button>
+                    <button class="graph-mode" data-mode="timeline">Timeline</button>
+                    <button class="graph-mode" data-mode="hierarchy">Hierarchy</button>
+                </div></div></section><section class="comp"><h2>QuerySection</h2><div class="preview"><div class="query-section">
+                <div class="query-input-group" style="flex: 1;">
+                    <div class="query-input-label">Research Query</div></div></section><section class="comp"><h2>ProgressItem</h2><div class="preview"><div class="progress-item">
+                            <div class="progress-icon complete"><i class="fas fa-check"></i></div></div></section><section class="comp"><h2>MetricsGrid</h2><div class="preview"><div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-value" id="credibility-score">8.7</div></div></section><section class="comp"><h2>ResearchWorkspace</h2><div class="preview"><div class="research-workspace">
+            <!-- Enhanced Tab System -->
+            <div class="research-tabs">
+                <div class="tab active" data-tab="sources">
+                    <i class="fas fa-list"></i>
+                    Sources
+                    <span class="tab-badge" id="sources-badge">12</span>
+                </div></div></section><section class="comp"><h2>ContradictionPanel</h2><div class="preview"><div class="contradiction-panel">
+                        <div class="contradiction-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Contradiction Detected: ${contradiction.topic}
+                        </div></div></section><section class="comp"><h2>ResearchTabs</h2><div class="preview"><div class="research-tabs">
+                <div class="tab active" data-tab="sources">
+                    <i class="fas fa-list"></i>
+                    Sources
+                    <span class="tab-badge" id="sources-badge">12</span>
+                </div></div></section><section class="comp"><h2>TerminalHeader</h2><div class="preview"><div class="terminal-header">
+                        <div class="terminal-dots">
+                            <div class="terminal-dot red"></div></div></section><section class="comp"><h2>TerminalContent</h2><div class="preview"><div class="terminal-content" id="terminal-content">
+                        <!-- Terminal output will be populated here -->
+                    </div></div></section><section class="comp"><h2>ResearchSidebar</h2><div class="preview"><div class="research-sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-title">Research Engine</div></div></section><section class="comp"><h2>QueryInputGroup</h2><div class="preview"><div class="query-input-group">
+                            <div class="query-input-label">Research Depth</div></div></section></div>
+  </body>
+</html>

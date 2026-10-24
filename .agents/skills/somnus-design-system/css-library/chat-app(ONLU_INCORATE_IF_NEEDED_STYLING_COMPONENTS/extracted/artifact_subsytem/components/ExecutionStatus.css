@@ -1,0 +1,20 @@
+.execution-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark-700);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 12px;
+        }
+
+
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            animation: pulse 2s infinite;
+        }

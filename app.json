@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Astra",
+    "slug": "astra-ui",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "dev.astra.personal",
+      "softwareKeyboardLayoutMode": "resize",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "Astra"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "backgroundColor": "#000000",
+    "splash": {
+      "backgroundColor": "#000000"
+    }
+  }
+}

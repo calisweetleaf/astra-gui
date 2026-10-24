@@ -1,0 +1,526 @@
+{
+  "artifact-container": {
+    "html": "<div class=\"artifact-container\">\n        <!-- Header -->\n        <div class=\"artifact-header\">\n            <div class=\"header-left\">\n                <div class=\"artifact-icon\">\n                    <i class=\"fas fa-rocket\"></i>\n                </div>",
+    "css": "\n\n        /* Main Container */\n        .artifact-container {\n            display: flex;\n            flex-direction: column;\n            height: 100vh;\n            background: var(--dark-900);\n        }"
+  },
+  "artifact-header": {
+    "html": "<div class=\"artifact-header\">\n            <div class=\"header-left\">\n                <div class=\"artifact-icon\">\n                    <i class=\"fas fa-rocket\"></i>\n                </div>",
+    "css": "\n\n        /* Header */\n        .artifact-header {\n            height: 70px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            padding: 0 24px;\n            box-shadow: var(--glass-shadow);\n            position: relative;\n            z-index: 1000;\n        }"
+  },
+  "header-left": {
+    "html": "<div class=\"header-left\">\n                <div class=\"artifact-icon\">\n                    <i class=\"fas fa-rocket\"></i>\n                </div>",
+    "css": "\n\n        .header-left {\n            display: flex;\n            align-items: center;\n            gap: 16px;\n        }"
+  },
+  "artifact-icon": {
+    "html": "<div class=\"artifact-icon\">\n                    <i class=\"fas fa-rocket\"></i>\n                </div>",
+    "css": "\n\n        .artifact-icon {\n            width: 48px;\n            height: 48px;\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            border-radius: 12px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            color: white;\n            font-size: 20px;\n        }"
+  },
+  "fas": {
+    "html": "<i class=\"fas fa-rocket\"></i>",
+    "css": ""
+  },
+  "fa-rocket": {
+    "html": "<i class=\"fas fa-rocket\"></i>",
+    "css": ""
+  },
+  "artifact-info": {
+    "html": "<div class=\"artifact-info\">\n                    <h1>Unlimited Artifact System</h1>\n                    <div class=\"artifact-subtitle\">Container: artifact_${Date.now().toString(36)}</div>",
+    "css": "\n\n        .artifact-info h1 {\n            font-size: 18px;\n            font-weight: 600;\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n        }"
+  },
+  "artifact-subtitle": {
+    "html": "<div class=\"artifact-subtitle\">Container: artifact_${Date.now().toString(36)}</div>",
+    "css": "\n\n        .artifact-subtitle {\n            font-size: 12px;\n            color: var(--light-400);\n            margin-top: 2px;\n        }"
+  },
+  "header-center": {
+    "html": "<div class=\"header-center\">\n                <div class=\"execution-status\">\n                    <div class=\"status-indicator\"></div>",
+    "css": "\n\n        .header-center {\n            display: flex;\n            align-items: center;\n            gap: 12px;\n        }"
+  },
+  "execution-status": {
+    "html": "<div class=\"execution-status\">\n                    <div class=\"status-indicator\"></div>",
+    "css": "\n\n        .execution-status {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 20px;\n            padding: 8px 16px;\n            font-size: 12px;\n        }"
+  },
+  "status-indicator": {
+    "html": "<div class=\"status-indicator\"></div>",
+    "css": "\n\n        .status-indicator {\n            width: 8px;\n            height: 8px;\n            border-radius: 50%;\n            background: var(--accent-green);\n            animation: pulse 2s infinite;\n        }"
+  },
+  "header-controls": {
+    "html": "<div class=\"header-controls\">\n                <button class=\"header-btn\" id=\"settings-btn\" title=\"Settings\">\n                    <i class=\"fas fa-cog\"></i>\n                </button>\n                <button class=\"header-btn\" id=\"fullscreen-btn\" title=\"Fullscreen\">\n                    <i class=\"fas fa-expand\"></i>\n                </button>\n                <button class=\"header-btn\" id=\"save-btn\" title=\"Save Artifact\">\n                    <i class=\"fas fa-save\"></i>\n                </button>\n                <button class=\"header-btn active\" id=\"execute-btn\" title=\"Execute\">\n                    <i class=\"fas fa-play\"></i>\n                </button>\n                <div class=\"unlimited-badge\">Unlimited Power</div>",
+    "css": "\n\n        .header-controls {\n            display: flex;\n            align-items: center;\n            gap: 12px;\n        }"
+  },
+  "header-btn": {
+    "html": "<button class=\"header-btn\" id=\"settings-btn\" title=\"Settings\">\n                    <i class=\"fas fa-cog\"></i>\n                </button>",
+    "css": "\n\n        .header-btn {\n            width: 40px;\n            height: 40px;\n            border: none;\n            background: var(--dark-700);\n            color: var(--light-300);\n            border-radius: 10px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 14px;\n        }\n\n\n\n        .header-btn:hover {\n            background: var(--dark-600);\n            color: var(--accent-blue);\n            transform: translateY(-2px);\n        }\n\n\n\n        .header-btn.active {\n            background: var(--accent-blue);\n            color: white;\n        }"
+  },
+  "fa-cog": {
+    "html": "<i class=\"fas fa-cog\"></i>",
+    "css": ""
+  },
+  "fa-expand": {
+    "html": "<i class=\"fas fa-expand\"></i>",
+    "css": ""
+  },
+  "fa-save": {
+    "html": "<i class=\"fas fa-save\"></i>",
+    "css": ""
+  },
+  "active": {
+    "html": "<button class=\"header-btn active\" id=\"execute-btn\" title=\"Execute\">\n                    <i class=\"fas fa-play\"></i>\n                </button>",
+    "css": "\n\n        .header-btn.active {\n            background: var(--accent-blue);\n            color: white;\n        }\n\n\n\n        .file-item.active {\n            background: var(--accent-blue);\n            color: white;\n        }\n\n\n\n        .editor-tab.active {\n            background: var(--dark-800);\n            color: var(--accent-blue);\n        }\n\n\n\n        .panel-tab.active {\n            color: var(--accent-blue);\n            background: var(--dark-700);\n        }"
+  },
+  "fa-play": {
+    "html": "<i class=\"fas fa-play\"></i>",
+    "css": ""
+  },
+  "unlimited-badge": {
+    "html": "<div class=\"unlimited-badge\">Unlimited Power</div>",
+    "css": "\n\n        .unlimited-badge {\n            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-red));\n            color: white;\n            padding: 6px 12px;\n            border-radius: 16px;\n            font-size: 11px;\n            font-weight: 600;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "artifact-main": {
+    "html": "<div class=\"artifact-main\">\n            <!-- Left Sidebar -->\n            <div class=\"artifact-sidebar\">\n                <!-- Execution Environment -->\n                <div class=\"sidebar-section\">\n                    <div class=\"section-header\">\n                        <i class=\"fas fa-rocket\"></i> Execution Environment\n                    </div>",
+    "css": "\n\n        /* Main Content Area */\n        .artifact-main {\n            flex: 1;\n            display: flex;\n            overflow: hidden;\n        }"
+  },
+  "artifact-sidebar": {
+    "html": "<div class=\"artifact-sidebar\">\n                <!-- Execution Environment -->\n                <div class=\"sidebar-section\">\n                    <div class=\"section-header\">\n                        <i class=\"fas fa-rocket\"></i> Execution Environment\n                    </div>",
+    "css": "\n\n        /* Left Sidebar - Navigation & Controls */\n        .artifact-sidebar {\n            width: 320px;\n            background: var(--dark-800);\n            border-right: 1px solid var(--glass-border);\n            display: flex;\n            flex-direction: column;\n            overflow: hidden;\n        }\n\n\n            .artifact-sidebar {\n                width: 280px;\n            }"
+  },
+  "sidebar-section": {
+    "html": "<div class=\"sidebar-section\">\n                    <div class=\"section-header\">\n                        <i class=\"fas fa-rocket\"></i> Execution Environment\n                    </div>",
+    "css": "\n\n        .sidebar-section {\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "section-header": {
+    "html": "<div class=\"section-header\">\n                        <i class=\"fas fa-rocket\"></i> Execution Environment\n                    </div>",
+    "css": "\n\n        .section-header {\n            padding: 16px 20px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border-bottom: 1px solid var(--glass-border);\n            font-size: 12px;\n            font-weight: 600;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n            color: var(--light-400);\n        }"
+  },
+  "section-content": {
+    "html": "<div class=\"section-content\">\n                        <div class=\"execution-env\">\n                            <div class=\"env-selector\">\n                                <div class=\"env-dropdown\" id=\"env-dropdown\">\n                                    <div class=\"env-option\">\n                                        <div class=\"env-icon unlimited-env\">\u221e</div>",
+    "css": "\n\n        .section-content {\n            padding: 20px;\n            max-height: 300px;\n            overflow-y: auto;\n        }"
+  },
+  "execution-env": {
+    "html": "<div class=\"execution-env\">\n                            <div class=\"env-selector\">\n                                <div class=\"env-dropdown\" id=\"env-dropdown\">\n                                    <div class=\"env-option\">\n                                        <div class=\"env-icon unlimited-env\">\u221e</div>",
+    "css": "\n\n        /* Execution Environment Panel */\n        .execution-env {\n            display: flex;\n            flex-direction: column;\n            gap: 12px;\n        }"
+  },
+  "env-selector": {
+    "html": "<div class=\"env-selector\">\n                                <div class=\"env-dropdown\" id=\"env-dropdown\">\n                                    <div class=\"env-option\">\n                                        <div class=\"env-icon unlimited-env\">\u221e</div>",
+    "css": "\n\n        .env-selector {\n            position: relative;\n        }"
+  },
+  "env-dropdown": {
+    "html": "<div class=\"env-dropdown\" id=\"env-dropdown\">\n                                    <div class=\"env-option\">\n                                        <div class=\"env-icon unlimited-env\">\u221e</div>",
+    "css": "\n\n        .env-dropdown {\n            width: 100%;\n            background: var(--dark-600);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 12px;\n            color: var(--light-100);\n            font-size: 14px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .env-dropdown:hover {\n            border-color: var(--accent-blue);\n        }"
+  },
+  "env-option": {
+    "html": "<div class=\"env-option\">\n                                        <div class=\"env-icon unlimited-env\">\u221e</div>",
+    "css": "\n\n        .env-option {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }"
+  },
+  "env-icon": {
+    "html": "<div class=\"env-icon unlimited-env\">\u221e</div>",
+    "css": "\n\n        .env-icon {\n            width: 20px;\n            height: 20px;\n            border-radius: 4px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 10px;\n        }"
+  },
+  "unlimited-env": {
+    "html": "<div class=\"env-icon unlimited-env\">\u221e</div>",
+    "css": "\n\n        .unlimited-env { background: linear-gradient(45deg, var(--accent-yellow), var(--accent-red)); }"
+  },
+  "quick-actions": {
+    "html": "<div class=\"quick-actions\">\n                                <div class=\"quick-action\" id=\"youtube-action\">\n                                    <i class=\"fab fa-youtube\"></i>\n                                    YouTube\n                                </div>",
+    "css": "\n\n        /* Quick Actions Grid */\n        .quick-actions {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 8px;\n            margin-top: 16px;\n        }"
+  },
+  "quick-action": {
+    "html": "<div class=\"quick-action\" id=\"youtube-action\">\n                                    <i class=\"fab fa-youtube\"></i>\n                                    YouTube\n                                </div>",
+    "css": "\n\n        /* Quick Actions Grid */\n        .quick-actions {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 8px;\n            margin-top: 16px;\n        }\n\n\n\n        .quick-action {\n            background: var(--dark-600);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 12px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            text-align: center;\n            font-size: 12px;\n        }\n\n\n\n        .quick-action:hover {\n            background: var(--dark-500);\n            border-color: var(--accent-blue);\n            transform: translateY(-2px);\n        }\n\n\n\n        .quick-action i {\n            display: block;\n            font-size: 16px;\n            margin-bottom: 4px;\n            color: var(--accent-blue);\n        }"
+  },
+  "fab": {
+    "html": "<i class=\"fab fa-youtube\"></i>",
+    "css": ""
+  },
+  "fa-youtube": {
+    "html": "<i class=\"fab fa-youtube\"></i>",
+    "css": ""
+  },
+  "fa-microchip": {
+    "html": "<i class=\"fas fa-microchip\"></i>",
+    "css": ""
+  },
+  "fa-brain": {
+    "html": "<i class=\"fas fa-brain\"></i>",
+    "css": ""
+  },
+  "fa-search": {
+    "html": "<i class=\"fas fa-search\"></i>",
+    "css": ""
+  },
+  "fa-git-alt": {
+    "html": "<i class=\"fab fa-git-alt\"></i>",
+    "css": ""
+  },
+  "fa-docker": {
+    "html": "<i class=\"fab fa-docker\"></i>",
+    "css": ""
+  },
+  "file-explorer": {
+    "html": "<div class=\"sidebar-section file-explorer\">\n                    <div class=\"section-header\">\n                        <i class=\"fas fa-folder\"></i> Workspace Files\n                    </div>",
+    "css": "\n\n        /* File Explorer */\n        .file-explorer {\n            flex: 1;\n            display: flex;\n            flex-direction: column;\n        }"
+  },
+  "fa-folder": {
+    "html": "<i class=\"fas fa-folder\"></i>",
+    "css": ""
+  },
+  "file-tree": {
+    "html": "<div class=\"file-tree\" id=\"file-tree\">\n                        <div class=\"file-item active\">\n                            <div class=\"file-icon\"><i class=\"fas fa-file-code\" style=\"color: var(--accent-blue);\"></i></div>",
+    "css": "\n\n        .file-tree {\n            flex: 1;\n            overflow-y: auto;\n        }"
+  },
+  "file-item": {
+    "html": "<div class=\"file-item active\">\n                            <div class=\"file-icon\"><i class=\"fas fa-file-code\" style=\"color: var(--accent-blue);\"></i></div>",
+    "css": "\n\n        .file-item {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            padding: 8px 12px;\n            cursor: pointer;\n            transition: all 0.2s ease;\n            font-size: 13px;\n        }\n\n\n\n        .file-item:hover {\n            background: var(--dark-600);\n        }\n\n\n\n        .file-item.active {\n            background: var(--accent-blue);\n            color: white;\n        }"
+  },
+  "file-icon": {
+    "html": "<div class=\"file-icon\"><i class=\"fas fa-file-code\" style=\"color: var(--accent-blue);\"></i></div>",
+    "css": "\n\n        .file-icon {\n            width: 16px;\n            height: 16px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 12px;\n        }"
+  },
+  "fa-file-code": {
+    "html": "<i class=\"fas fa-file-code\" style=\"color: var(--accent-blue);\"></i>",
+    "css": ""
+  },
+  "fa-file": {
+    "html": "<i class=\"fas fa-file-code\" style=\"color: var(--accent-blue);\"></i>",
+    "css": ""
+  },
+  "artifact-editor": {
+    "html": "<div class=\"artifact-editor\">\n                <div class=\"editor-tabs\">\n                    <div class=\"editor-tab active\">\n                        <i class=\"fab fa-python\" style=\"color: var(--accent-blue);\"></i>\n                        <span>main.py</span>\n                        <div class=\"tab-close\"><i class=\"fas fa-times\"></i></div>",
+    "css": "\n\n        /* Center - Editor Area */\n        .artifact-editor {\n            flex: 1;\n            display: flex;\n            flex-direction: column;\n            overflow: hidden;\n        }"
+  },
+  "editor-tabs": {
+    "html": "<div class=\"editor-tabs\">\n                    <div class=\"editor-tab active\">\n                        <i class=\"fab fa-python\" style=\"color: var(--accent-blue);\"></i>\n                        <span>main.py</span>\n                        <div class=\"tab-close\"><i class=\"fas fa-times\"></i></div>",
+    "css": "\n\n        .editor-tabs {\n            height: 40px;\n            background: var(--dark-700);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n            padding: 0 12px;\n            overflow-x: auto;\n        }"
+  },
+  "editor-tab": {
+    "html": "<div class=\"editor-tab active\">\n                        <i class=\"fab fa-python\" style=\"color: var(--accent-blue);\"></i>\n                        <span>main.py</span>\n                        <div class=\"tab-close\"><i class=\"fas fa-times\"></i></div>",
+    "css": "\n\n        .editor-tabs {\n            height: 40px;\n            background: var(--dark-700);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n            padding: 0 12px;\n            overflow-x: auto;\n        }\n\n\n\n        .editor-tab {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            padding: 8px 16px;\n            background: var(--dark-600);\n            border-radius: 6px 6px 0 0;\n            cursor: pointer;\n            transition: all 0.2s ease;\n            font-size: 12px;\n            white-space: nowrap;\n            margin-right: 4px;\n        }\n\n\n\n        .editor-tab.active {\n            background: var(--dark-800);\n            color: var(--accent-blue);\n        }"
+  },
+  "fa-python": {
+    "html": "<i class=\"fab fa-python\" style=\"color: var(--accent-blue);\"></i>",
+    "css": ""
+  },
+  "tab-close": {
+    "html": "<div class=\"tab-close\"><i class=\"fas fa-times\"></i></div>",
+    "css": "\n\n        .tab-close {\n            width: 16px;\n            height: 16px;\n            border-radius: 2px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 10px;\n            opacity: 0.6;\n            transition: all 0.2s ease;\n        }\n\n\n\n        .tab-close:hover {\n            opacity: 1;\n            background: var(--accent-red);\n            color: white;\n        }"
+  },
+  "fa-times": {
+    "html": "<i class=\"fas fa-times\"></i>",
+    "css": ""
+  },
+  "fa-file-alt": {
+    "html": "<i class=\"fas fa-file-alt\" style=\"color: var(--accent-green);\"></i>",
+    "css": ""
+  },
+  "monaco-container": {
+    "html": "<div class=\"monaco-container\" id=\"monaco-container\">\n                    <!-- Monaco Editor will be mounted here -->\n                </div>",
+    "css": "\n\n        .monaco-container {\n            flex: 1;\n            position: relative;\n        }"
+  },
+  "execution-terminal": {
+    "html": "<div class=\"execution-terminal\">\n                    <div class=\"terminal-header\">\n                        <div class=\"terminal-title\">\n                            <i class=\"fas fa-terminal\"></i> Unlimited Execution Terminal\n                        </div>",
+    "css": "\n\n        /* Execution Terminal */\n        .execution-terminal {\n            height: 300px;\n            background: var(--dark-950);\n            border-top: 1px solid var(--glass-border);\n            display: flex;\n            flex-direction: column;\n            font-family: 'Consolas', 'Monaco', monospace;\n            resize: vertical;\n            overflow: hidden;\n        }"
+  },
+  "terminal-header": {
+    "html": "<div class=\"terminal-header\">\n                        <div class=\"terminal-title\">\n                            <i class=\"fas fa-terminal\"></i> Unlimited Execution Terminal\n                        </div>",
+    "css": "\n\n        .terminal-header {\n            height: 32px;\n            background: var(--dark-800);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n            padding: 0 12px;\n            justify-content: space-between;\n        }"
+  },
+  "terminal-title": {
+    "html": "<div class=\"terminal-title\">\n                            <i class=\"fas fa-terminal\"></i> Unlimited Execution Terminal\n                        </div>",
+    "css": "\n\n        .terminal-title {\n            font-size: 11px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "fa-terminal": {
+    "html": "<i class=\"fas fa-terminal\"></i>",
+    "css": ""
+  },
+  "terminal-controls": {
+    "html": "<div class=\"terminal-controls\">\n                            <button class=\"terminal-btn clear\" id=\"clear-terminal\">\n                                <i class=\"fas fa-trash\"></i>\n                            </button>\n                            <button class=\"terminal-btn expand\" id=\"expand-terminal\">\n                                <i class=\"fas fa-expand-arrows-alt\"></i>\n                            </button>\n                        </div>",
+    "css": "\n\n        .terminal-controls {\n            display: flex;\n            gap: 4px;\n        }"
+  },
+  "terminal-btn": {
+    "html": "<button class=\"terminal-btn clear\" id=\"clear-terminal\">\n                                <i class=\"fas fa-trash\"></i>\n                            </button>",
+    "css": "\n\n        .terminal-btn {\n            width: 20px;\n            height: 20px;\n            border: none;\n            border-radius: 3px;\n            cursor: pointer;\n            font-size: 10px;\n            transition: all 0.2s ease;\n        }\n\n\n\n        .terminal-btn.clear { background: var(--accent-red); color: white; }\n\n\n        .terminal-btn.expand { background: var(--accent-blue); color: white; }"
+  },
+  "clear": {
+    "html": "<button class=\"terminal-btn clear\" id=\"clear-terminal\">\n                                <i class=\"fas fa-trash\"></i>\n                            </button>",
+    "css": "\n\n        .terminal-btn.clear { background: var(--accent-red); color: white; }"
+  },
+  "fa-trash": {
+    "html": "<i class=\"fas fa-trash\"></i>",
+    "css": ""
+  },
+  "expand": {
+    "html": "<i class=\"fas fa-expand\"></i>",
+    "css": "\n        .terminal-btn.expand { background: var(--accent-blue); color: white; }"
+  },
+  "fa-expand-arrows-alt": {
+    "html": "<i class=\"fas fa-expand-arrows-alt\"></i>",
+    "css": ""
+  },
+  "terminal-content": {
+    "html": "<div class=\"terminal-content\" id=\"terminal-content\">\n                        <div class=\"terminal-line\">\n                            <span class=\"terminal-prompt\">somnus@unlimited:~/workspace$</span>\n                            <span class=\"terminal-output\"> Container initialized with unlimited capabilities</span>\n                        </div>",
+    "css": "\n\n        .terminal-content {\n            flex: 1;\n            padding: 12px;\n            overflow-y: auto;\n            font-size: 13px;\n            line-height: 1.4;\n        }"
+  },
+  "terminal-line": {
+    "html": "<div class=\"terminal-line\">\n                            <span class=\"terminal-prompt\">somnus@unlimited:~/workspace$</span>\n                            <span class=\"terminal-output\"> Container initialized with unlimited capabilities</span>\n                        </div>",
+    "css": "\n\n        .terminal-line {\n            margin-bottom: 4px;\n        }"
+  },
+  "terminal-prompt": {
+    "html": "<span class=\"terminal-prompt\">somnus@unlimited:~/workspace$</span>",
+    "css": "\n\n        .terminal-prompt {\n            color: var(--accent-green);\n        }"
+  },
+  "terminal-output": {
+    "html": "<span class=\"terminal-output\"> Container initialized with unlimited capabilities</span>",
+    "css": "\n\n        .terminal-output {\n            color: var(--light-300);\n        }"
+  },
+  "terminal-success": {
+    "html": "<span class=\"terminal-success\">\u2705 GPU acceleration enabled</span>",
+    "css": "\n\n        .terminal-success {\n            color: var(--accent-green);\n        }"
+  },
+  "artifact-right-panel": {
+    "html": "<div class=\"artifact-right-panel\">\n                <div class=\"panel-tabs\">\n                    <button class=\"panel-tab active\" data-panel=\"metrics\">\n                        <i class=\"fas fa-chart-line\"></i>\n                        Metrics\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"video\">\n                        <i class=\"fas fa-video\"></i>\n                        Video\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"training\">\n                        <i class=\"fas fa-brain\"></i>\n                        AI Training\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"research\">\n                        <i class=\"fas fa-search\"></i>\n                        Research\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"git\">\n                        <i class=\"fab fa-git-alt\"></i>\n                        Git\n                    </button>\n                </div>",
+    "css": "\n\n        /* Right Panel - Advanced Features */\n        .artifact-right-panel {\n            width: 400px;\n            background: var(--dark-800);\n            border-left: 1px solid var(--glass-border);\n            display: flex;\n            flex-direction: column;\n            overflow: hidden;\n        }\n\n\n            .artifact-right-panel {\n                width: 350px;\n            }\n\n\n            \n            .artifact-right-panel {\n                width: 320px;\n            }"
+  },
+  "panel-tabs": {
+    "html": "<div class=\"panel-tabs\">\n                    <button class=\"panel-tab active\" data-panel=\"metrics\">\n                        <i class=\"fas fa-chart-line\"></i>\n                        Metrics\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"video\">\n                        <i class=\"fas fa-video\"></i>\n                        Video\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"training\">\n                        <i class=\"fas fa-brain\"></i>\n                        AI Training\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"research\">\n                        <i class=\"fas fa-search\"></i>\n                        Research\n                    </button>\n                    <button class=\"panel-tab\" data-panel=\"git\">\n                        <i class=\"fab fa-git-alt\"></i>\n                        Git\n                    </button>\n                </div>",
+    "css": "\n\n        .panel-tabs {\n            height: 48px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n        }"
+  },
+  "panel-tab": {
+    "html": "<button class=\"panel-tab active\" data-panel=\"metrics\">\n                        <i class=\"fas fa-chart-line\"></i>\n                        Metrics\n                    </button>",
+    "css": "\n\n        .panel-tabs {\n            height: 48px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n        }\n\n\n\n        .panel-tab {\n            flex: 1;\n            height: 100%;\n            border: none;\n            background: transparent;\n            color: var(--light-400);\n            cursor: pointer;\n            transition: all 0.3s ease;\n            font-size: 11px;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            gap: 6px;\n        }\n\n\n\n        .panel-tab.active {\n            color: var(--accent-blue);\n            background: var(--dark-700);\n        }"
+  },
+  "fa-chart-line": {
+    "html": "<i class=\"fas fa-chart-line\"></i>",
+    "css": ""
+  },
+  "fa-video": {
+    "html": "<i class=\"fas fa-video\"></i>",
+    "css": ""
+  },
+  "panel-content": {
+    "html": "<div class=\"panel-content\">\n                    <!-- Metrics Panel -->\n                    <div class=\"metrics-dashboard panel-content-section active\" id=\"metrics-panel\">\n                        <div class=\"metrics-grid\">\n                            <div class=\"metric-card\">\n                                <div class=\"metric-value cpu-metric\" id=\"cpu-usage\">0%</div>",
+    "css": "\n\n        .panel-content {\n            flex: 1;\n            overflow-y: auto;\n        }"
+  },
+  "metrics-dashboard": {
+    "html": "<div class=\"metrics-dashboard panel-content-section active\" id=\"metrics-panel\">\n                        <div class=\"metrics-grid\">\n                            <div class=\"metric-card\">\n                                <div class=\"metric-value cpu-metric\" id=\"cpu-usage\">0%</div>",
+    "css": "\n\n        /* Metrics Dashboard */\n        .metrics-dashboard {\n            padding: 20px;\n        }"
+  },
+  "panel-content-section": {
+    "html": "<div class=\"metrics-dashboard panel-content-section active\" id=\"metrics-panel\">\n                        <div class=\"metrics-grid\">\n                            <div class=\"metric-card\">\n                                <div class=\"metric-value cpu-metric\" id=\"cpu-usage\">0%</div>",
+    "css": ""
+  },
+  "metrics-grid": {
+    "html": "<div class=\"metrics-grid\">\n                            <div class=\"metric-card\">\n                                <div class=\"metric-value cpu-metric\" id=\"cpu-usage\">0%</div>",
+    "css": "\n\n        .metrics-grid {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 12px;\n            margin-bottom: 20px;\n        }"
+  },
+  "metric-card": {
+    "html": "<div class=\"metric-card\">\n                                <div class=\"metric-value cpu-metric\" id=\"cpu-usage\">0%</div>",
+    "css": "\n\n        .metric-card {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 16px;\n            text-align: center;\n        }"
+  },
+  "metric-value": {
+    "html": "<div class=\"metric-value cpu-metric\" id=\"cpu-usage\">0%</div>",
+    "css": "\n\n        .metric-value {\n            font-size: 24px;\n            font-weight: 700;\n            margin-bottom: 4px;\n        }"
+  },
+  "cpu-metric": {
+    "html": "<div class=\"metric-value cpu-metric\" id=\"cpu-usage\">0%</div>",
+    "css": "\n\n        .cpu-metric { color: var(--accent-blue); }"
+  },
+  "metric-label": {
+    "html": "<div class=\"metric-label\">CPU Usage</div>",
+    "css": "\n\n        .metric-label {\n            font-size: 11px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "memory-metric": {
+    "html": "<div class=\"metric-value memory-metric\" id=\"memory-usage\">0%</div>",
+    "css": "\n        .memory-metric { color: var(--accent-green); }"
+  },
+  "gpu-metric": {
+    "html": "<div class=\"metric-value gpu-metric\" id=\"gpu-usage\">0%</div>",
+    "css": "\n        .gpu-metric { color: var(--accent-yellow); }"
+  },
+  "network-metric": {
+    "html": "<div class=\"metric-value network-metric\" id=\"network-usage\">0 MB/s</div>",
+    "css": "\n        .network-metric { color: var(--accent-purple); }"
+  },
+  "performance-chart": {
+    "html": "<div class=\"performance-chart\" id=\"performance-chart\">\n                            <canvas id=\"metrics-chart\" width=\"100%\" height=\"200\"></canvas>\n                        </div>",
+    "css": "\n\n        .performance-chart {\n            height: 200px;\n            background: var(--dark-700);\n            border-radius: 8px;\n            margin-bottom: 20px;\n            position: relative;\n        }"
+  },
+  "container-status": {
+    "html": "<div class=\"container-status\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-blue);\">Container Status</h4>\n                            <div class=\"terminal-line\">\n                                <span class=\"terminal-success\">\ud83d\udc33 Container ID: unlimited_${Date.now().toString(36)}</span>\n                            </div>",
+    "css": ""
+  },
+  "video-panel": {
+    "html": "<div class=\"video-panel panel-content-section\" id=\"video-panel\">\n                        <div class=\"video-controls\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-red);\">\n                                <i class=\"fab fa-youtube\"></i> YouTube Video Processing\n                            </h4>\n                            <input type=\"text\" class=\"video-input\" placeholder=\"Paste YouTube URL here...\" id=\"youtube-url\">\n                            <div class=\"video-actions\">\n                                <button class=\"video-btn download\" id=\"download-video\">\n                                    <i class=\"fas fa-download\"></i> Download\n                                </button>\n                                <button class=\"video-btn process\" id=\"process-video\">\n                                    <i class=\"fas fa-cogs\"></i> Process\n                                </button>\n                            </div>",
+    "css": "\n\n        /* Video Processing Panel */\n        .video-panel {\n            padding: 20px;\n        }"
+  },
+  "video-controls": {
+    "html": "<div class=\"video-controls\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-red);\">\n                                <i class=\"fab fa-youtube\"></i> YouTube Video Processing\n                            </h4>\n                            <input type=\"text\" class=\"video-input\" placeholder=\"Paste YouTube URL here...\" id=\"youtube-url\">\n                            <div class=\"video-actions\">\n                                <button class=\"video-btn download\" id=\"download-video\">\n                                    <i class=\"fas fa-download\"></i> Download\n                                </button>\n                                <button class=\"video-btn process\" id=\"process-video\">\n                                    <i class=\"fas fa-cogs\"></i> Process\n                                </button>\n                            </div>",
+    "css": "\n\n        .video-controls {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 20px;\n            margin-bottom: 20px;\n        }"
+  },
+  "video-input": {
+    "html": "<input type=\"text\" class=\"video-input\" placeholder=\"Paste YouTube URL here...\" id=\"youtube-url\">\n                            <div class=\"video-actions\">\n                                <button class=\"video-btn download\" id=\"download-video\">\n                                    <i class=\"fas fa-download\"></i>",
+    "css": "\n\n        .video-input {\n            width: 100%;\n            background: var(--dark-600);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 12px;\n            color: var(--light-100);\n            font-size: 14px;\n            margin-bottom: 12px;\n        }\n\n\n\n        .video-input::placeholder {\n            color: var(--light-400);\n        }"
+  },
+  "video-actions": {
+    "html": "<div class=\"video-actions\">\n                                <button class=\"video-btn download\" id=\"download-video\">\n                                    <i class=\"fas fa-download\"></i> Download\n                                </button>\n                                <button class=\"video-btn process\" id=\"process-video\">\n                                    <i class=\"fas fa-cogs\"></i> Process\n                                </button>\n                            </div>",
+    "css": "\n\n        .video-actions {\n            display: flex;\n            gap: 8px;\n        }"
+  },
+  "video-btn": {
+    "html": "<button class=\"video-btn download\" id=\"download-video\">\n                                    <i class=\"fas fa-download\"></i> Download\n                                </button>",
+    "css": "\n\n        .video-btn {\n            flex: 1;\n            padding: 12px;\n            border: none;\n            border-radius: 8px;\n            cursor: pointer;\n            font-size: 12px;\n            font-weight: 600;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .video-btn.download {\n            background: linear-gradient(135deg, var(--accent-red), var(--accent-yellow));\n            color: white;\n        }\n\n\n\n        .video-btn.process {\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            color: white;\n        }\n\n\n\n        .video-btn:hover {\n            transform: translateY(-2px);\n            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);\n        }"
+  },
+  "download": {
+    "html": "<button class=\"video-btn download\" id=\"download-video\">\n                                    <i class=\"fas fa-download\"></i> Download\n                                </button>",
+    "css": "\n\n        .video-btn.download {\n            background: linear-gradient(135deg, var(--accent-red), var(--accent-yellow));\n            color: white;\n        }"
+  },
+  "fa-download": {
+    "html": "<i class=\"fas fa-download\"></i>",
+    "css": ""
+  },
+  "process": {
+    "html": "<button class=\"video-btn process\" id=\"process-video\">\n                                    <i class=\"fas fa-cogs\"></i> Process\n                                </button>",
+    "css": "\n\n        .video-btn.process {\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            color: white;\n        }"
+  },
+  "fa-cogs": {
+    "html": "<i class=\"fas fa-cogs\"></i>",
+    "css": ""
+  },
+  "video-preview": {
+    "html": "<div class=\"video-preview\" id=\"video-preview\">\n                                <i class=\"fas fa-video\" style=\"font-size: 24px; margin-bottom: 8px; display: block;\"></i>\n                                Video preview will appear here after download\n                            </div>",
+    "css": "\n\n        .video-preview {\n            width: 100%;\n            height: 200px;\n            background: var(--dark-700);\n            border-radius: 8px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            color: var(--light-400);\n            font-size: 12px;\n            margin-top: 16px;\n        }"
+  },
+  "processing-options": {
+    "html": "<div class=\"processing-options\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-purple);\">Processing Options</h4>\n                            <div class=\"quick-actions\">\n                                <div class=\"quick-action\">\n                                    <i class=\"fas fa-cut\"></i>\n                                    Extract Audio\n                                </div>",
+    "css": ""
+  },
+  "fa-cut": {
+    "html": "<i class=\"fas fa-cut\"></i>",
+    "css": ""
+  },
+  "fa-images": {
+    "html": "<i class=\"fas fa-images\"></i>",
+    "css": ""
+  },
+  "fa-compress": {
+    "html": "<i class=\"fas fa-compress\"></i>",
+    "css": ""
+  },
+  "fa-magic": {
+    "html": "<i class=\"fas fa-magic\"></i>",
+    "css": ""
+  },
+  "training-panel": {
+    "html": "<div class=\"training-panel panel-content-section\" id=\"training-panel\">\n                        <div class=\"training-status\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-green);\">\n                                <i class=\"fas fa-brain\"></i> AI Model Training\n                            </h4>\n                            <div class=\"training-progress\">\n                                <div class=\"progress-bar\" id=\"training-progress-bar\"></div>",
+    "css": "\n\n        /* AI Training Panel */\n        .training-panel {\n            padding: 20px;\n        }"
+  },
+  "training-status": {
+    "html": "<div class=\"training-status\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-green);\">\n                                <i class=\"fas fa-brain\"></i> AI Model Training\n                            </h4>\n                            <div class=\"training-progress\">\n                                <div class=\"progress-bar\" id=\"training-progress-bar\"></div>",
+    "css": "\n\n        .training-status {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 20px;\n            margin-bottom: 20px;\n        }"
+  },
+  "training-progress": {
+    "html": "<div class=\"training-progress\">\n                                <div class=\"progress-bar\" id=\"training-progress-bar\"></div>",
+    "css": "\n\n        .training-progress {\n            width: 100%;\n            height: 8px;\n            background: var(--dark-600);\n            border-radius: 4px;\n            overflow: hidden;\n            margin-bottom: 12px;\n        }"
+  },
+  "progress-bar": {
+    "html": "<div class=\"progress-bar\" id=\"training-progress-bar\"></div>",
+    "css": "\n\n        .progress-bar {\n            height: 100%;\n            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));\n            width: 0%;\n            transition: width 1s ease;\n        }"
+  },
+  "training-stats": {
+    "html": "<div class=\"training-stats\">\n                                <div class=\"training-stat\">\n                                    <span class=\"stat-label\">Epoch:</span>\n                                    <span class=\"stat-value\" id=\"current-epoch\">0/100</span>\n                                </div>",
+    "css": "\n\n        .training-stats {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 8px;\n            margin-top: 12px;\n        }"
+  },
+  "training-stat": {
+    "html": "<div class=\"training-stat\">\n                                    <span class=\"stat-label\">Epoch:</span>\n                                    <span class=\"stat-value\" id=\"current-epoch\">0/100</span>\n                                </div>",
+    "css": "\n\n        .training-status {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 20px;\n            margin-bottom: 20px;\n        }\n\n\n\n        .training-stats {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 8px;\n            margin-top: 12px;\n        }\n\n\n\n        .training-stat {\n            display: flex;\n            justify-content: space-between;\n            font-size: 12px;\n        }"
+  },
+  "stat-label": {
+    "html": "<span class=\"stat-label\">Epoch:</span>",
+    "css": "\n\n        .stat-label {\n            color: var(--light-400);\n        }"
+  },
+  "stat-value": {
+    "html": "<span class=\"stat-value\" id=\"current-epoch\">0/100</span>",
+    "css": "\n\n        .stat-value {\n            color: var(--light-100);\n            font-weight: 600;\n        }"
+  },
+  "training-controls": {
+    "html": "<div class=\"training-controls\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-blue);\">Training Controls</h4>\n                            <div class=\"quick-actions\">\n                                <div class=\"quick-action\" id=\"start-training\">\n                                    <i class=\"fas fa-play\"></i>\n                                    Start Training\n                                </div>",
+    "css": ""
+  },
+  "fa-pause": {
+    "html": "<i class=\"fas fa-pause\"></i>",
+    "css": ""
+  },
+  "fa-upload": {
+    "html": "<i class=\"fas fa-upload\"></i>",
+    "css": ""
+  },
+  "model-info": {
+    "html": "<div class=\"model-info\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-yellow);\">Model Information</h4>\n                            <div class=\"terminal-line\">\n                                <span class=\"terminal-output\">Architecture: Transformer (Custom)</span>\n                            </div>",
+    "css": ""
+  },
+  "research-panel": {
+    "html": "<div class=\"research-panel panel-content-section\" id=\"research-panel\">\n                        <div class=\"research-controls\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-cyan);\">\n                                <i class=\"fas fa-search\"></i> Browser Research\n                            </h4>\n                            <input type=\"text\" class=\"research-input\" placeholder=\"Enter research query...\" id=\"research-query\">\n                            <button class=\"research-btn\" id=\"start-research\">\n                                <i class=\"fas fa-globe\"></i> Start Visual Research\n                            </button>\n                        </div>",
+    "css": "\n\n        /* Browser Research Panel */\n        .research-panel {\n            padding: 20px;\n        }"
+  },
+  "research-controls": {
+    "html": "<div class=\"research-controls\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-cyan);\">\n                                <i class=\"fas fa-search\"></i> Browser Research\n                            </h4>\n                            <input type=\"text\" class=\"research-input\" placeholder=\"Enter research query...\" id=\"research-query\">\n                            <button class=\"research-btn\" id=\"start-research\">\n                                <i class=\"fas fa-globe\"></i> Start Visual Research\n                            </button>\n                        </div>",
+    "css": "\n\n        .research-controls {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 20px;\n            margin-bottom: 20px;\n        }"
+  },
+  "research-input": {
+    "html": "<input type=\"text\" class=\"research-input\" placeholder=\"Enter research query...\" id=\"research-query\">\n                            <button class=\"research-btn\" id=\"start-research\">\n                                <i class=\"fas fa-globe\"></i>",
+    "css": "\n\n        .research-input {\n            width: 100%;\n            background: var(--dark-600);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 12px;\n            color: var(--light-100);\n            font-size: 14px;\n            margin-bottom: 12px;\n        }"
+  },
+  "research-btn": {
+    "html": "<button class=\"research-btn\" id=\"start-research\">\n                                <i class=\"fas fa-globe\"></i> Start Visual Research\n                            </button>",
+    "css": "\n\n        .research-btn {\n            width: 100%;\n            padding: 12px;\n            border: none;\n            border-radius: 8px;\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));\n            color: white;\n            font-size: 12px;\n            font-weight: 600;\n            cursor: pointer;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .research-btn:hover {\n            transform: translateY(-2px);\n            box-shadow: 0 4px 16px rgba(6, 182, 212, 0.3);\n        }"
+  },
+  "fa-globe": {
+    "html": "<i class=\"fas fa-globe\"></i>",
+    "css": ""
+  },
+  "research-status": {
+    "html": "<div class=\"research-status\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-blue);\">Research Progress</h4>\n                            <div class=\"terminal-line\">\n                                <span class=\"terminal-output\">Sources Found: <span id=\"sources-count\">0</span></span>\n                            </div>",
+    "css": ""
+  },
+  "screenshot-gallery": {
+    "html": "<div class=\"screenshot-gallery\" id=\"screenshot-gallery\">\n                            <div class=\"screenshot-item\">\n                                <div style=\"width: 100%; height: 100%; background: var(--dark-600); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--light-400);\">\n                                    Screenshot 1\n                                </div>",
+    "css": "\n\n        .screenshot-gallery {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 8px;\n            margin-top: 16px;\n        }"
+  },
+  "screenshot-item": {
+    "html": "<div class=\"screenshot-item\">\n                                <div style=\"width: 100%; height: 100%; background: var(--dark-600); display: flex; align-items: center; justify-content: center; font-size: 12px; color: var(--light-400);\">\n                                    Screenshot 1\n                                </div>",
+    "css": "\n\n        .screenshot-item {\n            aspect-ratio: 16/9;\n            background: var(--dark-700);\n            border-radius: 8px;\n            overflow: hidden;\n            cursor: pointer;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .screenshot-item:hover {\n            transform: scale(1.02);\n        }"
+  },
+  "git-panel": {
+    "html": "<div class=\"git-panel panel-content-section\" id=\"git-panel\">\n                        <div class=\"git-controls\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-purple);\">\n                                <i class=\"fab fa-github\"></i> Git Repository\n                            </h4>\n                            <input type=\"text\" class=\"git-input\" placeholder=\"Enter GitHub repository URL...\" id=\"git-url\">\n                            <button class=\"git-btn\" id=\"clone-repo\">\n                                <i class=\"fas fa-download\"></i> Clone Repository\n                            </button>\n                        </div>",
+    "css": "\n\n        /* Git Repository Panel */\n        .git-panel {\n            padding: 20px;\n        }"
+  },
+  "git-controls": {
+    "html": "<div class=\"git-controls\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-purple);\">\n                                <i class=\"fab fa-github\"></i> Git Repository\n                            </h4>\n                            <input type=\"text\" class=\"git-input\" placeholder=\"Enter GitHub repository URL...\" id=\"git-url\">\n                            <button class=\"git-btn\" id=\"clone-repo\">\n                                <i class=\"fas fa-download\"></i> Clone Repository\n                            </button>\n                        </div>",
+    "css": "\n\n        .git-controls {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 20px;\n            margin-bottom: 20px;\n        }"
+  },
+  "fa-github": {
+    "html": "<i class=\"fab fa-github\"></i>",
+    "css": ""
+  },
+  "git-input": {
+    "html": "<input type=\"text\" class=\"git-input\" placeholder=\"Enter GitHub repository URL...\" id=\"git-url\">\n                            <button class=\"git-btn\" id=\"clone-repo\">\n                                <i class=\"fas fa-download\"></i>",
+    "css": "\n\n        .git-input {\n            width: 100%;\n            background: var(--dark-600);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 12px;\n            color: var(--light-100);\n            font-size: 14px;\n            margin-bottom: 12px;\n        }"
+  },
+  "git-btn": {
+    "html": "<button class=\"git-btn\" id=\"clone-repo\">\n                                <i class=\"fas fa-download\"></i> Clone Repository\n                            </button>",
+    "css": "\n\n        .git-btn {\n            width: 100%;\n            padding: 12px;\n            border: none;\n            border-radius: 8px;\n            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));\n            color: white;\n            font-size: 12px;\n            font-weight: 600;\n            cursor: pointer;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .git-btn:hover {\n            transform: translateY(-2px);\n            box-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);\n        }"
+  },
+  "repo-status": {
+    "html": "<div class=\"repo-status\">\n                            <h4 style=\"margin-bottom: 12px; color: var(--accent-green);\">Repository Status</h4>\n                            <div class=\"terminal-line\">\n                                <span class=\"terminal-output\">Status: <span id=\"repo-status\">Ready to clone</span></span>\n                            </div>",
+    "css": ""
+  },
+  "repo-browser": {
+    "html": "<div class=\"repo-browser\" id=\"repo-browser\">\n                            <div class=\"repo-item\">\n                                <i class=\"fas fa-folder\" style=\"color: var(--accent-yellow);\"></i>\n                                <span>src/</span>\n                            </div>",
+    "css": "\n\n        .repo-browser {\n            max-height: 300px;\n            overflow-y: auto;\n            background: var(--dark-700);\n            border-radius: 8px;\n            margin-top: 16px;\n        }"
+  },
+  "repo-item": {
+    "html": "<div class=\"repo-item\">\n                                <i class=\"fas fa-folder\" style=\"color: var(--accent-yellow);\"></i>\n                                <span>src/</span>\n                            </div>",
+    "css": "\n\n        .repo-item {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            padding: 8px 12px;\n            cursor: pointer;\n            transition: all 0.2s ease;\n            font-size: 12px;\n            border-bottom: 1px solid var(--dark-600);\n        }\n\n\n\n        .repo-item:hover {\n            background: var(--dark-600);\n        }"
+  },
+  "loading": {
+    "html": "<div class=\"loading\"></div>",
+    "css": "\n\n        /* Loading States */\n        .loading {\n            display: inline-block;\n            width: 16px;\n            height: 16px;\n            border: 2px solid var(--dark-600);\n            border-radius: 50%;\n            border-top-color: var(--accent-blue);\n            animation: spin 1s ease-in-out infinite;\n        }"
+  }
+}

@@ -1,0 +1,106 @@
+.agent-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+
+
+        .agent-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glass-shadow);
+            border-color: var(--accent-cyan);
+        }
+
+
+
+        .agent-card.active {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: var(--accent-cyan);
+        }
+
+
+
+        .agent-card.active {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: var(--accent-cyan);
+        }
+
+
+
+        .control-btn.active {
+            background: var(--accent-cyan);
+            color: white;
+        }
+
+
+
+        .action-btn.active {
+            background: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+            color: white;
+        }
+
+
+
+        .orchestration-indicator.active {
+            display: flex;
+        }
+
+
+
+        .agent-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+
+
+        .agent-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: white;
+            font-weight: 600;
+        }
+
+
+
+        .agent-avatar.researcher {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+        }
+
+
+
+        .agent-avatar.coder {
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+        }
+
+
+
+        .agent-avatar.analyst {
+            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-red));
+        }
+
+
+
+        .agent-avatar.coordinator {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+        }
+
+
+
+        .agent-avatar.coordinator {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+        }

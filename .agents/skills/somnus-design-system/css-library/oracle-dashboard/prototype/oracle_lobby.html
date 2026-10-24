@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oracle Lobby</title>
+  <link rel="stylesheet" href="../../styles/somnus-tokens.css" />
+  <link rel="stylesheet" href="../styles/globals.css" />
+  <link rel="stylesheet" href="../../styles/somnus-components.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <style>
+    html, body { height: 100%; }
+    body { background: var(--surface-0); color: var(--text-primary); }
+    .layout { display: grid; grid-template-rows: 56px 1fr; height: 100%; }
+    .topbar {
+      display: grid; grid-template-columns: 280px 1fr 240px; align-items: center; gap: 12px;
+      padding: 8px 12px; border-bottom: 1px solid var(--border-subtle);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .brand .mark {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      display: grid; place-items: center; color: #fff;
+    }
+    .omnibox { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 10px; background: var(--surface-1); border: 1px solid var(--border-subtle); }
+    .omnibox input { flex: 1; background: transparent; border: none; color: var(--text-primary); outline: none; }
+    .window-controls { display: flex; justify-content: end; gap: 8px; }
+    .win-btn { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--border-subtle); }
+
+    .content { display: grid; grid-template-columns: 320px 1fr 360px; gap: 12px; padding: 12px; overflow: hidden; }
+    .panel { border: 1px solid var(--border-subtle); border-radius: 12px; overflow: hidden; background: var(--surface-1); display: flex; flex-direction: column; }
+    .panel .header { padding: 12px; border-bottom: 1px solid var(--border-subtle); font-weight: 600; color: var(--text-secondary); display: flex; align-items: center; gap: 8px; }
+    .panel .body { padding: 12px; overflow: auto; }
+
+    /* Sidebar */
+    .views { display: grid; gap: 8px; }
+    .view-item { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 10px; border: 1px solid var(--border-subtle); background: var(--surface-0); cursor: pointer; }
+    .view-item:hover { background: var(--surface-2); }
+
+    /* Lobby grid */
+    .lobby-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .tile { border: 1px solid var(--border-subtle); border-radius: 14px; padding: 14px; background: var(--surface-0); display: grid; gap: 10px; cursor: pointer; transition: transform .15s ease; }
+    .tile:hover { transform: translateY(-2px); }
+    .tile .thumb { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; color: #fff; }
+    .tile .title { font-weight: 700; }
+    .tile .desc { color: var(--text-secondary); font-size: 13px; }
+
+    .badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .badge { height: 22px; padding: 0 8px; border-radius: 999px; border: 1px solid var(--border-subtle); font-size: 12px; display: inline-flex; align-items: center; gap: 6px; color: var(--text-secondary); }
+  </style>
+  <script>
+    // purely presentational for now
+  </script>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- Top Bar (keeps browser feel) -->
+      <div class="topbar glass-panel">
+        <div class="brand">
+          <div class="mark"><i class="fas fa-compass"></i></div>
+          <div>
+            <div class="text-gradient">Oracle</div>
+            <div class="text-muted" style="font-size: 12px; line-height: 1;">Planetary Media Platform</div>
+          </div>
+        </div>
+        <div class="omnibox">
+          <i class="fas fa-globe" style="color: var(--text-secondary);"></i>
+          <input placeholder="Type a protocol, feed, or address (web, rss, activitypub, ipfs, torrent, file, vm)…" />
+          <button class="btn primary" style="height: 32px;">Go</button>
+        </div>
+        <div class="window-controls">
+          <div class="win-btn"><i class="fas fa-minus"></i></div>
+          <div class="win-btn"><i class="fas fa-square"></i></div>
+          <div class="win-btn"><i class="fas fa-x"></i></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <!-- Left: Views / Workspaces -->
+        <div class="panel">
+          <div class="header"><i class="fas fa-layer-group"></i> Workspaces</div>
+          <div class="body">
+            <div class="views">
+              <div class="view-item"><i class="fas fa-sun"></i> Daily</div>
+              <div class="view-item"><i class="fas fa-flask"></i> Research</div>
+              <div class="view-item"><i class="fas fa-briefcase"></i> Work</div>
+              <div class="view-item"><i class="fas fa-microchip"></i> VM</div>
+              <div class="view-item"><i class="fas fa-folder-open"></i> Local</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center: Lobby tiles (protocol connections) -->
+        <div class="panel">
+          <div class="header"><i class="fas fa-network-wired"></i> Oracle Lobby</div>
+          <div class="body">
+            <div class="lobby-grid">
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));"><i class="fas fa-globe"></i></div>
+                <div class="title">Web</div>
+                <div class="desc">HTTP/HTTPS content as first‑class media objects.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-rss"></i> Feeds</span>
+                  <span class="badge"><i class="fas fa-bolt"></i> Live</span>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-amber), var(--accent-red));"><i class="fas fa-rss"></i></div>
+                <div class="title">RSS/Atom</div>
+                <div class="desc">Subscribe and compose long‑form streams.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-filter"></i> Filters</span>
+                  <span class="badge"><i class="fas fa-list"></i> Collections</span>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));"><i class="fas fa-users"></i></div>
+                <div class="title">ActivityPub</div>
+                <div class="desc">Federated social as composable media.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-hashtag"></i> Tags</span>
+                  <span class="badge"><i class="fas fa-retweet"></i> Interact</span>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));"><i class="fas fa-cubes"></i></div>
+                <div class="title">IPFS</div>
+                <div class="desc">Decentralized objects, pinned and portable.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-link"></i> CIDs</span>
+                  <span class="badge"><i class="fas fa-share"></i> Pin</span>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));"><i class="fas fa-magnet"></i></div>
+                <div class="title">BitTorrent</div>
+                <div class="desc">P2P distribution as a first‑class source.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-upload"></i> Seed</span>
+                  <span class="badge"><i class="fas fa-download"></i> Fetch</span>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));"><i class="fas fa-random"></i></div>
+                <div class="title">WebRTC</div>
+                <div class="desc">Realtime peer connections & streams.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-broadcast-tower"></i> Live</span>
+                  <span class="badge"><i class="fas fa-lock"></i> P2P</span>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-yellow), var(--accent-amber));"><i class="fas fa-folder-open"></i></div>
+                <div class="title">Local Files</div>
+                <div class="desc">Your disk as a living media source.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-sync"></i> Watch</span>
+                  <span class="badge"><i class="fas fa-tags"></i> Annotate</span>
+                </div>
+              </div>
+              <div class="tile">
+                <div class="thumb" style="background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));"><i class="fas fa-microchip"></i></div>
+                <div class="title">VM / Apps</div>
+                <div class="desc">Native apps as media objects & actions.</div>
+                <div class="badge-row">
+                  <span class="badge"><i class="fas fa-plug"></i> Bridge</span>
+                  <span class="badge"><i class="fas fa-cogs"></i> Scripts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Intelligence / Monitoring (static placeholders) -->
+        <div class="panel">
+          <div class="header"><i class="fas fa-wave-square"></i> Monitoring</div>
+          <div class="body">
+            <div class="card padded" style="margin-bottom: 12px;">
+              <div class="heading-2">System</div>
+              <div class="text-muted" style="font-size: 13px;">Local health snapshot</div>
+            </div>
+            <div class="card padded">
+              <div class="heading-2">Recent Activity</div>
+              <div class="text-muted" style="font-size: 13px;">No events yet</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
+

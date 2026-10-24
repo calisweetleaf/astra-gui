@@ -1,0 +1,45 @@
+{
+  "project": "Somnus CSS Library / Oracle Dashboard",
+  "created_at": "${DATE}",
+  "summary": {
+    "goal": "Extract reusable UI components + tokens from existing HTMLs and scaffold a browser-like Oracle Lobby/dashboard without AI logic.",
+    "tokens": [
+      "styles/somnus-tokens.css",
+      "styles/somnus-components.css",
+      "design-tokens/somnus.tokens.json"
+    ],
+    "tools": [
+      "tools/rip_somnus_ui.py",
+      "tools/maps/*.json"
+    ],
+    "extracted_sets": [
+      "extracted/somnus_main_ui",
+      "extracted/artifact_subsytem",
+      "extracted/projects_subsytem",
+      "extracted/multi_agent_collab_ui",
+      "extracted/research_v3"
+    ],
+    "oracle_dashboard": {
+      "react": "oracle-dashboard/App.tsx + components/ui/* + styles/globals.css",
+      "prototype": "oracle-dashboard/prototype/oracle_lobby.html"
+    },
+    "oracle_docs": [
+      "C:/Users/treyr/Desktop/Oracle Browser/Oracle_Browser.md",
+      "C:/Users/treyr/Desktop/Oracle Browser/main_window.py"
+    ]
+  },
+  "resume_howto": [
+    "Open oracle-dashboard/prototype/oracle_lobby.html for the static Lobby",
+    "Use tools/rip_somnus_ui.py with a map to extract more components",
+    "Import design-tokens/somnus.tokens.json in Figma (Tokens Studio)",
+    "If integrating with PyQt, point a QWebEngineView at the Lobby HTML first, then switch to splitter workspace later"
+  ],
+  "next_actions": [
+    "Enhance ripper catalogs to always include styles/somnus-tokens.css",
+    "Unify palette across pages (decide final --dark-600, etc.)",
+    "Expand tokens: spacing, typography, radii, shadows",
+    "Assemble React OracleDashboard.tsx (optional) using extracted HTML markup and per-component CSS, no AI logic",
+    "Add PyQt LobbyWidget wrapper (optional) to load prototype/oracle_lobby.html on startup"
+  ]
+}
+

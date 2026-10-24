@@ -1,0 +1,109 @@
+{
+  "name": "multi_agent_collab_ui",
+  "styles": "extracted\\multi_agent_collab_ui\\styles\\multi_agent_collab_ui.css",
+  "scripts": "extracted\\multi_agent_collab_ui\\scripts\\multi_agent_collab_ui.js",
+  "tokens": "extracted\\multi_agent_collab_ui\\tokens\\multi_agent_collab_ui.tokens.json",
+  "components_manifest": "extracted\\multi_agent_collab_ui\\components.manifest.json",
+  "components": {
+    "AgentsList": {
+      "selector": ".agents-list",
+      "html": "extracted/multi_agent_collab_ui/components/AgentsList.html",
+      "css": "extracted/multi_agent_collab_ui/components/AgentsList.css"
+    },
+    "ChatHeader": {
+      "selector": ".chat-header",
+      "html": "extracted/multi_agent_collab_ui/components/ChatHeader.html",
+      "css": "extracted/multi_agent_collab_ui/components/ChatHeader.css"
+    },
+    "CollaborationApp": {
+      "selector": ".collaboration-app",
+      "html": "extracted/multi_agent_collab_ui/components/CollaborationApp.html",
+      "css": "extracted/multi_agent_collab_ui/components/CollaborationApp.css"
+    },
+    "CollaborationStats": {
+      "selector": ".collaboration-stats",
+      "html": "extracted/multi_agent_collab_ui/components/CollaborationStats.html",
+      "css": "extracted/multi_agent_collab_ui/components/CollaborationStats.css"
+    },
+    "QuickActions": {
+      "selector": ".quick-actions",
+      "html": "extracted/multi_agent_collab_ui/components/QuickActions.html",
+      "css": "extracted/multi_agent_collab_ui/components/QuickActions.css"
+    },
+    "CollaborationControls": {
+      "selector": ".collaboration-controls",
+      "html": "extracted/multi_agent_collab_ui/components/CollaborationControls.html",
+      "css": "extracted/multi_agent_collab_ui/components/CollaborationControls.css"
+    },
+    "ChatMessages": {
+      "selector": ".chat-messages",
+      "html": "extracted/multi_agent_collab_ui/components/ChatMessages.html",
+      "css": "extracted/multi_agent_collab_ui/components/ChatMessages.css"
+    },
+    "AgentCard": {
+      "selector": ".agent-card",
+      "html": "extracted/multi_agent_collab_ui/components/AgentCard.html",
+      "css": "extracted/multi_agent_collab_ui/components/AgentCard.css"
+    },
+    "StatCard": {
+      "selector": ".stat-card",
+      "html": "extracted/multi_agent_collab_ui/components/StatCard.html",
+      "css": "extracted/multi_agent_collab_ui/components/StatCard.css"
+    },
+    "ChatMain": {
+      "selector": ".chat-main",
+      "html": "extracted/multi_agent_collab_ui/components/ChatMain.html",
+      "css": "extracted/multi_agent_collab_ui/components/ChatMain.css"
+    },
+    "AgentsSidebar": {
+      "selector": ".agents-sidebar",
+      "html": "extracted/multi_agent_collab_ui/components/AgentsSidebar.html",
+      "css": "extracted/multi_agent_collab_ui/components/AgentsSidebar.css"
+    },
+    "ChatInputContainer": {
+      "selector": ".chat-input-container",
+      "html": "extracted/multi_agent_collab_ui/components/ChatInputContainer.html",
+      "css": "extracted/multi_agent_collab_ui/components/ChatInputContainer.css"
+    },
+    "AgentsHeader": {
+      "selector": ".agents-header",
+      "html": "extracted/multi_agent_collab_ui/components/AgentsHeader.html",
+      "css": "extracted/multi_agent_collab_ui/components/AgentsHeader.css"
+    },
+    "SynthesisPanel": {
+      "selector": ".synthesis-panel",
+      "html": "extracted/multi_agent_collab_ui/components/SynthesisPanel.html",
+      "css": "extracted/multi_agent_collab_ui/components/SynthesisPanel.css"
+    },
+    "OrchestrationIndicator": {
+      "selector": ".orchestration-indicator",
+      "html": "extracted/multi_agent_collab_ui/components/OrchestrationIndicator.html",
+      "css": "extracted/multi_agent_collab_ui/components/OrchestrationIndicator.css"
+    },
+    "InputField": {
+      "selector": ".input-field",
+      "html": "extracted/multi_agent_collab_ui/components/InputField.html",
+      "css": "extracted/multi_agent_collab_ui/components/InputField.css"
+    },
+    "SynthesisHeader": {
+      "selector": ".synthesis-header",
+      "html": "extracted/multi_agent_collab_ui/components/SynthesisHeader.html",
+      "css": "extracted/multi_agent_collab_ui/components/SynthesisHeader.css"
+    },
+    "OrchestrationControls": {
+      "selector": ".orchestration-controls",
+      "html": "extracted/multi_agent_collab_ui/components/OrchestrationControls.html",
+      "css": "extracted/multi_agent_collab_ui/components/OrchestrationControls.css"
+    },
+    "QuickAction": {
+      "selector": ".quick-action",
+      "html": "extracted/multi_agent_collab_ui/components/QuickAction.html",
+      "css": "extracted/multi_agent_collab_ui/components/QuickAction.css"
+    },
+    "SendButton": {
+      "selector": ".send-button",
+      "html": "extracted/multi_agent_collab_ui/components/SendButton.html",
+      "css": "extracted/multi_agent_collab_ui/components/SendButton.css"
+    }
+  }
+}

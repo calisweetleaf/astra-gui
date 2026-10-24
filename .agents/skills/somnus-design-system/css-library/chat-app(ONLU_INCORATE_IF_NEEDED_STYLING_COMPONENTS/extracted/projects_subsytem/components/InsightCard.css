@@ -1,0 +1,35 @@
+.insight-card {
+            background: var(--dark-700);
+            border: 1px solid var(--glass-border);
+            border-left: 4px solid var(--accent-purple);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            transition: var(--transition-smooth);
+        }
+
+
+
+        .insight-card:hover {
+            background: var(--dark-600);
+            transform: translateX(4px);
+        }
+
+
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+
+
+        .insight-type {
+            color: var(--accent-purple);
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }

@@ -1,0 +1,16 @@
+.intelligence-insights {
+            margin-bottom: 24px;
+        }
+
+
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--light-300);
+            margin-bottom: 12px;
+            padding: 8px 0;
+        }

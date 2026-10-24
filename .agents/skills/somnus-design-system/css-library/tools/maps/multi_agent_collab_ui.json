@@ -1,0 +1,22 @@
+{
+  "AgentsList": ".agents-list",
+  "ChatHeader": ".chat-header",
+  "CollaborationApp": ".collaboration-app",
+  "CollaborationStats": ".collaboration-stats",
+  "QuickActions": ".quick-actions",
+  "CollaborationControls": ".collaboration-controls",
+  "ChatMessages": ".chat-messages",
+  "AgentCard": ".agent-card",
+  "StatCard": ".stat-card",
+  "ChatMain": ".chat-main",
+  "AgentsSidebar": ".agents-sidebar",
+  "ChatInputContainer": ".chat-input-container",
+  "AgentsHeader": ".agents-header",
+  "SynthesisPanel": ".synthesis-panel",
+  "OrchestrationIndicator": ".orchestration-indicator",
+  "InputField": ".input-field",
+  "SynthesisHeader": ".synthesis-header",
+  "OrchestrationControls": ".orchestration-controls",
+  "QuickAction": ".quick-action",
+  "SendButton": ".send-button"
+}

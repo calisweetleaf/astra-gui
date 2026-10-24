@@ -1,0 +1,114 @@
+{
+  "name": "research_v3",
+  "styles": "extracted\\research_v3\\styles\\research_v3.css",
+  "scripts": "extracted\\research_v3\\scripts\\research_v3.js",
+  "tokens": "extracted\\research_v3\\tokens\\research_v3.tokens.json",
+  "components_manifest": "extracted\\research_v3\\components.manifest.json",
+  "components": {
+    "ExportPanel": {
+      "selector": ".export-panel",
+      "html": "extracted/research_v3/components/ExportPanel.html",
+      "css": "extracted/research_v3/components/ExportPanel.css"
+    },
+    "Tab": {
+      "selector": ".tab",
+      "html": "extracted/research_v3/components/Tab.html",
+      "css": "extracted/research_v3/components/Tab.css"
+    },
+    "MetricCard": {
+      "selector": ".metric-card",
+      "html": "extracted/research_v3/components/MetricCard.html",
+      "css": "extracted/research_v3/components/MetricCard.css"
+    },
+    "SidebarHeader": {
+      "selector": ".sidebar-header",
+      "html": "extracted/research_v3/components/SidebarHeader.html",
+      "css": "extracted/research_v3/components/SidebarHeader.css"
+    },
+    "TerminalContainer": {
+      "selector": ".terminal-container",
+      "html": "extracted/research_v3/components/TerminalContainer.html",
+      "css": "extracted/research_v3/components/TerminalContainer.css"
+    },
+    "ResearchHeader": {
+      "selector": ".research-header",
+      "html": "extracted/research_v3/components/ResearchHeader.html",
+      "css": "extracted/research_v3/components/ResearchHeader.css"
+    },
+    "KnowledgePanel": {
+      "selector": ".knowledge-panel",
+      "html": "extracted/research_v3/components/KnowledgePanel.html",
+      "css": "extracted/research_v3/components/KnowledgePanel.css"
+    },
+    "ResearchContainer": {
+      "selector": ".research-container",
+      "html": "extracted/research_v3/components/ResearchContainer.html",
+      "css": "extracted/research_v3/components/ResearchContainer.css"
+    },
+    "SourceCard": {
+      "selector": ".source-card",
+      "html": "extracted/research_v3/components/SourceCard.html",
+      "css": "extracted/research_v3/components/SourceCard.css"
+    },
+    "SidebarSections": {
+      "selector": ".sidebar-sections",
+      "html": "extracted/research_v3/components/SidebarSections.html",
+      "css": "extracted/research_v3/components/SidebarSections.css"
+    },
+    "KnowledgeGraphContainer": {
+      "selector": ".knowledge-graph-container",
+      "html": "extracted/research_v3/components/KnowledgeGraphContainer.html",
+      "css": "extracted/research_v3/components/KnowledgeGraphContainer.css"
+    },
+    "QuerySection": {
+      "selector": ".query-section",
+      "html": "extracted/research_v3/components/QuerySection.html",
+      "css": "extracted/research_v3/components/QuerySection.css"
+    },
+    "ProgressItem": {
+      "selector": ".progress-item",
+      "html": "extracted/research_v3/components/ProgressItem.html",
+      "css": "extracted/research_v3/components/ProgressItem.css"
+    },
+    "MetricsGrid": {
+      "selector": ".metrics-grid",
+      "html": "extracted/research_v3/components/MetricsGrid.html",
+      "css": "extracted/research_v3/components/MetricsGrid.css"
+    },
+    "ResearchWorkspace": {
+      "selector": ".research-workspace",
+      "html": "extracted/research_v3/components/ResearchWorkspace.html",
+      "css": "extracted/research_v3/components/ResearchWorkspace.css"
+    },
+    "ContradictionPanel": {
+      "selector": ".contradiction-panel",
+      "html": "extracted/research_v3/components/ContradictionPanel.html",
+      "css": "extracted/research_v3/components/ContradictionPanel.css"
+    },
+    "ResearchTabs": {
+      "selector": ".research-tabs",
+      "html": "extracted/research_v3/components/ResearchTabs.html",
+      "css": "extracted/research_v3/components/ResearchTabs.css"
+    },
+    "TerminalHeader": {
+      "selector": ".terminal-header",
+      "html": "extracted/research_v3/components/TerminalHeader.html",
+      "css": "extracted/research_v3/components/TerminalHeader.css"
+    },
+    "TerminalContent": {
+      "selector": ".terminal-content",
+      "html": "extracted/research_v3/components/TerminalContent.html",
+      "css": "extracted/research_v3/components/TerminalContent.css"
+    },
+    "ResearchSidebar": {
+      "selector": ".research-sidebar",
+      "html": "extracted/research_v3/components/ResearchSidebar.html",
+      "css": "extracted/research_v3/components/ResearchSidebar.css"
+    },
+    "QueryInputGroup": {
+      "selector": ".query-input-group",
+      "html": "extracted/research_v3/components/QueryInputGroup.html",
+      "css": "extracted/research_v3/components/QueryInputGroup.css"
+    }
+  }
+}

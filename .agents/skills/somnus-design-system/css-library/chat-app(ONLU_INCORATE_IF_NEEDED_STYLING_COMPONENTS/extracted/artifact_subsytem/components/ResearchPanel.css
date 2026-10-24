@@ -1,0 +1,50 @@
+/* Browser Research Panel */
+        .research-panel {
+            padding: 20px;
+        }
+
+
+
+        .research-controls {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+
+
+        .research-input {
+            width: 100%;
+            background: var(--dark-600);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 12px;
+            color: var(--light-100);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+
+
+        .research-btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .research-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(6, 182, 212, 0.3);
+        }

@@ -1,0 +1,37 @@
+.action-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--dark-700);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 10px 16px;
+            color: var(--light-300);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+
+
+        .action-btn:hover {
+            background: var(--dark-600);
+            border-color: var(--accent-blue);
+            color: var(--light-100);
+            transform: translateY(-1px);
+        }
+
+
+
+        .action-btn.active {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+            color: white;
+        }
+
+
+
+        .action-icon {
+            font-size: 14px;
+        }

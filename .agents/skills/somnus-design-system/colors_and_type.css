@@ -1,0 +1,391 @@
+/* =============================================================================
+ * SOMNUS / REM-CORE — DESIGN TOKENS
+ * Sovereign AI + Strategic Intelligence Glassmorphic System
+ *
+ * Two interrelated palettes share this token sheet:
+ *   • SOMNUS  — sovereign AI workspace; cool dark blues, blue/purple gradients
+ *   • REM-CORE — intelligence command surface; deeper blacks, neural violet,
+ *                cyan instruments, threat/correlation classification spectrum
+ *
+ * Both share Inter as the interface face, JetBrains Mono for telemetry, and a
+ * common glass-morphism layer. REM-Core adds Orbitron/Space Grotesk display
+ * faces for command-grade typography.
+ * ========================================================================== */
+
+/* ---------- WEBFONT IMPORTS (Google Fonts substitutes for missing files) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ============================================================== */
+  /* # SURFACES — stacked dark layers (Somnus + REM share this base) */
+  /* ============================================================== */
+  --dark-950: #070a11; /* deepest void — page floor */
+  --dark-900: #0a0a0f; /* canvas */
+  --dark-850: #0f0f1a; /* canvas alt (Somnus chat bg) */
+  --dark-800: #1a1a2e; /* primary panel */
+  --dark-750: #16213e; /* nested panel / inputs */
+  --dark-700: #1e293b; /* slate panel */
+  --dark-600: #1f2937; /* surface row */
+  --dark-500: #334155; /* border / divider strong */
+  --dark-400: #475569; /* hairline */
+
+  /* ============================================================== */
+  /* # FOREGROUND — light scale */
+  /* ============================================================== */
+  --light-50:  #ffffff;
+  --light-100: #f8fafc; /* primary text */
+  --light-200: #e2e8f0; /* secondary text */
+  --light-300: #cbd5e1; /* tertiary text */
+  --light-400: #94a3b8; /* muted / labels */
+  --light-500: #64748b; /* disabled / faint */
+
+  /* ============================================================== */
+  /* # ACCENT — Somnus shared palette */
+  /* ============================================================== */
+  --accent-blue:   #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-cyan:   #06b6d4;
+  --accent-indigo: #6366f1;
+  --accent-green:  #10b981;
+  --accent-yellow: #f59e0b;
+  --accent-orange: #f97316;
+  --accent-red:    #ef4444;
+  --accent-pink:   #ec4899;
+
+  /* AI agent colors (from multi-agent collaboration UI) */
+  --ai-one:    #3b82f6; /* primary agent */
+  --ai-two:    #8b5cf6; /* secondary agent */
+  --ai-three:  #10b981; /* tertiary agent */
+  --ai-system: #f59e0b; /* delegator/system */
+
+  /* ============================================================== */
+  /* # REM-CORE — Strategic Intelligence palette */
+  /* ============================================================== */
+  --neural-primary:   #8b5cf6; /* command violet */
+  --neural-secondary: #7c3aed;
+  --neural-tertiary:  #6d28d9;
+
+  --intel-cyan:    #06b6d4;
+  --intel-teal:    #0891b2;
+  --intel-blue:    #0284c7;
+  --intel-amber:   #f59e0b;
+  --intel-corp:    #f97316; /* corporate-influence orange */
+  --intel-warning: #f59e0b;
+  --intel-secure:  #10b981;
+  --intel-critical:#ef4444;
+
+  /* Threat classification spectrum */
+  --threat-institutional: #dc2626; /* "Institutional Capture" */
+  --threat-critical:      #ef4444;
+  --threat-high:          #f97316;
+  --threat-concerning:    #f59e0b;
+  --threat-monitored:     #10b981;
+  --threat-neutral:       #06b6d4;
+
+  /* Correlation strength (matrix heatmap) */
+  --corr-perfect:  #dc2626;
+  --corr-strong:   #f97316;
+  --corr-moderate: #f59e0b;
+  --corr-weak:     #10b981;
+  --corr-none:     #64748b;
+
+  /* ============================================================== */
+  /* # GLASSMORPHISM — material hierarchy */
+  /* ============================================================== */
+  --glass-command:    rgba(8, 12, 18, 0.96);   /* deepest panel */
+  --glass-primary:    rgba(15, 20, 28, 0.92);
+  --glass-secondary:  rgba(22, 29, 39, 0.85);
+  --glass-tertiary:   rgba(31, 41, 55, 0.70);  /* the canonical "glass-bg" */
+  --glass-surface:    rgba(39, 50, 66, 0.60);
+  --glass-overlay:    rgba(52, 64, 81, 0.45);
+
+  --glass-border:           rgba(148, 163, 184, 0.10);
+  --glass-border-strong:    rgba(148, 163, 184, 0.20);
+  --glass-border-active:    rgba(139, 92, 246, 0.45);
+  --glass-border-cyan:      rgba(6, 182, 212, 0.30);
+  --glass-border-critical:  rgba(248, 81, 73, 0.40);
+
+  --blur-sm: blur(10px);
+  --blur-md: blur(20px);
+  --blur-lg: blur(32px) saturate(1.2);
+  --blur-xl: blur(56px) saturate(1.2);
+
+  /* ============================================================== */
+  /* # SHADOWS — elevation + glow */
+  /* ============================================================== */
+  --shadow-sm:        0 4px 16px rgba(0, 0, 0, 0.25);
+  --shadow-glass:     0 8px 32px rgba(0, 0, 0, 0.30);
+  --shadow-elevated:  0 12px 48px rgba(0, 0, 0, 0.45);
+  --shadow-panel:     0 16px 64px rgba(0, 0, 0, 0.60);
+  --shadow-command:   0 24px 96px rgba(0, 0, 0, 0.85);
+
+  --glow-cyan:    0 0 40px rgba(6, 182, 212, 0.35);
+  --glow-violet:  0 0 40px rgba(139, 92, 246, 0.35);
+  --glow-blue:    0 0 32px rgba(59, 130, 246, 0.30);
+  --glow-corp:    0 0 32px rgba(249, 115, 22, 0.30);
+  --glow-threat:  0 0 32px rgba(239, 68, 68, 0.30);
+
+  /* ============================================================== */
+  /* # PAGE BACKGROUNDS — the two house gradients */
+  /* ============================================================== */
+  --bg-somnus:
+    linear-gradient(135deg, var(--dark-950) 0%, var(--dark-900) 100%);
+
+  --bg-rem-core:
+    radial-gradient(ellipse at 20% 30%, rgba(6, 182, 212, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 70%, rgba(139, 92, 246, 0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(249, 115, 22, 0.08) 0%, transparent 40%),
+    linear-gradient(135deg, #060a10 0%, #0c1218 25%, #12181a 75%, #000000 100%);
+
+  /* ============================================================== */
+  /* # TYPE — families                                              */
+  /* ============================================================== */
+  --font-interface: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display:   'Orbitron', 'Space Grotesk', var(--font-interface);
+  --font-accent:    'Space Grotesk', var(--font-interface);
+  --font-mono:      'JetBrains Mono', 'Roboto Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  /* Type scale */
+  --text-2xs: 0.6875rem; /*  11px — micro labels, hex grid */
+  --text-xs:  0.75rem;   /*  12px — meta, captions */
+  --text-sm:  0.8125rem; /*  13px — secondary UI text */
+  --text-base:0.9375rem; /*  15px — body */
+  --text-md:  1rem;      /*  16px — body emphasized */
+  --text-lg:  1.125rem;  /*  18px — section title */
+  --text-xl:  1.375rem;  /*  22px — panel title */
+  --text-2xl: 1.75rem;   /*  28px — h2 */
+  --text-3xl: 2.25rem;   /*  36px — h1 */
+  --text-4xl: 3rem;      /*  48px — display */
+  --text-5xl: 4rem;      /*  64px — hero */
+
+  /* Letter spacing — REM-Core leans on uppercase tracking */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:  0.04em;
+  --tracking-wider: 0.08em;  /* command labels */
+  --tracking-widest: 0.16em; /* OPERATION MOONSHINE */
+
+  /* Line heights */
+  --leading-tight:  1.15;
+  --leading-snug:   1.3;
+  --leading-normal: 1.5;
+  --leading-loose:  1.7;
+
+  /* ============================================================== */
+  /* # SPACING — 4px / 8px rhythm                                   */
+  /* ============================================================== */
+  --space-2xs: 0.125rem;  /* 2  */
+  --space-xs:  0.25rem;   /* 4  */
+  --space-sm:  0.5rem;    /* 8  */
+  --space-md:  1rem;      /* 16 */
+  --space-lg:  1.5rem;    /* 24 */
+  --space-xl:  2rem;      /* 32 */
+  --space-2xl: 3rem;      /* 48 */
+  --space-3xl: 4rem;      /* 64 */
+  --space-4xl: 6rem;      /* 96 */
+
+  /* ============================================================== */
+  /* # RADII                                                        */
+  /* ============================================================== */
+  --radius-xs:   4px;   /* badges, ticks */
+  --radius-sm:   8px;   /* buttons, inputs */
+  --radius-md:   12px;  /* cards */
+  --radius-lg:   16px;  /* panels */
+  --radius-xl:   20px;  /* hero cards */
+  --radius-2xl:  24px;  /* command surfaces */
+  --radius-pill: 9999px;
+
+  /* ============================================================== */
+  /* # MOTION — easing                                              */
+  /* ============================================================== */
+  --ease-smooth:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-bounce:    cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-neural:    cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-orbital:   cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --duration-fast:   150ms;
+  --duration-base:   300ms;
+  --duration-slow:   500ms;
+
+  /* ============================================================== */
+  /* # SEMANTIC ROLES                                                */
+  /* ============================================================== */
+  --bg:            var(--dark-900);
+  --bg-elevated:   var(--dark-800);
+  --bg-input:      var(--dark-750);
+  --fg:            var(--light-100);
+  --fg-muted:      var(--light-300);
+  --fg-faint:      var(--light-400);
+  --border:        var(--glass-border);
+  --border-strong: var(--glass-border-strong);
+  --link:          var(--accent-cyan);
+  --link-hover:    var(--accent-blue);
+}
+
+/* =============================================================================
+ * SEMANTIC TYPOGRAPHY — drop these classes / element styles into any page
+ * ========================================================================== */
+
+html, body {
+  font-family: var(--font-interface);
+  color: var(--fg);
+  background: var(--bg-somnus);
+  font-feature-settings: "cv11", "ss01";
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body modifier for the command-grade page treatment */
+body.theme-rem-core {
+  background: var(--bg-rem-core);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--light-100);
+}
+
+h2, .h2 {
+  font-family: var(--font-accent);
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-wide);
+  color: var(--light-100);
+}
+
+h3, .h3 {
+  font-family: var(--font-interface);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--light-100);
+}
+
+h4, .h4 {
+  font-family: var(--font-interface);
+  font-weight: 600;
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--light-200);
+}
+
+/* Section eyebrow — uppercase tracked label sitting above a heading */
+.eyebrow,
+.section-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--light-400);
+}
+
+/* Body */
+p, .body {
+  font-family: var(--font-interface);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--light-200);
+}
+
+.body-sm { font-size: var(--text-sm); color: var(--light-300); }
+.muted   { color: var(--light-400); }
+.faint   { color: var(--light-500); }
+
+/* Telemetry / metric values — JetBrains mono, tabular */
+.metric,
+.telemetry,
+code, pre, kbd {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-value {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  color: var(--accent-cyan);
+}
+
+.metric-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--light-400);
+}
+
+/* Display headlines used in marketing/title slides */
+.display {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+/* Branded gradient text — the Somnus signature greeting style */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Code blocks */
+code {
+  font-size: 0.92em;
+  background: var(--dark-700);
+  color: var(--accent-cyan);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--glass-border);
+}
+
+/* Status dots — used everywhere */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-green);
+}
+.status-dot.online    { background: var(--accent-green); }
+.status-dot.warning   { background: var(--accent-yellow); }
+.status-dot.critical  { background: var(--accent-red); }
+.status-dot.corporate { background: var(--accent-orange); }
+.status-dot.neutral   { background: var(--accent-cyan); }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.45; }
+}
+.status-dot.pulse { animation: pulse-dot 2s var(--ease-smooth) infinite; }
+
+/* Scrollbars — subtle dark with cyan accent on hover */
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--dark-500);
+  border-radius: var(--radius-pill);
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--accent-cyan); }

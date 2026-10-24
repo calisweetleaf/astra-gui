@@ -1,0 +1,247 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="command">
+<style>
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; flex:1; min-height:0; }
+
+  .ec { position:relative; padding:0; border-radius:10px;
+        background:
+          linear-gradient(180deg, rgba(220,38,38,.06) 0%, rgba(8,12,18,.96) 28%, rgba(8,12,18,.98) 100%);
+        border:1px solid rgba(220,38,38,.35);
+        box-shadow:
+          0 0 0 1px rgba(0,0,0,.6) inset,
+          0 24px 80px rgba(0,0,0,.8),
+          0 0 64px -8px rgba(220,38,38,.25);
+        overflow:hidden;
+        font-family:var(--font-mono);
+      }
+  .ec.orange { border-color:rgba(249,115,22,.35);
+               background:linear-gradient(180deg, rgba(249,115,22,.06) 0%, rgba(8,12,18,.96) 28%, rgba(8,12,18,.98) 100%);
+               box-shadow:0 0 0 1px rgba(0,0,0,.6) inset, 0 24px 80px rgba(0,0,0,.8), 0 0 64px -8px rgba(249,115,22,.25); }
+
+  /* Hex grid background inside the card */
+  .ec::before {
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.10;
+    background-image:
+      linear-gradient(rgba(6,182,212,.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6,182,212,.4) 1px, transparent 1px);
+    background-size:14px 14px;
+    mask-image:radial-gradient(ellipse at 50% 0%, black 0%, transparent 70%);
+    -webkit-mask-image:radial-gradient(ellipse at 50% 0%, black 0%, transparent 70%);
+  }
+
+  /* Top classification rail */
+  .ec-class {
+    display:flex; align-items:center; gap:10px; padding:5px 10px;
+    background:rgba(220,38,38,.18); border-bottom:1px solid rgba(220,38,38,.4);
+    font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:#fca5a5;
+    position:relative; z-index:1;
+  }
+  .ec.orange .ec-class { background:rgba(249,115,22,.18); border-bottom-color:rgba(249,115,22,.4); color:#fdba74; }
+  .ec-class .blink { width:6px; height:6px; border-radius:50%; background:#ef4444;
+                     box-shadow:0 0 8px #ef4444; animation:blink 1.2s ease-in-out infinite; }
+  .ec.orange .ec-class .blink { background:#f97316; box-shadow:0 0 8px #f97316; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+  .ec-class .id { margin-left:auto; color:rgba(255,255,255,.5); letter-spacing:.18em; }
+
+  /* Body */
+  .ec-body { position:relative; z-index:1; padding:12px 14px 10px; }
+
+  .ec-head { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .ec-name-wrap { min-width:0; }
+  .ec-name { font-family:var(--font-interface); font-weight:700; font-size:15px; color:#fff; letter-spacing:.01em;
+             display:flex; align-items:center; gap:8px; }
+  .ec-name .glyph { width:10px; height:10px; border:1px solid #ef4444; transform:rotate(45deg); display:inline-block; }
+  .ec.orange .ec-name .glyph { border-color:#f97316; }
+  .ec-meta { display:flex; gap:8px; margin-top:4px; font-size:9px; color:rgba(255,255,255,.5);
+             text-transform:uppercase; letter-spacing:.14em; }
+  .ec-meta .sep { color:rgba(255,255,255,.25); }
+
+  /* Score gauge */
+  .gauge { position:relative; width:64px; height:64px; flex-shrink:0; }
+  .gauge svg { transform:rotate(-90deg); }
+  .gauge-track { stroke:rgba(255,255,255,.08); }
+  .gauge-fill  { stroke:#ef4444; stroke-linecap:round;
+                 filter:drop-shadow(0 0 6px rgba(239,68,68,.6)); }
+  .ec.orange .gauge-fill { stroke:#f97316; filter:drop-shadow(0 0 6px rgba(249,115,22,.6)); }
+  .gauge-num { position:absolute; inset:0; display:flex; flex-direction:column;
+               align-items:center; justify-content:center; }
+  .gauge-num .v { font-size:14px; font-weight:700; color:#fff; line-height:1; }
+  .gauge-num .l { font-size:7px; letter-spacing:.18em; color:rgba(255,255,255,.45);
+                  text-transform:uppercase; margin-top:2px; }
+
+  /* Metric strip */
+  .ec-strip { display:grid; grid-template-columns:repeat(4, 1fr); gap:0;
+              margin-top:12px; border-top:1px dashed rgba(255,255,255,.12);
+              border-bottom:1px dashed rgba(255,255,255,.12); }
+  .ec-cell { padding:8px 6px; border-right:1px dashed rgba(255,255,255,.08); position:relative; }
+  .ec-cell:last-child { border-right:0; }
+  .ec-cell .k { font-size:8px; letter-spacing:.18em; color:rgba(255,255,255,.45);
+                text-transform:uppercase; }
+  .ec-cell .v { font-size:15px; font-weight:700; color:#fca5a5; margin-top:3px;
+                font-variant-numeric:tabular-nums; line-height:1.1; }
+  .ec.orange .ec-cell .v { color:#fdba74; }
+  .ec-cell .delta { font-size:9px; color:#6ee7b7; margin-top:2px; letter-spacing:.06em; }
+  .ec-cell .delta.dn { color:#fca5a5; }
+
+  /* Sparkline + flags */
+  .ec-foot { display:flex; align-items:center; gap:10px; margin-top:9px; }
+  .spark { flex:1; height:22px; }
+  .spark path.line { fill:none; stroke:#ef4444; stroke-width:1.5;
+                     filter:drop-shadow(0 0 4px rgba(239,68,68,.55)); }
+  .ec.orange .spark path.line { stroke:#f97316; filter:drop-shadow(0 0 4px rgba(249,115,22,.55)); }
+  .spark path.area { fill:url(#g-red); stroke:none; opacity:.35; }
+  .ec.orange .spark path.area { fill:url(#g-orange); }
+  .ec-foot .tags { display:flex; gap:5px; }
+  .tag { font-size:8px; letter-spacing:.16em; text-transform:uppercase;
+         padding:2px 6px; border-radius:3px;
+         background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);
+         color:rgba(255,255,255,.65); }
+
+  .ec-tick { position:absolute; top:0; bottom:0; width:1px; background:rgba(6,182,212,.35); }
+  .ec-tick.l { left:24%; } .ec-tick.r { left:76%; }
+
+  /* Corner brackets */
+  .br { position:absolute; width:10px; height:10px; z-index:2; }
+  .br.tl { top:0; left:0;   border-top:1px solid #ef4444; border-left:1px solid #ef4444; }
+  .br.tr { top:0; right:0;  border-top:1px solid #ef4444; border-right:1px solid #ef4444; }
+  .br.bl { bottom:0; left:0; border-bottom:1px solid #ef4444; border-left:1px solid #ef4444; }
+  .br.br2{ bottom:0; right:0;border-bottom:1px solid #ef4444; border-right:1px solid #ef4444; }
+  .ec.orange .br { border-color:#f97316; }
+</style>
+
+<svg width="0" height="0" style="position:absolute;">
+  <defs>
+    <linearGradient id="g-red" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g-orange" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f97316" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<div class="card">
+  <div class="kicker">Entity dossier · classified · live telemetry</div>
+  <div class="grid">
+
+    <!-- PALANTIR -->
+    <div class="ec">
+      <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br2"></span>
+      <span class="ec-tick l"></span><span class="ec-tick r"></span>
+
+      <div class="ec-class">
+        <span class="blink"></span>
+        <span>TS//SCI · NOFORN</span>
+        <span style="opacity:.55;">// CORP-INFL · TIER-1</span>
+        <span class="id">DOSSIER &nbsp;PLT-09F2-A41C</span>
+      </div>
+
+      <div class="ec-body">
+        <div class="ec-head">
+          <div class="ec-name-wrap">
+            <div class="ec-name"><span class="glyph"></span>PALANTIR TECHNOLOGIES</div>
+            <div class="ec-meta">
+              <span>NYSE: PLTR</span><span class="sep">·</span>
+              <span>DENVER, CO</span><span class="sep">·</span>
+              <span>EST 2003</span>
+            </div>
+            <div style="margin-top:6px; font-size:9px; letter-spacing:.18em; color:#fca5a5; text-transform:uppercase;">
+              ◆ INSTITUTIONAL CAPTURE — INTERVENTION RECOMMENDED
+            </div>
+          </div>
+          <div class="gauge">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="26" stroke-width="4" fill="none" class="gauge-track"/>
+              <circle cx="32" cy="32" r="26" stroke-width="4" fill="none"
+                      class="gauge-fill"
+                      stroke-dasharray="163.36" stroke-dashoffset="13.07"/>
+            </svg>
+            <div class="gauge-num"><div class="v">0.92</div><div class="l">THREAT</div></div>
+          </div>
+        </div>
+
+        <div class="ec-strip">
+          <div class="ec-cell"><div class="k">Mkt Cap</div><div class="v">$20.0B</div><div class="delta">▲ 4.1%</div></div>
+          <div class="ec-cell"><div class="k">DoD ≥</div><div class="v">$800M</div><div class="delta">▲ 12.0%</div></div>
+          <div class="ec-cell"><div class="k">Active</div><div class="v">5</div><div class="delta">+1 Q</div></div>
+          <div class="ec-cell"><div class="k">Δ 90d</div><div class="v">+0.07</div><div class="delta dn">RISING</div></div>
+        </div>
+
+        <div class="ec-foot">
+          <svg class="spark" viewBox="0 0 200 22" preserveAspectRatio="none">
+            <path class="area" d="M0,18 L8,16 L18,17 L28,14 L40,15 L52,12 L62,13 L72,10 L84,11 L96,8 L108,9 L120,7 L132,5 L144,6 L156,4 L168,5 L180,3 L192,4 L200,2 L200,22 L0,22 Z"/>
+            <path class="line" d="M0,18 L8,16 L18,17 L28,14 L40,15 L52,12 L62,13 L72,10 L84,11 L96,8 L108,9 L120,7 L132,5 L144,6 L156,4 L168,5 L180,3 L192,4 L200,2"/>
+          </svg>
+          <div class="tags">
+            <span class="tag">FOUNDRY</span>
+            <span class="tag">GOTHAM</span>
+            <span class="tag">JCC2</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANDURIL -->
+    <div class="ec orange">
+      <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br br2"></span>
+      <span class="ec-tick l"></span><span class="ec-tick r"></span>
+
+      <div class="ec-class">
+        <span class="blink"></span>
+        <span>SECRET · NOFORN</span>
+        <span style="opacity:.55;">// CORP-INFL · TIER-1</span>
+        <span class="id">DOSSIER &nbsp;AND-04E8-B17D</span>
+      </div>
+
+      <div class="ec-body">
+        <div class="ec-head">
+          <div class="ec-name-wrap">
+            <div class="ec-name"><span class="glyph"></span>ANDURIL INDUSTRIES</div>
+            <div class="ec-meta">
+              <span>PRIVATE</span><span class="sep">·</span>
+              <span>COSTA MESA, CA</span><span class="sep">·</span>
+              <span>EST 2017</span>
+            </div>
+            <div style="margin-top:6px; font-size:9px; letter-spacing:.18em; color:#fdba74; text-transform:uppercase;">
+              ◆ HIGH INFLUENCE — VELOCITY ACCELERATING
+            </div>
+          </div>
+          <div class="gauge">
+            <svg width="64" height="64" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="26" stroke-width="4" fill="none" class="gauge-track"/>
+              <circle cx="32" cy="32" r="26" stroke-width="4" fill="none"
+                      class="gauge-fill"
+                      stroke-dasharray="163.36" stroke-dashoffset="24.50"/>
+            </svg>
+            <div class="gauge-num"><div class="v">0.85</div><div class="l">THREAT</div></div>
+          </div>
+        </div>
+
+        <div class="ec-strip">
+          <div class="ec-cell"><div class="k">Valuation</div><div class="v">$28.0B</div><div class="delta">▲ 64%</div></div>
+          <div class="ec-cell"><div class="k">YoY</div><div class="v">300%</div><div class="delta">▲ 2.4×</div></div>
+          <div class="ec-cell"><div class="k">Gov K</div><div class="v">3</div><div class="delta">+2 Q</div></div>
+          <div class="ec-cell"><div class="k">Δ 90d</div><div class="v">+0.11</div><div class="delta dn">RISING</div></div>
+        </div>
+
+        <div class="ec-foot">
+          <svg class="spark" viewBox="0 0 200 22" preserveAspectRatio="none">
+            <path class="area" d="M0,20 L10,19 L22,20 L34,17 L46,18 L58,15 L70,12 L82,14 L94,10 L106,11 L118,7 L130,8 L142,5 L154,6 L166,3 L178,4 L190,2 L200,1 L200,22 L0,22 Z"/>
+            <path class="line" d="M0,20 L10,19 L22,20 L34,17 L46,18 L58,15 L70,12 L82,14 L94,10 L106,11 L118,7 L130,8 L142,5 L154,6 L166,3 L178,4 L190,2 L200,1"/>
+          </svg>
+          <div class="tags">
+            <span class="tag">LATTICE</span>
+            <span class="tag">ALTIUS</span>
+            <span class="tag">GHOST</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,18 @@
+{
+  "QuickLaunchGrid": ".quick-launch-grid",
+  "FloatingNav": ".floating-nav",
+  "PopoverAction": ".popover-action",
+  "HeaderBadge": ".header-badge",
+  "ChatMessages": ".chat-messages",
+  "ChatApp": ".chat-app",
+  "NavBubble": ".nav-bubble",
+  "ChatHeader": ".chat-header",
+  "QuickLaunchCard": ".quick-launch-card",
+  "InputField": ".input-field",
+  "QuickAction": ".quick-action",
+  "ChatInputContainer": ".chat-input-container",
+  "ModelSelector": ".model-selector",
+  "ActionButton": ".action-btn",
+  "WelcomeScreen": ".welcome-screen",
+  "BubblePopover": ".bubble-popover"
+}

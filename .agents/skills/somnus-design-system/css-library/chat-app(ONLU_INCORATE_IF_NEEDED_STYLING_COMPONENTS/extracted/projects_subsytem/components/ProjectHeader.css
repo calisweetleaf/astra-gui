@@ -1,0 +1,21 @@
+.project-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+
+
+        .project-info {
+            flex: 1;
+        }
+
+
+
+        .project-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--light-100);
+            margin-bottom: 4px;
+        }

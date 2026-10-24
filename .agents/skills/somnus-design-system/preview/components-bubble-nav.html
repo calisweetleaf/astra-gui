@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<style>
+  .bubble { width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+            color:#fff; font-size:20px; cursor:pointer; transition:all .3s var(--ease-smooth);
+            border:1px solid rgba(148,163,184,.12); position:relative; }
+  .bubble:hover { transform:scale(1.08); }
+  .b-art    { background:linear-gradient(135deg,#3b82f6,#8b5cf6); box-shadow:0 8px 24px rgba(59,130,246,.35); }
+  .b-proj   { background:linear-gradient(135deg,#10b981,#06b6d4); box-shadow:0 8px 24px rgba(16,185,129,.35); }
+  .b-train  { background:linear-gradient(135deg,#f59e0b,#ef4444); box-shadow:0 8px 24px rgba(245,158,11,.35); }
+  .b-git    { background:linear-gradient(135deg,#8b5cf6,#3b82f6); box-shadow:0 8px 24px rgba(139,92,246,.35); }
+  .b-res    { background:linear-gradient(135deg,#06b6d4,#10b981); box-shadow:0 8px 24px rgba(6,182,212,.35); }
+  .b-name { font-family:var(--font-mono); font-size:10px; text-transform:uppercase; letter-spacing:.16em; color:var(--light-400); text-align:center; margin-top:6px; }
+</style>
+<div class="card center">
+  <div class="kicker" style="align-self:flex-start;">Floating bubble nav · Somnus signature pattern</div>
+  <div class="row" style="gap:24px; justify-content:center; flex:1; align-items:center;">
+    <div><div class="bubble b-art"><i class="fas fa-cube"></i></div><div class="b-name">Artifacts</div></div>
+    <div><div class="bubble b-proj"><i class="fas fa-folder"></i></div><div class="b-name">Projects</div></div>
+    <div><div class="bubble b-train"><i class="fas fa-brain"></i></div><div class="b-name">Training</div></div>
+    <div><div class="bubble b-git"><i class="fab fa-git-alt"></i></div><div class="b-name">Git</div></div>
+    <div><div class="bubble b-res"><i class="fas fa-flask"></i></div><div class="b-name">Research</div></div>
+  </div>
+</div>
+</body></html>

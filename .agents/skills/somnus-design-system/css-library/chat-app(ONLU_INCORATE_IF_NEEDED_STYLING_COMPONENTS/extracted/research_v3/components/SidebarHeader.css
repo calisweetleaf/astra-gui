@@ -1,0 +1,12 @@
+.sidebar-header {
+            margin-bottom: 32px;
+        }
+
+
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 4px;
+        }

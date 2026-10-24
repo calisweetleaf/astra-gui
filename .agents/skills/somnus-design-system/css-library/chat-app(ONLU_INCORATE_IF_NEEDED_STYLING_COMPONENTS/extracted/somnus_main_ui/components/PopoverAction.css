@@ -1,0 +1,26 @@
+.popover-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+
+        .popover-action {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 13px;
+            color: var(--light-300);
+        }
+
+
+
+        .popover-action:hover {
+            background: var(--dark-600);
+            color: var(--light-100);
+        }

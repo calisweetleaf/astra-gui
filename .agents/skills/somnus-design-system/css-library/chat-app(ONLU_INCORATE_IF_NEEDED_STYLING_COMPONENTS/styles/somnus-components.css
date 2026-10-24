@@ -1,0 +1,90 @@
+/* Somnus Components (CSS-only) */
+/* Consume variables from styles/somnus-tokens.css */
+
+/* Layout primitives */
+.container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.stack { display: flex; flex-direction: column; gap: 12px; }
+.row { display: flex; gap: 12px; align-items: center; }
+
+/* Card / Panel */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  color: var(--text-primary);
+}
+.card.padded { padding: 16px; }
+.panel { border-radius: 12px; }
+.panel.glass { background: var(--glass-bg); border: 1px solid var(--glass-border); box-shadow: var(--glass-shadow); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+
+/* Typography */
+.heading-1 { font-size: 22px; font-weight: 700; color: var(--text-primary); }
+.heading-2 { font-size: 18px; font-weight: 600; color: var(--text-primary); }
+.subtle { color: var(--text-secondary); }
+.muted { color: var(--text-muted); }
+
+/* Buttons */
+.btn { 
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 36px; padding: 0 14px; border-radius: 10px;
+  font-weight: 600; font-size: 14px; cursor: pointer; user-select: none;
+  border: 1px solid transparent; transition: all .2s ease; color: var(--text-primary);
+  background: var(--surface-2);
+}
+.btn:hover { background: var(--surface-3); }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--focus-ring); }
+.btn:disabled { opacity: .6; cursor: not-allowed; }
+
+.btn.primary { background: var(--primary); color: white; border-color: var(--primary); }
+.btn.primary:hover { filter: brightness(1.08); }
+
+.btn.ghost { background: transparent; border-color: var(--border-subtle); color: var(--text-secondary); }
+.btn.ghost:hover { background: var(--surface-2); color: var(--text-primary); }
+
+.btn.outline { background: transparent; border-color: var(--primary); color: var(--primary); }
+.btn.outline:hover { background: color-mix(in oklab, var(--primary) 12%, transparent); }
+
+.btn.success { background: var(--success); color: white; border-color: var(--success); }
+.btn.danger  { background: var(--danger);  color: white; border-color: var(--danger); }
+.btn.info    { background: var(--info);    color: white; border-color: var(--info); }
+
+/* Inputs */
+.input {
+  height: 36px; padding: 0 12px; border-radius: 10px; width: 100%;
+  border: 1px solid var(--border-subtle); background: var(--surface-1); color: var(--text-primary);
+}
+.input::placeholder { color: var(--text-muted); }
+.input:focus { outline: none; box-shadow: 0 0 0 3px var(--focus-ring); border-color: var(--primary); }
+
+/* Badges */
+.badge { display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; font-weight: 600; font-size: 12px; }
+.badge.neutral { background: var(--surface-2); color: var(--text-secondary); border: 1px solid var(--border-subtle); }
+.badge.primary { background: color-mix(in oklab, var(--primary) 15%, transparent); color: var(--primary); border: 1px solid color-mix(in oklab, var(--primary) 40%, transparent); }
+.badge.success { background: color-mix(in oklab, var(--success) 15%, transparent); color: var(--success); border: 1px solid color-mix(in oklab, var(--success) 40%, transparent); }
+.badge.danger  { background: color-mix(in oklab, var(--danger) 15%, transparent);  color: var(--danger);  border: 1px solid color-mix(in oklab, var(--danger) 40%, transparent); }
+.badge.info    { background: color-mix(in oklab, var(--info) 15%, transparent);    color: var(--info);    border: 1px solid color-mix(in oklab, var(--info) 40%, transparent); }
+
+/* Tabs (basic) */
+.tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--border-subtle); }
+.tab { padding: 8px 12px; border-radius: 8px 8px 0 0; color: var(--text-secondary); cursor: pointer; }
+.tab.active { color: var(--text-primary); background: var(--surface-2); }
+
+/* Table (minimal) */
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 10px 12px; border-bottom: 1px solid var(--border-subtle); }
+.table thead th { color: var(--text-secondary); font-weight: 600; }
+
+/* Surfaces */
+.surface-0 { background: var(--surface-0); }
+.surface-1 { background: var(--surface-1); }
+.surface-2 { background: var(--surface-2); }
+.surface-3 { background: var(--surface-3); }
+
+/* Helpers */
+.rounded { border-radius: 12px; }
+.bordered { border: 1px solid var(--border-subtle); }
+.p-2 { padding: 8px; }
+.p-3 { padding: 12px; }
+.p-4 { padding: 16px; }
+.gap-2 > * + * { margin-left: 8px; }
+

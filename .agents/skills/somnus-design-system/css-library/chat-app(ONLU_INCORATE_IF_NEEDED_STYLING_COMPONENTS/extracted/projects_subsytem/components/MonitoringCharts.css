@@ -1,0 +1,25 @@
+.monitoring-charts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+
+
+        .chart-container {
+            background: var(--dark-700);
+            border-radius: 12px;
+            padding: 16px;
+            height: 200px;
+        }
+
+
+
+        .chart-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--light-300);
+            margin-bottom: 12px;
+            text-align: center;
+        }

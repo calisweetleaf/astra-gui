@@ -1,0 +1,19 @@
+/* Main Header */
+        .projects-header {
+            grid-area: header;
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-strength);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+
+        .header-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--light-100);
+        }

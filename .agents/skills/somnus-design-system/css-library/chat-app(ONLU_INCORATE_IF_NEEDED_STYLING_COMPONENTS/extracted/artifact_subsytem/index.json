@@ -1,0 +1,104 @@
+{
+  "name": "artifact_subsytem",
+  "styles": "extracted\\artifact_subsytem\\styles\\artifact_subsytem.css",
+  "scripts": "extracted\\artifact_subsytem\\scripts\\artifact_subsytem.js",
+  "tokens": null,
+  "components_manifest": "extracted\\artifact_subsytem\\components.manifest.json",
+  "components": {
+    "FileExplorer": {
+      "selector": ".file-explorer",
+      "html": "extracted/artifact_subsytem/components/FileExplorer.html",
+      "css": "extracted/artifact_subsytem/components/FileExplorer.css"
+    },
+    "MetricsDashboard": {
+      "selector": ".metrics-dashboard",
+      "html": "extracted/artifact_subsytem/components/MetricsDashboard.html",
+      "css": "extracted/artifact_subsytem/components/MetricsDashboard.css"
+    },
+    "ArtifactRightPanel": {
+      "selector": ".artifact-right-panel",
+      "html": "extracted/artifact_subsytem/components/ArtifactRightPanel.html",
+      "css": "extracted/artifact_subsytem/components/ArtifactRightPanel.css"
+    },
+    "TrainingPanel": {
+      "selector": ".training-panel",
+      "html": "extracted/artifact_subsytem/components/TrainingPanel.html",
+      "css": "extracted/artifact_subsytem/components/TrainingPanel.css"
+    },
+    "EnvSelector": {
+      "selector": ".env-selector",
+      "html": "extracted/artifact_subsytem/components/EnvSelector.html",
+      "css": "extracted/artifact_subsytem/components/EnvSelector.css"
+    },
+    "ArtifactHeader": {
+      "selector": ".artifact-header",
+      "html": "extracted/artifact_subsytem/components/ArtifactHeader.html",
+      "css": "extracted/artifact_subsytem/components/ArtifactHeader.css"
+    },
+    "ResearchPanel": {
+      "selector": ".research-panel",
+      "html": "extracted/artifact_subsytem/components/ResearchPanel.html",
+      "css": "extracted/artifact_subsytem/components/ResearchPanel.css"
+    },
+    "MonacoContainer": {
+      "selector": ".monaco-container",
+      "html": "extracted/artifact_subsytem/components/MonacoContainer.html",
+      "css": "extracted/artifact_subsytem/components/MonacoContainer.css"
+    },
+    "ExecutionTerminal": {
+      "selector": ".execution-terminal",
+      "html": "extracted/artifact_subsytem/components/ExecutionTerminal.html",
+      "css": "extracted/artifact_subsytem/components/ExecutionTerminal.css"
+    },
+    "ArtifactMain": {
+      "selector": ".artifact-main",
+      "html": "extracted/artifact_subsytem/components/ArtifactMain.html",
+      "css": "extracted/artifact_subsytem/components/ArtifactMain.css"
+    },
+    "TerminalControls": {
+      "selector": ".terminal-controls",
+      "html": "extracted/artifact_subsytem/components/TerminalControls.html",
+      "css": "extracted/artifact_subsytem/components/TerminalControls.css"
+    },
+    "EditorTabs": {
+      "selector": ".editor-tabs",
+      "html": "extracted/artifact_subsytem/components/EditorTabs.html",
+      "css": "extracted/artifact_subsytem/components/EditorTabs.css"
+    },
+    "ArtifactContainer": {
+      "selector": ".artifact-container",
+      "html": "extracted/artifact_subsytem/components/ArtifactContainer.html",
+      "css": "extracted/artifact_subsytem/components/ArtifactContainer.css"
+    },
+    "ExecutionStatus": {
+      "selector": ".execution-status",
+      "html": "extracted/artifact_subsytem/components/ExecutionStatus.html",
+      "css": "extracted/artifact_subsytem/components/ExecutionStatus.css"
+    },
+    "PanelTabs": {
+      "selector": ".panel-tabs",
+      "html": "extracted/artifact_subsytem/components/PanelTabs.html",
+      "css": "extracted/artifact_subsytem/components/PanelTabs.css"
+    },
+    "GitPanel": {
+      "selector": ".git-panel",
+      "html": "extracted/artifact_subsytem/components/GitPanel.html",
+      "css": "extracted/artifact_subsytem/components/GitPanel.css"
+    },
+    "ArtifactSidebar": {
+      "selector": ".artifact-sidebar",
+      "html": "extracted/artifact_subsytem/components/ArtifactSidebar.html",
+      "css": "extracted/artifact_subsytem/components/ArtifactSidebar.css"
+    },
+    "PanelContent": {
+      "selector": ".panel-content",
+      "html": "extracted/artifact_subsytem/components/PanelContent.html",
+      "css": "extracted/artifact_subsytem/components/PanelContent.css"
+    },
+    "MetricsGrid": {
+      "selector": ".metrics-grid",
+      "html": "extracted/artifact_subsytem/components/MetricsGrid.html",
+      "css": "extracted/artifact_subsytem/components/MetricsGrid.css"
+    }
+  }
+}

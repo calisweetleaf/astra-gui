@@ -1,0 +1,390 @@
+{
+  "research-container": {
+    "html": "<div class=\"research-container\">\n        <!-- Enhanced Research Sidebar -->\n        <div class=\"research-sidebar\">\n            <div class=\"sidebar-header\">\n                <div class=\"sidebar-title\">Research Engine</div>",
+    "css": "\n\n        /* Main Layout Architecture */\n        .research-container {\n            display: grid;\n            grid-template-areas: \n                \"sidebar header header\"\n                \"sidebar workspace knowledge-panel\"\n                \"sidebar workspace export-panel\";\n            grid-template-columns: 320px 1fr 400px;\n            grid-template-rows: 80px 1fr 200px;\n            height: 100vh;\n            gap: 2px;\n            background: var(--dark-900);\n        }\n\n\n            .research-container {\n                grid-template-columns: 280px 1fr 320px;\n            }\n\n\n            .research-container {\n                grid-template-areas: \n                    \"header\"\n                    \"workspace\"\n                    \"sidebar\";\n                grid-template-columns: 1fr;\n                grid-template-rows: auto 1fr auto;\n            }"
+  },
+  "research-sidebar": {
+    "html": "<div class=\"research-sidebar\">\n            <div class=\"sidebar-header\">\n                <div class=\"sidebar-title\">Research Engine</div>",
+    "css": "\n\n        /* Enhanced Sidebar */\n        .research-sidebar {\n            grid-area: sidebar;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-right: 1px solid var(--glass-border);\n            padding: 24px;\n            overflow-y: auto;\n            scrollbar-width: thin;\n            scrollbar-color: var(--accent-cyan) transparent;\n        }\n\n\n            \n            .research-sidebar,\n            .knowledge-panel,\n            .export-panel {\n                position: relative;\n                height: auto;\n            }"
+  },
+  "sidebar-header": {
+    "html": "<div class=\"sidebar-header\">\n                <div class=\"sidebar-title\">Research Engine</div>",
+    "css": "\n\n        .sidebar-header {\n            margin-bottom: 32px;\n        }"
+  },
+  "sidebar-title": {
+    "html": "<div class=\"sidebar-title\">Research Engine</div>",
+    "css": "\n\n        .sidebar-title {\n            font-size: 18px;\n            font-weight: 700;\n            color: var(--accent-cyan);\n            margin-bottom: 4px;\n        }"
+  },
+  "sidebar-subtitle": {
+    "html": "<div class=\"sidebar-subtitle\">Deep Intelligence System</div>",
+    "css": "\n\n        .sidebar-subtitle {\n            font-size: 12px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "sidebar-sections": {
+    "html": "<div class=\"sidebar-sections\">\n                <!-- Research Controls -->\n                <div class=\"sidebar-section\">\n                    <div class=\"section-header\">\n                        <i class=\"fas fa-cogs\"></i>\n                        Research Controls\n                    </div>",
+    "css": ""
+  },
+  "sidebar-section": {
+    "html": "<div class=\"sidebar-section\">\n                    <div class=\"section-header\">\n                        <i class=\"fas fa-cogs\"></i>\n                        Research Controls\n                    </div>",
+    "css": "\n\n        .sidebar-section {\n            margin-bottom: 32px;\n        }"
+  },
+  "section-header": {
+    "html": "<div class=\"section-header\">\n                        <i class=\"fas fa-cogs\"></i>\n                        Research Controls\n                    </div>",
+    "css": "\n\n        .section-header {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--light-300);\n            margin-bottom: 16px;\n            padding-bottom: 8px;\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "fas": {
+    "html": "<i class=\"fas fa-cogs\"></i>",
+    "css": ""
+  },
+  "fa-cogs": {
+    "html": "<i class=\"fas fa-cogs\"></i>",
+    "css": ""
+  },
+  "section-content": {
+    "html": "<div class=\"section-content\">\n                        <div class=\"query-input-group\">\n                            <div class=\"query-input-label\">Research Depth</div>",
+    "css": "\n\n        .section-content {\n            display: flex;\n            flex-direction: column;\n            gap: 12px;\n        }"
+  },
+  "query-input-group": {
+    "html": "<div class=\"query-input-group\">\n                            <div class=\"query-input-label\">Research Depth</div>",
+    "css": "\n\n        /* Advanced Control Elements */\n        .query-input-group {\n            display: flex;\n            flex-direction: column;\n            gap: 8px;\n        }"
+  },
+  "query-input-label": {
+    "html": "<div class=\"query-input-label\">Research Depth</div>",
+    "css": "\n\n        .query-input-label {\n            font-size: 11px;\n            font-weight: 500;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "input-field": {
+    "html": "<select class=\"input-field\" id=\"research-depth\">\n                                <option value=\"surface\">Surface (Fast)</option>\n                                <option value=\"moderate\" selected>Moderate (Balanced)</option>\n                                <option value=\"deep\">Deep (Comprehensive)</option>\n                                <option value=\"expert\">Expert (Maximum)</option>\n                            </select>",
+    "css": "\n\n        .input-field {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 12px 16px;\n            color: var(--light-100);\n            font-size: 14px;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .input-field:focus {\n            outline: none;\n            border-color: var(--accent-cyan);\n            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);\n        }"
+  },
+  "btn": {
+    "html": "<button class=\"btn source-type active\" data-type=\"academic\">Academic</button>",
+    "css": "\n\n        .btn {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 8px 12px;\n            color: var(--light-300);\n            font-size: 12px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            gap: 6px;\n        }\n\n\n\n        .btn:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            color: var(--light-100);\n            transform: translateY(-1px);\n        }\n\n\n\n        .btn.active {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .btn-primary {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .btn-primary:hover {\n            background: #0891b2;\n            transform: translateY(-2px);\n            box-shadow: var(--shadow-elevated);\n        }\n\n\n\n        .btn-block {\n            width: 100%;\n            justify-content: center;\n        }"
+  },
+  "source-type": {
+    "html": "<button class=\"btn source-type active\" data-type=\"academic\">Academic</button>",
+    "css": ""
+  },
+  "active": {
+    "html": "<button class=\"btn source-type active\" data-type=\"academic\">Academic</button>",
+    "css": "\n\n        .btn.active {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .tab.active {\n            color: var(--accent-cyan);\n            border-bottom-color: var(--accent-cyan);\n        }\n\n\n\n        .tab-content.active {\n            display: block;\n        }\n\n\n\n        .graph-mode:hover,\n        .graph-mode.active {\n            background: var(--accent-cyan);\n            color: white;\n        }"
+  },
+  "fa-chart-line": {
+    "html": "<i class=\"fas fa-chart-line\"></i>",
+    "css": ""
+  },
+  "progress-item": {
+    "html": "<div class=\"progress-item\">\n                            <div class=\"progress-icon complete\"><i class=\"fas fa-check\"></i></div>",
+    "css": "\n\n        /* Progress Indicators */\n        .progress-item {\n            display: flex;\n            align-items: center;\n            gap: 12px;\n            padding: 12px 0;\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "progress-icon": {
+    "html": "<div class=\"progress-icon complete\"><i class=\"fas fa-check\"></i></div>",
+    "css": "\n\n        .progress-icon {\n            width: 16px;\n            height: 16px;\n            border-radius: 50%;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 10px;\n            color: white;\n        }\n\n\n\n        .progress-icon.complete {\n            background: var(--accent-green);\n        }\n\n\n\n        .progress-icon.pending {\n            background: var(--accent-amber);\n        }\n\n\n\n        .progress-icon.processing {\n            background: var(--accent-cyan);\n            animation: pulse 2s infinite;\n        }"
+  },
+  "complete": {
+    "html": "<div class=\"progress-icon complete\"><i class=\"fas fa-check\"></i></div>",
+    "css": "\n\n        .progress-icon.complete {\n            background: var(--accent-green);\n        }"
+  },
+  "fa-check": {
+    "html": "<i class=\"fas fa-check\"></i>",
+    "css": ""
+  },
+  "progress-text": {
+    "html": "<div class=\"progress-text\">\n                                <div class=\"progress-title\">Query Analysis</div>",
+    "css": "\n\n        .progress-text {\n            flex: 1;\n        }"
+  },
+  "progress-title": {
+    "html": "<div class=\"progress-title\">Query Analysis</div>",
+    "css": "\n\n        .progress-title {\n            font-size: 13px;\n            font-weight: 500;\n            color: var(--light-100);\n            margin-bottom: 2px;\n        }"
+  },
+  "progress-status": {
+    "html": "<div class=\"progress-status\">Completed</div>",
+    "css": "\n\n        .progress-status {\n            font-size: 11px;\n            color: var(--light-400);\n        }"
+  },
+  "processing": {
+    "html": "<div class=\"progress-icon processing\"><i class=\"fas fa-search\"></i></div>",
+    "css": "\n\n        .progress-icon.processing {\n            background: var(--accent-cyan);\n            animation: pulse 2s infinite;\n        }"
+  },
+  "fa-search": {
+    "html": "<i class=\"fas fa-search\"></i>",
+    "css": ""
+  },
+  "pending": {
+    "html": "<div class=\"progress-icon pending\"><i class=\"fas fa-brain\"></i></div>",
+    "css": "\n\n        .progress-icon.pending {\n            background: var(--accent-amber);\n        }"
+  },
+  "fa-brain": {
+    "html": "<i class=\"fas fa-brain\"></i>",
+    "css": ""
+  },
+  "fa-file-alt": {
+    "html": "<i class=\"fas fa-file-alt\"></i>",
+    "css": ""
+  },
+  "fa-award": {
+    "html": "<i class=\"fas fa-award\"></i>",
+    "css": ""
+  },
+  "metrics-grid": {
+    "html": "<div class=\"metrics-grid\">\n                            <div class=\"metric-card\">\n                                <div class=\"metric-value\" id=\"credibility-score\">8.7</div>",
+    "css": "\n\n        /* Metrics Dashboard */\n        .metrics-grid {\n            display: grid;\n            grid-template-columns: repeat(2, 1fr);\n            gap: 16px;\n            margin-bottom: 24px;\n        }"
+  },
+  "metric-card": {
+    "html": "<div class=\"metric-card\">\n                                <div class=\"metric-value\" id=\"credibility-score\">8.7</div>",
+    "css": "\n\n        .metric-card {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 20px;\n            text-align: center;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .metric-card:hover {\n            background: var(--dark-600);\n            transform: translateY(-2px);\n        }"
+  },
+  "metric-value": {
+    "html": "<div class=\"metric-value\" id=\"credibility-score\">8.7</div>",
+    "css": "\n\n        .metric-value {\n            font-size: 28px;\n            font-weight: 700;\n            color: var(--accent-cyan);\n            margin-bottom: 4px;\n            display: block;\n        }"
+  },
+  "metric-label": {
+    "html": "<div class=\"metric-label\">Credibility</div>",
+    "css": "\n\n        .metric-label {\n            font-size: 12px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "research-header": {
+    "html": "<div class=\"research-header\">\n            <div class=\"query-section\">\n                <div class=\"query-input-group\" style=\"flex: 1;\">\n                    <div class=\"query-input-label\">Research Query</div>",
+    "css": "\n\n        /* Research Header */\n        .research-header {\n            grid-area: header;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-bottom: 1px solid var(--glass-border);\n            padding: 20px 32px;\n            display: flex;\n            align-items: center;\n            gap: 24px;\n        }"
+  },
+  "query-section": {
+    "html": "<div class=\"query-section\">\n                <div class=\"query-input-group\" style=\"flex: 1;\">\n                    <div class=\"query-input-label\">Research Query</div>",
+    "css": "\n\n        .query-section {\n            flex: 1;\n            display: flex;\n            gap: 16px;\n            align-items: flex-end;\n        }"
+  },
+  "query-input": {
+    "html": "<div class=\"query-input-group\">\n                            <div class=\"query-input-label\">Research Depth</div>",
+    "css": "\n\n        /* Advanced Control Elements */\n        .query-input-group {\n            display: flex;\n            flex-direction: column;\n            gap: 8px;\n        }\n\n\n\n        .query-input-label {\n            font-size: 11px;\n            font-weight: 500;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n\n\n\n        .query-input {\n            flex: 1;\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 16px 20px;\n            color: var(--light-100);\n            font-size: 16px;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .query-input:focus {\n            outline: none;\n            border-color: var(--accent-cyan);\n            box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1);\n        }"
+  },
+  "query-actions": {
+    "html": "<div class=\"query-actions\">\n                    <button class=\"btn btn-primary\" id=\"start-research\">\n                        <i class=\"fas fa-search\"></i>\n                        Research\n                    </button>\n                    <button class=\"btn\" id=\"pause-research\">\n                        <i class=\"fas fa-pause\"></i>\n                        Pause\n                    </button>\n                    <button class=\"btn\" id=\"stop-research\">\n                        <i class=\"fas fa-stop\"></i>\n                        Stop\n                    </button>\n                </div>",
+    "css": "\n\n        .query-actions {\n            display: flex;\n            gap: 12px;\n        }"
+  },
+  "btn-primary": {
+    "html": "<button class=\"btn btn-primary\" id=\"start-research\">\n                        <i class=\"fas fa-search\"></i>\n                        Research\n                    </button>",
+    "css": "\n\n        .btn-primary {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .btn-primary:hover {\n            background: #0891b2;\n            transform: translateY(-2px);\n            box-shadow: var(--shadow-elevated);\n        }"
+  },
+  "fa-pause": {
+    "html": "<i class=\"fas fa-pause\"></i>",
+    "css": ""
+  },
+  "fa-stop": {
+    "html": "<i class=\"fas fa-stop\"></i>",
+    "css": ""
+  },
+  "research-workspace": {
+    "html": "<div class=\"research-workspace\">\n            <!-- Enhanced Tab System -->\n            <div class=\"research-tabs\">\n                <div class=\"tab active\" data-tab=\"sources\">\n                    <i class=\"fas fa-list\"></i>\n                    Sources\n                    <span class=\"tab-badge\" id=\"sources-badge\">12</span>\n                </div>",
+    "css": "\n\n        /* Research Workspace */\n        .research-workspace {\n            grid-area: workspace;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            display: flex;\n            flex-direction: column;\n            overflow: hidden;\n        }"
+  },
+  "research-tabs": {
+    "html": "<div class=\"research-tabs\">\n                <div class=\"tab active\" data-tab=\"sources\">\n                    <i class=\"fas fa-list\"></i>\n                    Sources\n                    <span class=\"tab-badge\" id=\"sources-badge\">12</span>\n                </div>",
+    "css": "\n\n        /* Advanced Tab System */\n        .research-tabs {\n            display: flex;\n            border-bottom: 1px solid var(--glass-border);\n            background: rgba(16, 23, 42, 0.6);\n        }"
+  },
+  "tab": {
+    "html": "<div class=\"tab active\" data-tab=\"sources\">\n                    <i class=\"fas fa-list\"></i>\n                    Sources\n                    <span class=\"tab-badge\" id=\"sources-badge\">12</span>\n                </div>",
+    "css": "\n\n        .tab {\n            padding: 16px 24px;\n            font-size: 14px;\n            font-weight: 500;\n            color: var(--light-400);\n            cursor: pointer;\n            border-bottom: 2px solid transparent;\n            transition: var(--transition-smooth);\n            position: relative;\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }\n\n\n\n        .tab:hover {\n            color: var(--light-100);\n            background: var(--glass-hover);\n        }\n\n\n\n        .tab.active {\n            color: var(--accent-cyan);\n            border-bottom-color: var(--accent-cyan);\n        }\n\n\n\n        .tab-badge {\n            background: var(--accent-cyan);\n            color: var(--dark-900);\n            font-size: 10px;\n            font-weight: 600;\n            padding: 2px 6px;\n            border-radius: 8px;\n            min-width: 16px;\n            text-align: center;\n        }\n\n\n\n        /* Content Panels */\n        .tab-content {\n            flex: 1;\n            padding: 24px;\n            overflow-y: auto;\n            display: none;\n        }\n\n\n\n        .tab-content.active {\n            display: block;\n        }"
+  },
+  "fa-list": {
+    "html": "<i class=\"fas fa-list\"></i>",
+    "css": ""
+  },
+  "tab-badge": {
+    "html": "<span class=\"tab-badge\" id=\"sources-badge\">12</span>",
+    "css": "\n\n        .tab-badge {\n            background: var(--accent-cyan);\n            color: var(--dark-900);\n            font-size: 10px;\n            font-weight: 600;\n            padding: 2px 6px;\n            border-radius: 8px;\n            min-width: 16px;\n            text-align: center;\n        }"
+  },
+  "fa-chart-bar": {
+    "html": "<i class=\"fas fa-chart-bar\"></i>",
+    "css": ""
+  },
+  "fa-exclamation-triangle": {
+    "html": "<i class=\"fas fa-exclamation-triangle\"></i>",
+    "css": ""
+  },
+  "fa-lightbulb": {
+    "html": "<i class=\"fas fa-lightbulb\"></i>",
+    "css": ""
+  },
+  "fa-terminal": {
+    "html": "<i class=\"fas fa-terminal\"></i>",
+    "css": ""
+  },
+  "tab-content": {
+    "html": "<div class=\"tab-content active\" id=\"sources-panel\">\n                <div id=\"sources-container\">\n                    <!-- Sources will be populated here -->\n                </div>",
+    "css": "\n\n        /* Content Panels */\n        .tab-content {\n            flex: 1;\n            padding: 24px;\n            overflow-y: auto;\n            display: none;\n        }\n\n\n\n        .tab-content.active {\n            display: block;\n        }"
+  },
+  "fa-check-circle": {
+    "html": "<i class=\"fas fa-check-circle\" style=\"font-size: 48px; margin-bottom: 16px; color: var(--accent-green);\"></i>",
+    "css": ""
+  },
+  "terminal-container": {
+    "html": "<div class=\"terminal-container\">\n                    <div class=\"terminal-header\">\n                        <div class=\"terminal-dots\">\n                            <div class=\"terminal-dot red\"></div>",
+    "css": "\n\n        /* Terminal Activity */\n        .terminal-container {\n            background: var(--dark-900);\n            border-radius: 12px;\n            border: 1px solid var(--glass-border);\n            overflow: hidden;\n        }"
+  },
+  "terminal-header": {
+    "html": "<div class=\"terminal-header\">\n                        <div class=\"terminal-dots\">\n                            <div class=\"terminal-dot red\"></div>",
+    "css": "\n\n        .terminal-header {\n            background: var(--dark-800);\n            padding: 12px 16px;\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }"
+  },
+  "terminal-dots": {
+    "html": "<div class=\"terminal-dots\">\n                            <div class=\"terminal-dot red\"></div>",
+    "css": "\n\n        .terminal-dots {\n            display: flex;\n            gap: 4px;\n        }"
+  },
+  "terminal-dot": {
+    "html": "<div class=\"terminal-dot red\"></div>",
+    "css": "\n\n        .terminal-dots {\n            display: flex;\n            gap: 4px;\n        }\n\n\n\n        .terminal-dot {\n            width: 8px;\n            height: 8px;\n            border-radius: 50%;\n        }\n\n\n\n        .terminal-dot.red { background: #ff5f56; }\n\n\n        .terminal-dot.yellow { background: #ffbd2e; }\n\n\n        .terminal-dot.green { background: #27ca3f; }"
+  },
+  "red": {
+    "html": "<div class=\"terminal-dot red\"></div>",
+    "css": "\n\n        .terminal-dot.red { background: #ff5f56; }"
+  },
+  "yellow": {
+    "html": "<div class=\"terminal-dot yellow\"></div>",
+    "css": "\n        .terminal-dot.yellow { background: #ffbd2e; }"
+  },
+  "green": {
+    "html": "<div class=\"terminal-dot green\"></div>",
+    "css": "\n        .terminal-dot.green { background: #27ca3f; }"
+  },
+  "terminal-title": {
+    "html": "<div class=\"terminal-title\">Research Activity Log</div>",
+    "css": "\n\n        .terminal-title {\n            font-size: 12px;\n            color: var(--light-400);\n            margin-left: 8px;\n        }"
+  },
+  "terminal-content": {
+    "html": "<div class=\"terminal-content\" id=\"terminal-content\">\n                        <!-- Terminal output will be populated here -->\n                    </div>",
+    "css": "\n\n        .terminal-content {\n            padding: 16px;\n            max-height: 300px;\n            overflow-y: auto;\n            font-family: 'Courier New', monospace;\n            font-size: 12px;\n            line-height: 1.6;\n        }"
+  },
+  "knowledge-panel": {
+    "html": "<div class=\"knowledge-panel\">\n            <div class=\"panel-header\">\n                <div class=\"panel-title\">Knowledge Graph</div>",
+    "css": "\n\n        /* Knowledge Panel */\n        .knowledge-panel {\n            grid-area: knowledge-panel;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-left: 1px solid var(--glass-border);\n            padding: 24px;\n            overflow-y: auto;\n        }\n\n\n            \n            .research-sidebar,\n            .knowledge-panel,\n            .export-panel {\n                position: relative;\n                height: auto;\n            }"
+  },
+  "panel-header": {
+    "html": "<div class=\"panel-header\">\n                <div class=\"panel-title\">Knowledge Graph</div>",
+    "css": "\n\n        .panel-header {\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            margin-bottom: 20px;\n            padding-bottom: 12px;\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "panel-title": {
+    "html": "<div class=\"panel-title\">Knowledge Graph</div>",
+    "css": "\n\n        .panel-title {\n            font-size: 16px;\n            font-weight: 600;\n            color: var(--light-100);\n        }"
+  },
+  "fa-expand": {
+    "html": "<i class=\"fas fa-expand\"></i>",
+    "css": ""
+  },
+  "knowledge-graph-container": {
+    "html": "<div class=\"knowledge-graph-container\">\n                <div class=\"graph-controls\">\n                    <button class=\"graph-mode active\" data-mode=\"network\">Network</button>\n                    <button class=\"graph-mode\" data-mode=\"timeline\">Timeline</button>\n                    <button class=\"graph-mode\" data-mode=\"hierarchy\">Hierarchy</button>\n                </div>",
+    "css": "\n\n        /* Knowledge Graph */\n        .knowledge-graph-container {\n            width: 100%;\n            height: 300px;\n            background: var(--dark-800);\n            border-radius: 12px;\n            border: 1px solid var(--glass-border);\n            position: relative;\n            overflow: hidden;\n        }"
+  },
+  "graph-controls": {
+    "html": "<div class=\"graph-controls\">\n                    <button class=\"graph-mode active\" data-mode=\"network\">Network</button>\n                    <button class=\"graph-mode\" data-mode=\"timeline\">Timeline</button>\n                    <button class=\"graph-mode\" data-mode=\"hierarchy\">Hierarchy</button>\n                </div>",
+    "css": "\n\n        .graph-controls {\n            position: absolute;\n            top: 12px;\n            left: 12px;\n            display: flex;\n            gap: 8px;\n            z-index: 10;\n        }"
+  },
+  "graph-mode": {
+    "html": "<button class=\"graph-mode active\" data-mode=\"network\">Network</button>",
+    "css": "\n\n        .graph-mode {\n            background: rgba(0, 0, 0, 0.7);\n            border: 1px solid var(--glass-border);\n            border-radius: 6px;\n            padding: 6px 10px;\n            color: var(--light-300);\n            font-size: 11px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .graph-mode:hover,\n        .graph-mode.active {\n            background: var(--accent-cyan);\n            color: white;\n        }"
+  },
+  "export-panel": {
+    "html": "<div class=\"export-panel\">\n            <div class=\"panel-header\">\n                <div class=\"panel-title\">Export & Actions</div>",
+    "css": "\n\n        /* Export Panel */\n        .export-panel {\n            grid-area: export-panel;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-left: 1px solid var(--glass-border);\n            border-top: 1px solid var(--glass-border);\n            padding: 20px;\n        }\n\n\n            \n            .research-sidebar,\n            .knowledge-panel,\n            .export-panel {\n                position: relative;\n                height: auto;\n            }"
+  },
+  "export-options": {
+    "html": "<div class=\"export-options\">\n                <button class=\"btn btn-primary btn-block\" id=\"create-website\">\n                    <i class=\"fas fa-globe\"></i>\n                    Create Website\n                </button>\n                <button class=\"btn btn-block\" id=\"export-report\">\n                    <i class=\"fas fa-file-pdf\"></i>\n                    Export Report\n                </button>\n                <button class=\"btn btn-block\" id=\"generate-infographic\">\n                    <i class=\"fas fa-chart-bar\"></i>\n                    Generate Infographic\n                </button>\n                <button class=\"btn btn-block\" id=\"create-presentation\">\n                    <i class=\"fas fa-file-powerpoint\"></i>\n                    Create Slides\n                </button>\n            </div>",
+    "css": "\n\n        .export-options {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 12px;\n        }"
+  },
+  "btn-block": {
+    "html": "<button class=\"btn btn-primary btn-block\" id=\"create-website\">\n                    <i class=\"fas fa-globe\"></i>\n                    Create Website\n                </button>",
+    "css": "\n\n        .btn-block {\n            width: 100%;\n            justify-content: center;\n        }"
+  },
+  "fa-globe": {
+    "html": "<i class=\"fas fa-globe\"></i>",
+    "css": ""
+  },
+  "fa-file-pdf": {
+    "html": "<i class=\"fas fa-file-pdf\"></i>",
+    "css": ""
+  },
+  "fa-file-powerpoint": {
+    "html": "<i class=\"fas fa-file-powerpoint\"></i>",
+    "css": ""
+  },
+  "fa-plus": {
+    "html": "<i class=\"fas fa-plus\"></i>",
+    "css": ""
+  },
+  "fa-filter": {
+    "html": "<i class=\"fas fa-filter\"></i>",
+    "css": ""
+  },
+  "fa-save": {
+    "html": "<i class=\"fas fa-save\"></i>",
+    "css": ""
+  },
+  "source-card": {
+    "html": "<div class=\"source-card\" data-source-id=\"${source.id}\">\n                        <div class=\"source-header\">\n                            <div>\n                                <div class=\"source-title\">${source.title}</div>",
+    "css": "\n\n        /* Source Cards */\n        .source-card {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 16px;\n            margin-bottom: 16px;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .source-card:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            transform: translateY(-2px);\n        }"
+  },
+  "source-header": {
+    "html": "<div class=\"source-header\">\n                            <div>\n                                <div class=\"source-title\">${source.title}</div>",
+    "css": "\n\n        .source-header {\n            display: flex;\n            align-items: flex-start;\n            justify-content: space-between;\n            margin-bottom: 12px;\n        }"
+  },
+  "source-title": {
+    "html": "<div class=\"source-title\">${source.title}</div>",
+    "css": "\n\n        .source-title {\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--light-100);\n            line-height: 1.4;\n            margin-bottom: 4px;\n        }"
+  },
+  "source-domain": {
+    "html": "<a href=\"${source.url}\" class=\"source-domain\" target=\"_blank\">${source.domain}</a>",
+    "css": "\n\n        .source-domain {\n            font-size: 12px;\n            color: var(--accent-cyan);\n            text-decoration: none;\n        }"
+  },
+  "source-badge": {
+    "html": "<div class=\"source-badge ${badgeClass}\">${badgeText}</div>",
+    "css": "\n\n        .source-badge {\n            padding: 4px 8px;\n            border-radius: 6px;\n            font-size: 10px;\n            font-weight: 600;\n            text-transform: uppercase;\n        }\n\n\n\n        .source-badge.high {\n            background: var(--accent-green);\n            color: white;\n        }\n\n\n\n        .source-badge.medium {\n            background: var(--accent-amber);\n            color: var(--dark-900);\n        }"
+  },
+  "source-excerpt": {
+    "html": "<div class=\"source-excerpt\">${source.excerpt}</div>",
+    "css": "\n\n        .source-excerpt {\n            font-size: 13px;\n            color: var(--light-300);\n            line-height: 1.5;\n            margin-bottom: 12px;\n        }"
+  },
+  "source-meta": {
+    "html": "<div class=\"source-meta\">\n                            <span><i class=\"fas fa-calendar\"></i> ${source.publishedDate}</span>\n                            <span><i class=\"fas fa-eye\"></i> ${source.views} views</span>\n                            <span><i class=\"fas fa-star\"></i> ${source.credibility}/10</span>\n                        </div>",
+    "css": "\n\n        .source-meta {\n            display: flex;\n            align-items: center;\n            gap: 16px;\n            font-size: 11px;\n            color: var(--light-400);\n        }"
+  },
+  "fa-calendar": {
+    "html": "<i class=\"fas fa-calendar\"></i>",
+    "css": ""
+  },
+  "fa-eye": {
+    "html": "<i class=\"fas fa-eye\"></i>",
+    "css": ""
+  },
+  "fa-star": {
+    "html": "<i class=\"fas fa-star\"></i>",
+    "css": ""
+  },
+  "contradiction-panel": {
+    "html": "<div class=\"contradiction-panel\">\n                        <div class=\"contradiction-header\">\n                            <i class=\"fas fa-exclamation-triangle\"></i>\n                            Contradiction Detected: ${contradiction.topic}\n                        </div>",
+    "css": "\n\n        /* Contradiction Panel */\n        .contradiction-panel {\n            background: var(--dark-700);\n            border: 1px solid var(--accent-red);\n            border-radius: 12px;\n            padding: 16px;\n            margin: 16px 0;\n        }"
+  },
+  "contradiction-header": {
+    "html": "<div class=\"contradiction-header\">\n                            <i class=\"fas fa-exclamation-triangle\"></i>\n                            Contradiction Detected: ${contradiction.topic}\n                        </div>",
+    "css": "\n\n        .contradiction-header {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            color: var(--accent-red);\n            font-weight: 600;\n            margin-bottom: 12px;\n        }"
+  },
+  "contradiction-sources": {
+    "html": "<div class=\"contradiction-sources\">\n                            <div class=\"contradiction-source\">\n                                <strong>Source A:</strong> ${contradiction.sourceA.claim}\n                                <br><small>${contradiction.sourceA.source}</small>\n                            </div>",
+    "css": "\n\n        .contradiction-sources {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 12px;\n        }"
+  },
+  "contradiction-source": {
+    "html": "<div class=\"contradiction-source\">\n                                <strong>Source A:</strong> ${contradiction.sourceA.claim}\n                                <br><small>${contradiction.sourceA.source}</small>\n                            </div>",
+    "css": "\n\n        .contradiction-sources {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 12px;\n        }\n\n\n\n        .contradiction-source {\n            background: var(--dark-800);\n            border-radius: 8px;\n            padding: 12px;\n            font-size: 12px;\n        }"
+  },
+  "fa-link": {
+    "html": "<i class=\"fas fa-link\"></i>",
+    "css": ""
+  },
+  "fa-info-circle": {
+    "html": "<i class=\"fas fa-info-circle\"></i>",
+    "css": ""
+  },
+  "fa-times": {
+    "html": "<i class=\"fas fa-times\"></i>",
+    "css": ""
+  },
+  "terminal-timestamp": {
+    "html": "<div class=\"terminal-timestamp\">${timestamp}</div>",
+    "css": "\n\n        .terminal-timestamp {\n            color: var(--light-400);\n            min-width: 70px;\n        }"
+  },
+  "terminal-output": {
+    "html": "<div class=\"terminal-output terminal-${type}\">\n                        ${typeIcons[type] || ''} ${message}\n                    </div>",
+    "css": "\n\n        .terminal-output {\n            color: var(--light-300);\n        }\n\n\n\n        .terminal-output.info {\n            color: var(--accent-cyan);\n        }\n\n\n\n        .terminal-output.success {\n            color: var(--accent-green);\n        }\n\n\n\n        .terminal-output.warning {\n            color: var(--accent-amber);\n        }\n\n\n\n        .terminal-output.error {\n            color: var(--accent-red);\n        }"
+  }
+}

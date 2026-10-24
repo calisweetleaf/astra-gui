@@ -1,0 +1,89 @@
+{
+  "name": "somnus_main_ui",
+  "styles": "extracted\\somnus_main_ui\\styles\\somnus_main_ui.css",
+  "scripts": "extracted\\somnus_main_ui\\scripts\\somnus_main_ui.js",
+  "tokens": null,
+  "components_manifest": "extracted\\somnus_main_ui\\components.manifest.json",
+  "components": {
+    "QuickLaunchGrid": {
+      "selector": ".quick-launch-grid",
+      "html": "extracted/somnus_main_ui/components/QuickLaunchGrid.html",
+      "css": "extracted/somnus_main_ui/components/QuickLaunchGrid.css"
+    },
+    "FloatingNav": {
+      "selector": ".floating-nav",
+      "html": "extracted/somnus_main_ui/components/FloatingNav.html",
+      "css": "extracted/somnus_main_ui/components/FloatingNav.css"
+    },
+    "PopoverAction": {
+      "selector": ".popover-action",
+      "html": "extracted/somnus_main_ui/components/PopoverAction.html",
+      "css": "extracted/somnus_main_ui/components/PopoverAction.css"
+    },
+    "HeaderBadge": {
+      "selector": ".header-badge",
+      "html": "extracted/somnus_main_ui/components/HeaderBadge.html",
+      "css": "extracted/somnus_main_ui/components/HeaderBadge.css"
+    },
+    "ChatMessages": {
+      "selector": ".chat-messages",
+      "html": "extracted/somnus_main_ui/components/ChatMessages.html",
+      "css": "extracted/somnus_main_ui/components/ChatMessages.css"
+    },
+    "ChatApp": {
+      "selector": ".chat-app",
+      "html": "extracted/somnus_main_ui/components/ChatApp.html",
+      "css": "extracted/somnus_main_ui/components/ChatApp.css"
+    },
+    "NavBubble": {
+      "selector": ".nav-bubble",
+      "html": "extracted/somnus_main_ui/components/NavBubble.html",
+      "css": "extracted/somnus_main_ui/components/NavBubble.css"
+    },
+    "ChatHeader": {
+      "selector": ".chat-header",
+      "html": "extracted/somnus_main_ui/components/ChatHeader.html",
+      "css": "extracted/somnus_main_ui/components/ChatHeader.css"
+    },
+    "QuickLaunchCard": {
+      "selector": ".quick-launch-card",
+      "html": "extracted/somnus_main_ui/components/QuickLaunchCard.html",
+      "css": "extracted/somnus_main_ui/components/QuickLaunchCard.css"
+    },
+    "InputField": {
+      "selector": ".input-field",
+      "html": "extracted/somnus_main_ui/components/InputField.html",
+      "css": "extracted/somnus_main_ui/components/InputField.css"
+    },
+    "QuickAction": {
+      "selector": ".quick-action",
+      "html": "extracted/somnus_main_ui/components/QuickAction.html",
+      "css": "extracted/somnus_main_ui/components/QuickAction.css"
+    },
+    "ChatInputContainer": {
+      "selector": ".chat-input-container",
+      "html": "extracted/somnus_main_ui/components/ChatInputContainer.html",
+      "css": "extracted/somnus_main_ui/components/ChatInputContainer.css"
+    },
+    "ModelSelector": {
+      "selector": ".model-selector",
+      "html": "extracted/somnus_main_ui/components/ModelSelector.html",
+      "css": "extracted/somnus_main_ui/components/ModelSelector.css"
+    },
+    "ActionButton": {
+      "selector": ".action-btn",
+      "html": "extracted/somnus_main_ui/components/ActionButton.html",
+      "css": "extracted/somnus_main_ui/components/ActionButton.css"
+    },
+    "WelcomeScreen": {
+      "selector": ".welcome-screen",
+      "html": "extracted/somnus_main_ui/components/WelcomeScreen.html",
+      "css": "extracted/somnus_main_ui/components/WelcomeScreen.css"
+    },
+    "BubblePopover": {
+      "selector": ".bubble-popover",
+      "html": "extracted/somnus_main_ui/components/BubblePopover.html",
+      "css": "extracted/somnus_main_ui/components/BubblePopover.css"
+    }
+  }
+}

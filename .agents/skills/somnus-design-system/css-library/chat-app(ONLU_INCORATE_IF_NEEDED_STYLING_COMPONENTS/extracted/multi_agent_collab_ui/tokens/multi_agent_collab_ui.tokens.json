@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schemas.tokens.studio/schemas/brands.json",
+  "colors": {
+    "dark-950": {
+      "value": "#0a0a0f",
+      "type": "color"
+    },
+    "dark-900": {
+      "value": "#0f0f1a",
+      "type": "color"
+    },
+    "dark-800": {
+      "value": "#1a1a2e",
+      "type": "color"
+    },
+    "dark-700": {
+      "value": "#16213e",
+      "type": "color"
+    },
+    "dark-600": {
+      "value": "#1f2937",
+      "type": "color"
+    },
+    "light-100": {
+      "value": "#f8fafc",
+      "type": "color"
+    },
+    "light-200": {
+      "value": "#e2e8f0",
+      "type": "color"
+    },
+    "light-300": {
+      "value": "#cbd5e1",
+      "type": "color"
+    },
+    "light-400": {
+      "value": "#94a3b8",
+      "type": "color"
+    },
+    "light-500": {
+      "value": "#64748b",
+      "type": "color"
+    },
+    "accent-blue": {
+      "value": "#3b82f6",
+      "type": "color"
+    },
+    "accent-purple": {
+      "value": "#8b5cf6",
+      "type": "color"
+    },
+    "accent-yellow": {
+      "value": "#f59e0b",
+      "type": "color"
+    },
+    "accent-red": {
+      "value": "#ef4444",
+      "type": "color"
+    },
+    "accent-green": {
+      "value": "#10b981",
+      "type": "color"
+    },
+    "accent-cyan": {
+      "value": "#06b6d4",
+      "type": "color"
+    },
+    "glass-bg": {
+      "value": "rgba(31, 41, 55, 0.7)",
+      "type": "color"
+    },
+    "glass-border": {
+      "value": "rgba(148, 163, 184, 0.1)",
+      "type": "color"
+    },
+    "glass-shadow": {
+      "value": "0 8px 32px rgba(0, 0, 0, 0.3)",
+      "type": "color"
+    }
+  }
+}

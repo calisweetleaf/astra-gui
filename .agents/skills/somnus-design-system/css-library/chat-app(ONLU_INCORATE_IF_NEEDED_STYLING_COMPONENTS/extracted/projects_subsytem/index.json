@@ -1,0 +1,119 @@
+{
+  "name": "projects_subsytem",
+  "styles": "extracted\\projects_subsytem\\styles\\projects_subsytem.css",
+  "scripts": "extracted\\projects_subsytem\\scripts\\projects_subsytem.js",
+  "tokens": "extracted\\projects_subsytem\\tokens\\projects_subsytem.tokens.json",
+  "components_manifest": "extracted\\projects_subsytem\\components.manifest.json",
+  "components": {
+    "IntelligencePanel": {
+      "selector": ".intelligence-panel",
+      "html": "extracted/projects_subsytem/components/IntelligencePanel.html",
+      "css": "extracted/projects_subsytem/components/IntelligencePanel.css"
+    },
+    "InsightCard": {
+      "selector": ".insight-card",
+      "html": "extracted/projects_subsytem/components/InsightCard.html",
+      "css": "extracted/projects_subsytem/components/InsightCard.css"
+    },
+    "ProjectsList": {
+      "selector": ".projects-list",
+      "html": "extracted/projects_subsytem/components/ProjectsList.html",
+      "css": "extracted/projects_subsytem/components/ProjectsList.css"
+    },
+    "CreateProjectButton": {
+      "selector": ".create-project-btn",
+      "html": "extracted/projects_subsytem/components/CreateProjectButton.html",
+      "css": "extracted/projects_subsytem/components/CreateProjectButton.css"
+    },
+    "WorkspaceTabs": {
+      "selector": ".workspace-tabs",
+      "html": "extracted/projects_subsytem/components/WorkspaceTabs.html",
+      "css": "extracted/projects_subsytem/components/WorkspaceTabs.css"
+    },
+    "ProjectsSidebar": {
+      "selector": ".projects-sidebar",
+      "html": "extracted/projects_subsytem/components/ProjectsSidebar.html",
+      "css": "extracted/projects_subsytem/components/ProjectsSidebar.css"
+    },
+    "SidebarHeader": {
+      "selector": ".sidebar-header",
+      "html": "extracted/projects_subsytem/components/SidebarHeader.html",
+      "css": "extracted/projects_subsytem/components/SidebarHeader.css"
+    },
+    "ProjectMetrics": {
+      "selector": ".project-metrics",
+      "html": "extracted/projects_subsytem/components/ProjectMetrics.html",
+      "css": "extracted/projects_subsytem/components/ProjectMetrics.css"
+    },
+    "MonitoringCharts": {
+      "selector": ".monitoring-charts",
+      "html": "extracted/projects_subsytem/components/MonitoringCharts.html",
+      "css": "extracted/projects_subsytem/components/MonitoringCharts.css"
+    },
+    "MonitoringPanel": {
+      "selector": ".monitoring-panel",
+      "html": "extracted/projects_subsytem/components/MonitoringPanel.html",
+      "css": "extracted/projects_subsytem/components/MonitoringPanel.css"
+    },
+    "ProjectHeader": {
+      "selector": ".project-header",
+      "html": "extracted/projects_subsytem/components/ProjectHeader.html",
+      "css": "extracted/projects_subsytem/components/ProjectHeader.css"
+    },
+    "ProjectsHeader": {
+      "selector": ".projects-header",
+      "html": "extracted/projects_subsytem/components/ProjectsHeader.html",
+      "css": "extracted/projects_subsytem/components/ProjectsHeader.css"
+    },
+    "WorkspaceContent": {
+      "selector": ".workspace-content",
+      "html": "extracted/projects_subsytem/components/WorkspaceContent.html",
+      "css": "extracted/projects_subsytem/components/WorkspaceContent.css"
+    },
+    "SearchContainer": {
+      "selector": ".search-container",
+      "html": "extracted/projects_subsytem/components/SearchContainer.html",
+      "css": "extracted/projects_subsytem/components/SearchContainer.css"
+    },
+    "VMCard": {
+      "selector": ".vm-card",
+      "html": "extracted/projects_subsytem/components/VMCard.html",
+      "css": "extracted/projects_subsytem/components/VMCard.css"
+    },
+    "ActivityItem": {
+      "selector": ".activity-item",
+      "html": "extracted/projects_subsytem/components/ActivityItem.html",
+      "css": "extracted/projects_subsytem/components/ActivityItem.css"
+    },
+    "ProjectsWorkspace": {
+      "selector": ".projects-workspace",
+      "html": "extracted/projects_subsytem/components/ProjectsWorkspace.html",
+      "css": "extracted/projects_subsytem/components/ProjectsWorkspace.css"
+    },
+    "ProjectsContainer": {
+      "selector": ".projects-container",
+      "html": "extracted/projects_subsytem/components/ProjectsContainer.html",
+      "css": "extracted/projects_subsytem/components/ProjectsContainer.css"
+    },
+    "FilterButton": {
+      "selector": ".filter-btn",
+      "html": "extracted/projects_subsytem/components/FilterButton.html",
+      "css": "extracted/projects_subsytem/components/FilterButton.css"
+    },
+    "IntelligenceInsights": {
+      "selector": ".intelligence-insights",
+      "html": "extracted/projects_subsytem/components/IntelligenceInsights.html",
+      "css": "extracted/projects_subsytem/components/IntelligenceInsights.css"
+    },
+    "ActivityFeed": {
+      "selector": ".activity-feed",
+      "html": "extracted/projects_subsytem/components/ActivityFeed.html",
+      "css": "extracted/projects_subsytem/components/ActivityFeed.css"
+    },
+    "VMDashboard": {
+      "selector": ".vm-dashboard",
+      "html": "extracted/projects_subsytem/components/VMDashboard.html",
+      "css": "extracted/projects_subsytem/components/VMDashboard.css"
+    }
+  }
+}

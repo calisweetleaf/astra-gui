@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Somnus Components Catalog</title>
+    <style>
+      
+      body{font-family:Inter,system-ui,sans-serif;background:var(--surface-0);color:var(--text-primary);}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;padding:24px;}
+      .comp{background:var(--surface-1);border:1px solid var(--border-subtle);border-radius:12px;padding:16px;}
+      .comp h2{font-size:14px;margin:0 0 12px;color:var(--text-secondary);}
+      .preview{background:var(--surface-0);border:1px dashed var(--border-subtle);border-radius:8px;padding:12px;}
+    </style>
+  </head>
+  <body>
+    <div class="grid"><section class="comp"><h2>QuickLaunchGrid</h2><div class="preview"><div class="quick-launch-grid">
+                        <div class="quick-launch-card" onclick="openNewArtifact()">
+                            <div class="card-icon" style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));">
+                                <i class="fas fa-rocket"></i>
+                            </div></div></section><section class="comp"><h2>FloatingNav</h2><div class="preview"><div class="floating-nav">
+            <div class="nav-bubble artifacts" title="Artifacts">
+                <i class="fas fa-rocket"></i>
+                <div class="bubble-popover">
+                    <div class="popover-header">
+                        <i class="fas fa-rocket"></i>
+                        Artifacts
+                    </div></div></section><section class="comp"><h2>PopoverAction</h2><div class="preview"><div class="popover-action" onclick="createNewArtifact()">
+                            <i class="fas fa-plus"></i>
+                            New Artifact
+                        </div></div></section><section class="comp"><h2>HeaderBadge</h2><div class="preview"><div class="header-badge">Unlimited Power</div></div></section><section class="comp"><h2>ChatMessages</h2><div class="preview"><div class="chat-messages" id="chatMessages">
+            <!-- Welcome Screen -->
+            <div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-icon">
+                    <i class="fas fa-brain"></i>
+                </div></div></section><section class="comp"><h2>ChatApp</h2><div class="preview"><div class="chat-app">
+        <!-- Professional Header -->
+        <div class="chat-header">
+            <div class="header-left">
+                <div class="model-selector" id="modelSelector">
+                    <div class="model-indicator"></div></div></section><section class="comp"><h2>NavBubble</h2><div class="preview"><div class="nav-bubble artifacts" title="Artifacts">
+                <i class="fas fa-rocket"></i>
+                <div class="bubble-popover">
+                    <div class="popover-header">
+                        <i class="fas fa-rocket"></i>
+                        Artifacts
+                    </div></div></section><section class="comp"><h2>ChatHeader</h2><div class="preview"><div class="chat-header">
+            <div class="header-left">
+                <div class="model-selector" id="modelSelector">
+                    <div class="model-indicator"></div></div></section><section class="comp"><h2>QuickLaunchCard</h2><div class="preview"><div class="quick-launch-card" onclick="openNewArtifact()">
+                            <div class="card-icon" style="background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));">
+                                <i class="fas fa-rocket"></i>
+                            </div></div></section><section class="comp"><h2>InputField</h2><div class="preview"><textarea 
+                        class="input-field" 
+                        id="messageInput"
+                        placeholder="Ask Somnus anything..."
+                        rows="1"
+                    ></textarea></div></section><section class="comp"><h2>QuickAction</h2><div class="preview"><button class="quick-action" id="voiceBtn" title="Voice Input">
+                            <i class="fas fa-microphone"></i>
+                        </button></div></section><section class="comp"><h2>ChatInputContainer</h2><div class="preview"><div class="chat-input-container">
+            <div class="input-wrapper">
+                <!-- Action Buttons Row -->
+                <div class="action-buttons">
+                    <button class="action-btn" id="webSearchBtn">
+                        <i class="action-icon fas fa-globe"></i>
+                        Web Search
+                    </button>
+                    <button class="action-btn" id="uploadsBtn">
+                        <i class="action-icon fas fa-paperclip"></i>
+                        Uploads
+                    </button>
+                    <button class="action-btn" id="pluginsBtn">
+                        <i class="action-icon fas fa-puzzle-piece"></i>
+                        Plugins
+                    </button>
+                    <button class="action-btn" id="memoryBtn">
+                        <i class="action-icon fas fa-brain"></i>
+                        Memory
+                    </button>
+                    <button class="action-btn" id="researchBtn">
+                        <i class="action-icon fas fa-microscope"></i>
+                        Research
+                    </button>
+                </div></div></section><section class="comp"><h2>ModelSelector</h2><div class="preview"><div class="model-selector" id="modelSelector">
+                    <div class="model-indicator"></div></div></section><section class="comp"><h2>ActionButton</h2><div class="preview"><button class="action-btn" id="webSearchBtn">
+                        <i class="action-icon fas fa-globe"></i>
+                        Web Search
+                    </button></div></section><section class="comp"><h2>WelcomeScreen</h2><div class="preview"><div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-icon">
+                    <i class="fas fa-brain"></i>
+                </div></div></section><section class="comp"><h2>BubblePopover</h2><div class="preview"><div class="bubble-popover">
+                    <div class="popover-header">
+                        <i class="fas fa-rocket"></i>
+                        Artifacts
+                    </div></div></section></div>
+  </body>
+</html>

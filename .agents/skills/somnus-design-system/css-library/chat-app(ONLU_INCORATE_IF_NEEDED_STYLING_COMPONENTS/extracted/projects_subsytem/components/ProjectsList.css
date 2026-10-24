@@ -1,0 +1,6 @@
+/* Project Cards */
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }

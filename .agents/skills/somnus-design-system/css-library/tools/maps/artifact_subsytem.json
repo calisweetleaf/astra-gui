@@ -1,0 +1,21 @@
+{
+  "FileExplorer": ".file-explorer",
+  "MetricsDashboard": ".metrics-dashboard",
+  "ArtifactRightPanel": ".artifact-right-panel",
+  "TrainingPanel": ".training-panel",
+  "EnvSelector": ".env-selector",
+  "ArtifactHeader": ".artifact-header",
+  "ResearchPanel": ".research-panel",
+  "MonacoContainer": ".monaco-container",
+  "ExecutionTerminal": ".execution-terminal",
+  "ArtifactMain": ".artifact-main",
+  "TerminalControls": ".terminal-controls",
+  "EditorTabs": ".editor-tabs",
+  "ArtifactContainer": ".artifact-container",
+  "ExecutionStatus": ".execution-status",
+  "PanelTabs": ".panel-tabs",
+  "GitPanel": ".git-panel",
+  "ArtifactSidebar": ".artifact-sidebar",
+  "PanelContent": ".panel-content",
+  "MetricsGrid": ".metrics-grid"
+}

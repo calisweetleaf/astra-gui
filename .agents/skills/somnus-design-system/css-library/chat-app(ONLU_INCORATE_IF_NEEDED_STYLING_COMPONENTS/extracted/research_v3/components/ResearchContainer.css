@@ -1,0 +1,66 @@
+/* Main Layout Architecture */
+        .research-container {
+            display: grid;
+            grid-template-areas: 
+                "sidebar header header"
+                "sidebar workspace knowledge-panel"
+                "sidebar workspace export-panel";
+            grid-template-columns: 320px 1fr 400px;
+            grid-template-rows: 80px 1fr 200px;
+            height: 100vh;
+            gap: 2px;
+            background: var(--dark-900);
+        }
+
+
+            .research-container {
+                grid-template-columns: 280px 1fr 320px;
+            }
+
+
+            .research-container {
+                grid-template-areas: 
+                    "header"
+                    "workspace"
+                    "sidebar";
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 1fr auto;
+            }
+
+
+
+        /* Enhanced Sidebar */
+        .research-sidebar {
+            grid-area: sidebar;
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-strength);
+            border-right: 1px solid var(--glass-border);
+            padding: 24px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-cyan) transparent;
+        }
+
+
+            
+            .research-sidebar,
+            .knowledge-panel,
+            .export-panel {
+                position: relative;
+                height: auto;
+            }
+
+
+
+        .sidebar-header {
+            margin-bottom: 32px;
+        }
+
+
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 4px;
+        }

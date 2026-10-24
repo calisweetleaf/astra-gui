@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<style>
+  .agent { display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:12px;
+           background:rgba(31,41,55,.5); border:1px solid var(--glass-border); }
+  .av { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+        font-family:var(--font-mono); font-weight:700; font-size:11px; color:#fff; flex-shrink:0; }
+  .name { font-family:var(--font-interface); font-weight:600; font-size:13px; color:var(--light-100); }
+  .role { font-family:var(--font-mono); font-size:10px; color:var(--light-400); text-transform:uppercase; letter-spacing:.14em; }
+  .msg  { font-family:var(--font-interface); font-size:13px; color:var(--light-200); margin-top:4px; line-height:1.45; }
+</style>
+<div class="card">
+  <div class="kicker">Multi-agent thread · agent role colors</div>
+  <div class="agent">
+    <div class="av" style="background:#3b82f6;">A1</div>
+    <div style="flex:1;">
+      <div style="display:flex; gap:8px; align-items:center;"><span class="name">Atlas</span><span class="role">· planner</span></div>
+      <div class="msg">Decomposing into three sub-tasks: corpus crawl, correlation scoring, brief draft.</div>
+    </div>
+  </div>
+  <div class="agent">
+    <div class="av" style="background:#8b5cf6;">A2</div>
+    <div style="flex:1;">
+      <div style="display:flex; gap:8px; align-items:center;"><span class="name">Vesper</span><span class="role">· researcher</span></div>
+      <div class="msg">Pulled 47 documents. Top correlation hit: 0.89 — Founders Fund / Anduril overlap.</div>
+    </div>
+  </div>
+  <div class="agent">
+    <div class="av" style="background:#f59e0b;">SY</div>
+    <div style="flex:1;">
+      <div style="display:flex; gap:8px; align-items:center;"><span class="name">Delegator</span><span class="role">· system</span></div>
+      <div class="msg">Routing brief draft → Atlas. Next checkpoint in 90s.</div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,57 @@
+/* Orchestration Indicators */
+        .orchestration-indicator {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 12px;
+            color: var(--accent-cyan);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+
+        .orchestration-indicator.active {
+            display: flex;
+        }
+
+
+
+        /* Loading States */
+        .loading-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+
+
+        /* Loading States */
+        .loading-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+
+
+        .loading-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-cyan);
+            border-radius: 50%;
+            animation: loading-bounce 1.4s ease-in-out infinite both;
+        }
+
+
+
+        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+
+
+        .loading-dot:nth-child(2) { animation-delay: -0.16s; }

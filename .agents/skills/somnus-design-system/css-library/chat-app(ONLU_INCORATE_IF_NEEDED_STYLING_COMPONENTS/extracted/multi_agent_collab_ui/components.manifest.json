@@ -1,0 +1,430 @@
+{
+  "collaboration-app": {
+    "html": "<div class=\"collaboration-app\">\n        <!-- Agent Orchestration Sidebar -->\n        <div class=\"agents-sidebar\">\n            <!-- Collaboration Header -->\n            <div class=\"agents-header\">\n                <div class=\"collaboration-icon\">\n                    <i class=\"fas fa-network-wired\"></i>\n                </div>",
+    "css": "\n\n        /* Modern Collaboration Container */\n        .collaboration-app {\n            display: flex;\n            height: 100vh;\n            background: var(--dark-900);\n        }"
+  },
+  "agents-sidebar": {
+    "html": "<div class=\"agents-sidebar\">\n            <!-- Collaboration Header -->\n            <div class=\"agents-header\">\n                <div class=\"collaboration-icon\">\n                    <i class=\"fas fa-network-wired\"></i>\n                </div>",
+    "css": "\n\n        /* Agent Orchestration Sidebar */\n        .agents-sidebar {\n            width: 320px;\n            background: var(--dark-800);\n            border-right: 1px solid var(--glass-border);\n            display: flex;\n            flex-direction: column;\n            overflow: hidden;\n        }\n\n\n            .agents-sidebar {\n                width: 280px;\n                transform: translateX(-100%);\n                transition: transform 0.3s ease;\n                position: fixed;\n                z-index: 1000;\n                height: 100vh;\n            }\n\n\n            \n            .agents-sidebar.mobile-open {\n                transform: translateX(0);\n            }"
+  },
+  "agents-header": {
+    "html": "<div class=\"agents-header\">\n                <div class=\"collaboration-icon\">\n                    <i class=\"fas fa-network-wired\"></i>\n                </div>",
+    "css": "\n\n        .agents-header {\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border-bottom: 1px solid var(--glass-border);\n            padding: 20px;\n            text-align: center;\n        }"
+  },
+  "collaboration-icon": {
+    "html": "<div class=\"collaboration-icon\">\n                    <i class=\"fas fa-network-wired\"></i>\n                </div>",
+    "css": "\n\n        .collaboration-icon {\n            width: 80px;\n            height: 80px;\n            border-radius: 20px;\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            margin: 0 auto 16px;\n            font-size: 32px;\n            color: white;\n            animation: orchestration-pulse 3s ease-in-out infinite;\n        }"
+  },
+  "fas": {
+    "html": "<i class=\"fas fa-network-wired\"></i>",
+    "css": ""
+  },
+  "fa-network-wired": {
+    "html": "<i class=\"fas fa-network-wired\"></i>",
+    "css": ""
+  },
+  "collaboration-title": {
+    "html": "<div class=\"collaboration-title\">AI Collaboration Hub</div>",
+    "css": "\n\n        .collaboration-title {\n            font-size: 16px;\n            font-weight: 600;\n            color: var(--light-100);\n            margin-bottom: 4px;\n        }"
+  },
+  "collaboration-subtitle": {
+    "html": "<div class=\"collaboration-subtitle\">Multi-Agent Orchestration</div>",
+    "css": "\n\n        .collaboration-subtitle {\n            font-size: 12px;\n            color: var(--light-400);\n        }"
+  },
+  "orchestration-status": {
+    "html": "<div class=\"orchestration-status\">\n                    <div class=\"status-pulse\"></div>",
+    "css": "\n\n        .orchestration-status {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            gap: 8px;\n            padding: 8px 16px;\n            background: var(--dark-700);\n            border-radius: 12px;\n            margin-top: 12px;\n            font-size: 11px;\n            color: var(--accent-cyan);\n        }"
+  },
+  "status-pulse": {
+    "html": "<div class=\"status-pulse\"></div>",
+    "css": "\n\n        .status-pulse {\n            width: 6px;\n            height: 6px;\n            background: var(--accent-cyan);\n            border-radius: 50%;\n            animation: pulse-dot 2s infinite;\n        }"
+  },
+  "agents-list": {
+    "html": "<div class=\"agents-list\">\n                <!-- Active Agents -->\n                <div class=\"agent-section\">\n                    <div class=\"agent-section-title\">\n                        <i class=\"fas fa-users\"></i>\n                        Active Agents\n                        <div class=\"agent-count\">4</div>",
+    "css": "\n\n        /* Agent List */\n        .agents-list {\n            flex: 1;\n            padding: 16px;\n            overflow-y: auto;\n        }"
+  },
+  "agent-section": {
+    "html": "<div class=\"agent-section\">\n                    <div class=\"agent-section-title\">\n                        <i class=\"fas fa-users\"></i>\n                        Active Agents\n                        <div class=\"agent-count\">4</div>",
+    "css": "\n\n        .agent-section {\n            margin-bottom: 20px;\n        }\n\n\n\n        .agent-section-title {\n            font-size: 11px;\n            font-weight: 600;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n            margin-bottom: 12px;\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }"
+  },
+  "agent-section-title": {
+    "html": "<div class=\"agent-section-title\">\n                        <i class=\"fas fa-users\"></i>\n                        Active Agents\n                        <div class=\"agent-count\">4</div>",
+    "css": "\n\n        .agent-section-title {\n            font-size: 11px;\n            font-weight: 600;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n            margin-bottom: 12px;\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }"
+  },
+  "fa-users": {
+    "html": "<i class=\"fas fa-users\"></i>",
+    "css": ""
+  },
+  "agent-count": {
+    "html": "<div class=\"agent-count\">4</div>",
+    "css": "\n\n        .agent-count {\n            background: var(--accent-blue);\n            color: white;\n            padding: 2px 6px;\n            border-radius: 8px;\n            font-size: 9px;\n            font-weight: 600;\n        }"
+  },
+  "agent-card": {
+    "html": "<div class=\"agent-card active\">\n                        <div class=\"agent-header\">\n                            <div class=\"agent-avatar coordinator\">CO</div>",
+    "css": "\n\n        .agent-card {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 12px;\n            margin-bottom: 8px;\n            transition: all 0.3s ease;\n            cursor: pointer;\n        }\n\n\n\n        .agent-card:hover {\n            transform: translateY(-2px);\n            box-shadow: var(--glass-shadow);\n            border-color: var(--accent-cyan);\n        }\n\n\n\n        .agent-card.active {\n            background: rgba(6, 182, 212, 0.1);\n            border-color: var(--accent-cyan);\n        }"
+  },
+  "active": {
+    "html": "<div class=\"agent-card active\">\n                        <div class=\"agent-header\">\n                            <div class=\"agent-avatar coordinator\">CO</div>",
+    "css": "\n\n        .agent-card.active {\n            background: rgba(6, 182, 212, 0.1);\n            border-color: var(--accent-cyan);\n        }\n\n\n\n        .control-btn.active {\n            background: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .action-btn.active {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .orchestration-indicator.active {\n            display: flex;\n        }"
+  },
+  "agent-header": {
+    "html": "<div class=\"agent-header\">\n                            <div class=\"agent-avatar coordinator\">CO</div>",
+    "css": "\n\n        .agent-header {\n            display: flex;\n            align-items: center;\n            gap: 10px;\n            margin-bottom: 8px;\n        }"
+  },
+  "agent-avatar": {
+    "html": "<div class=\"agent-avatar coordinator\">CO</div>",
+    "css": "\n\n        .agent-avatar {\n            width: 32px;\n            height: 32px;\n            border-radius: 8px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 14px;\n            color: white;\n            font-weight: 600;\n        }\n\n\n\n        .agent-avatar.researcher {\n            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));\n        }\n\n\n\n        .agent-avatar.coder {\n            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));\n        }\n\n\n\n        .agent-avatar.analyst {\n            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-red));\n        }\n\n\n\n        .agent-avatar.coordinator {\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));\n        }"
+  },
+  "coordinator": {
+    "html": "<div class=\"agent-avatar coordinator\">CO</div>",
+    "css": "\n\n        .agent-avatar.coordinator {\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));\n        }"
+  },
+  "agent-info": {
+    "html": "<div class=\"agent-info\">\n                                <div class=\"agent-name\">Coordinator</div>",
+    "css": "\n\n        .agent-info {\n            flex: 1;\n        }"
+  },
+  "agent-name": {
+    "html": "<div class=\"agent-name\">Coordinator</div>",
+    "css": "\n\n        .agent-name {\n            font-size: 13px;\n            font-weight: 600;\n            color: var(--light-100);\n            margin-bottom: 2px;\n        }"
+  },
+  "agent-role": {
+    "html": "<div class=\"agent-role\">Task Orchestration</div>",
+    "css": "\n\n        .agent-role {\n            font-size: 10px;\n            color: var(--light-400);\n        }"
+  },
+  "agent-status": {
+    "html": "<div class=\"agent-status synthesizing\">Synthesizing</div>",
+    "css": "\n\n        .agent-status {\n            font-size: 10px;\n            padding: 2px 6px;\n            border-radius: 8px;\n            font-weight: 500;\n        }\n\n\n\n        .agent-status.ready {\n            background: rgba(16, 185, 129, 0.2);\n            color: var(--accent-green);\n        }\n\n\n\n        .agent-status.working {\n            background: rgba(59, 130, 246, 0.2);\n            color: var(--accent-blue);\n        }\n\n\n\n        .agent-status.synthesizing {\n            background: rgba(139, 92, 246, 0.2);\n            color: var(--accent-purple);\n        }"
+  },
+  "synthesizing": {
+    "html": "<div class=\"agent-status synthesizing\">Synthesizing</div>",
+    "css": "\n\n        .agent-status.synthesizing {\n            background: rgba(139, 92, 246, 0.2);\n            color: var(--accent-purple);\n        }"
+  },
+  "agent-capabilities": {
+    "html": "<div class=\"agent-capabilities\">\n                            <div class=\"capability-badge\">Task Delegation</div>",
+    "css": "\n\n        .agent-capabilities {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 4px;\n            margin-top: 8px;\n        }"
+  },
+  "capability-badge": {
+    "html": "<div class=\"capability-badge\">Task Delegation</div>",
+    "css": "\n\n        .capability-badge {\n            background: var(--dark-700);\n            color: var(--light-400);\n            padding: 2px 6px;\n            border-radius: 6px;\n            font-size: 9px;\n            font-weight: 500;\n        }"
+  },
+  "researcher": {
+    "html": "<div class=\"agent-avatar researcher\">RE</div>",
+    "css": "\n\n        .agent-avatar.researcher {\n            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));\n        }"
+  },
+  "working": {
+    "html": "<div class=\"agent-status working\">Researching</div>",
+    "css": "\n\n        .agent-status.working {\n            background: rgba(59, 130, 246, 0.2);\n            color: var(--accent-blue);\n        }"
+  },
+  "coder": {
+    "html": "<div class=\"agent-avatar coder\">CD</div>",
+    "css": "\n\n        .agent-avatar.coder {\n            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));\n        }"
+  },
+  "analyst": {
+    "html": "<div class=\"agent-avatar analyst\">AN</div>",
+    "css": "\n\n        .agent-avatar.analyst {\n            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-red));\n        }"
+  },
+  "ready": {
+    "html": "<div class=\"agent-status ready\">Ready</div>",
+    "css": "\n\n        .agent-status.ready {\n            background: rgba(16, 185, 129, 0.2);\n            color: var(--accent-green);\n        }"
+  },
+  "fa-plus-circle": {
+    "html": "<i class=\"fas fa-plus-circle\"></i>",
+    "css": ""
+  },
+  "chat-main": {
+    "html": "<div class=\"chat-main\">\n            <!-- Collaboration Header -->\n            <div class=\"chat-header\">\n                <div class=\"session-info\">\n                    <div class=\"session-avatar\">\n                        <i class=\"fas fa-project-diagram\"></i>\n                    </div>",
+    "css": "\n\n        /* Main Chat Area */\n        .chat-main {\n            flex: 1;\n            display: flex;\n            flex-direction: column;\n            background: linear-gradient(180deg, var(--dark-900) 0%, var(--dark-950) 100%);\n        }"
+  },
+  "chat-header": {
+    "html": "<div class=\"chat-header\">\n                <div class=\"session-info\">\n                    <div class=\"session-avatar\">\n                        <i class=\"fas fa-project-diagram\"></i>\n                    </div>",
+    "css": "\n\n        /* Collaboration Header */\n        .chat-header {\n            height: 70px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            padding: 0 24px;\n            box-shadow: var(--glass-shadow);\n        }"
+  },
+  "session-info": {
+    "html": "<div class=\"session-info\">\n                    <div class=\"session-avatar\">\n                        <i class=\"fas fa-project-diagram\"></i>\n                    </div>",
+    "css": "\n\n        .session-info {\n            display: flex;\n            align-items: center;\n            gap: 12px;\n        }"
+  },
+  "session-avatar": {
+    "html": "<div class=\"session-avatar\">\n                        <i class=\"fas fa-project-diagram\"></i>\n                    </div>",
+    "css": "\n\n        .session-avatar {\n            width: 40px;\n            height: 40px;\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));\n            border-radius: 10px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            color: white;\n            font-size: 16px;\n        }"
+  },
+  "fa-project-diagram": {
+    "html": "<i class=\"fas fa-project-diagram\"></i>",
+    "css": ""
+  },
+  "session-details": {
+    "html": "<div class=\"session-details\">\n                        <h2>Multi-Agent Collaboration Session</h2>\n                        <div class=\"session-meta\">\n                            <div class=\"meta-item\">\n                                <i class=\"fas fa-users\"></i>\n                                <span>4 Active Agents</span>\n                            </div>",
+    "css": "\n\n        .session-details h2 {\n            font-size: 16px;\n            font-weight: 600;\n            margin: 0;\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n        }"
+  },
+  "session-meta": {
+    "html": "<div class=\"session-meta\">\n                            <div class=\"meta-item\">\n                                <i class=\"fas fa-users\"></i>\n                                <span>4 Active Agents</span>\n                            </div>",
+    "css": "\n\n        .session-meta {\n            font-size: 12px;\n            color: var(--light-400);\n            display: flex;\n            align-items: center;\n            gap: 12px;\n        }"
+  },
+  "meta-item": {
+    "html": "<div class=\"meta-item\">\n                                <i class=\"fas fa-users\"></i>\n                                <span>4 Active Agents</span>\n                            </div>",
+    "css": "\n\n        .meta-item {\n            display: flex;\n            align-items: center;\n            gap: 4px;\n        }"
+  },
+  "fa-clock": {
+    "html": "<i class=\"fas fa-clock\"></i>",
+    "css": ""
+  },
+  "fa-tasks": {
+    "html": "<i class=\"fas fa-tasks\"></i>",
+    "css": ""
+  },
+  "orchestration-controls": {
+    "html": "<div class=\"orchestration-controls\">\n                    <button class=\"control-btn\" id=\"pauseOrchestration\" title=\"Pause Orchestration\">\n                        <i class=\"fas fa-pause\"></i>\n                    </button>\n                    <button class=\"control-btn active\" id=\"realTimeMode\" title=\"Real-time Mode\">\n                        <i class=\"fas fa-broadcast-tower\"></i>\n                    </button>\n                    <button class=\"control-btn\" id=\"collaborationSettings\" title=\"Collaboration Settings\">\n                        <i class=\"fas fa-cogs\"></i>\n                    </button>\n                    <button class=\"control-btn\" id=\"exportSession\" title=\"Export Session\">\n                        <i class=\"fas fa-download\"></i>\n                    </button>\n                </div>",
+    "css": "\n\n        .orchestration-controls {\n            display: flex;\n            gap: 8px;\n            align-items: center;\n        }"
+  },
+  "control-btn": {
+    "html": "<button class=\"control-btn\" id=\"pauseOrchestration\" title=\"Pause Orchestration\">\n                        <i class=\"fas fa-pause\"></i>\n                    </button>",
+    "css": "\n\n        .control-btn {\n            width: 36px;\n            height: 36px;\n            border: none;\n            background: var(--dark-700);\n            color: var(--light-300);\n            border-radius: 8px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        }\n\n\n\n        .control-btn:hover {\n            background: var(--dark-600);\n            color: var(--accent-cyan);\n            transform: translateY(-1px);\n        }\n\n\n\n        .control-btn.active {\n            background: var(--accent-cyan);\n            color: white;\n        }"
+  },
+  "fa-pause": {
+    "html": "<i class=\"fas fa-pause\"></i>",
+    "css": ""
+  },
+  "fa-broadcast-tower": {
+    "html": "<i class=\"fas fa-broadcast-tower\"></i>",
+    "css": ""
+  },
+  "fa-cogs": {
+    "html": "<i class=\"fas fa-cogs\"></i>",
+    "css": ""
+  },
+  "fa-download": {
+    "html": "<i class=\"fas fa-download\"></i>",
+    "css": ""
+  },
+  "chat-messages": {
+    "html": "<div class=\"chat-messages\" id=\"collaborationMessages\">\n                <!-- Welcome Screen -->\n                <div class=\"collaboration-welcome\" id=\"collaborationWelcome\">\n                    <div class=\"welcome-orchestration-icon\">\n                        <i class=\"fas fa-network-wired\"></i>\n                    </div>",
+    "css": "\n\n        /* Collaboration Messages */\n        .chat-messages {\n            flex: 1;\n            padding: 24px;\n            overflow-y: auto;\n            display: flex;\n            flex-direction: column;\n            gap: 20px;\n        }\n\n\n            \n            .chat-messages {\n                padding: 16px;\n            }"
+  },
+  "collaboration-welcome": {
+    "html": "<div class=\"collaboration-welcome\" id=\"collaborationWelcome\">\n                    <div class=\"welcome-orchestration-icon\">\n                        <i class=\"fas fa-network-wired\"></i>\n                    </div>",
+    "css": "\n\n        /* Welcome Screen for Collaboration */\n        .collaboration-welcome {\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            justify-content: center;\n            flex: 1;\n            text-align: center;\n            max-width: 700px;\n            margin: 0 auto;\n        }"
+  },
+  "welcome-orchestration-icon": {
+    "html": "<div class=\"welcome-orchestration-icon\">\n                        <i class=\"fas fa-network-wired\"></i>\n                    </div>",
+    "css": "\n\n        .welcome-orchestration-icon {\n            width: 120px;\n            height: 120px;\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));\n            border-radius: 24px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            margin-bottom: 32px;\n            font-size: 48px;\n            color: white;\n            animation: gentle-glow 3s ease-in-out infinite;\n        }"
+  },
+  "welcome-greeting": {
+    "html": "<div class=\"welcome-greeting\">Multi-Agent AI Collaboration</div>",
+    "css": "\n\n        .welcome-greeting {\n            font-size: 42px;\n            font-weight: 700;\n            margin-bottom: 16px;\n            background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n            line-height: 1.2;\n        }\n\n\n            \n            .welcome-greeting {\n                font-size: 32px;\n            }"
+  },
+  "welcome-subtitle": {
+    "html": "<div class=\"welcome-subtitle\">\n                        Harness the power of specialized AI agents working together to solve complex problems.\n                        <br>Delegate tasks, coordinate responses, and synthesize unified solutions.\n                    </div>",
+    "css": "\n\n        .welcome-subtitle {\n            font-size: 18px;\n            color: var(--light-400);\n            margin-bottom: 32px;\n            line-height: 1.5;\n        }\n\n\n            \n            .welcome-subtitle {\n                font-size: 16px;\n            }"
+  },
+  "collaboration-stats": {
+    "html": "<div class=\"collaboration-stats\">\n                        <div class=\"stat-card\">\n                            <div class=\"stat-value\">4</div>",
+    "css": "\n\n        .collaboration-stats {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));\n            gap: 16px;\n            margin-top: 32px;\n            width: 100%;\n        }"
+  },
+  "stat-card": {
+    "html": "<div class=\"stat-card\">\n                            <div class=\"stat-value\">4</div>",
+    "css": "\n\n        .stat-card {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 16px;\n            text-align: center;\n        }"
+  },
+  "stat-value": {
+    "html": "<div class=\"stat-value\">4</div>",
+    "css": "\n\n        .stat-value {\n            font-size: 24px;\n            font-weight: 700;\n            color: var(--accent-cyan);\n            margin-bottom: 4px;\n        }"
+  },
+  "stat-label": {
+    "html": "<div class=\"stat-label\">Active Agents</div>",
+    "css": "\n\n        .stat-label {\n            font-size: 12px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "chat-input-container": {
+    "html": "<div class=\"chat-input-container\">\n                <div class=\"input-wrapper\">\n                    <!-- Collaboration Controls -->\n                    <div class=\"collaboration-controls\">\n                        <button class=\"action-btn\" id=\"taskDelegationBtn\">\n                            <i class=\"action-icon fas fa-project-diagram\"></i>\n                            Task Delegation\n                        </button>\n                        <button class=\"action-btn\" id=\"parallelProcessingBtn\">\n                            <i class=\"action-icon fas fa-layer-group\"></i>\n                            Parallel Processing\n                        </button>\n                        <button class=\"action-btn\" id=\"responseSynthesisBtn\">\n                            <i class=\"action-icon fas fa-compress-arrows-alt\"></i>\n                            Response Synthesis\n                        </button>\n                        <button class=\"action-btn\" id=\"agentCollaborationBtn\">\n                            <i class=\"action-icon fas fa-handshake\"></i>\n                            Agent Collaboration\n                        </button>\n                        <button class=\"action-btn\" id=\"devSessionBtn\">\n                            <i class=\"action-icon fas fa-code\"></i>\n                            Dev Session\n                        </button>\n                    </div>",
+    "css": "\n\n        /* Modern Input Area for Collaboration */\n        .chat-input-container {\n            padding: 24px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border-top: 1px solid var(--glass-border);\n        }\n\n\n            \n            .chat-input-container {\n                padding: 16px;\n            }"
+  },
+  "input-wrapper": {
+    "html": "<div class=\"input-wrapper\">\n                    <!-- Collaboration Controls -->\n                    <div class=\"collaboration-controls\">\n                        <button class=\"action-btn\" id=\"taskDelegationBtn\">\n                            <i class=\"action-icon fas fa-project-diagram\"></i>\n                            Task Delegation\n                        </button>\n                        <button class=\"action-btn\" id=\"parallelProcessingBtn\">\n                            <i class=\"action-icon fas fa-layer-group\"></i>\n                            Parallel Processing\n                        </button>\n                        <button class=\"action-btn\" id=\"responseSynthesisBtn\">\n                            <i class=\"action-icon fas fa-compress-arrows-alt\"></i>\n                            Response Synthesis\n                        </button>\n                        <button class=\"action-btn\" id=\"agentCollaborationBtn\">\n                            <i class=\"action-icon fas fa-handshake\"></i>\n                            Agent Collaboration\n                        </button>\n                        <button class=\"action-btn\" id=\"devSessionBtn\">\n                            <i class=\"action-icon fas fa-code\"></i>\n                            Dev Session\n                        </button>\n                    </div>",
+    "css": "\n\n        .input-wrapper {\n            max-width: 800px;\n            margin: 0 auto;\n            position: relative;\n        }"
+  },
+  "collaboration-controls": {
+    "html": "<div class=\"collaboration-controls\">\n                        <button class=\"action-btn\" id=\"taskDelegationBtn\">\n                            <i class=\"action-icon fas fa-project-diagram\"></i>\n                            Task Delegation\n                        </button>\n                        <button class=\"action-btn\" id=\"parallelProcessingBtn\">\n                            <i class=\"action-icon fas fa-layer-group\"></i>\n                            Parallel Processing\n                        </button>\n                        <button class=\"action-btn\" id=\"responseSynthesisBtn\">\n                            <i class=\"action-icon fas fa-compress-arrows-alt\"></i>\n                            Response Synthesis\n                        </button>\n                        <button class=\"action-btn\" id=\"agentCollaborationBtn\">\n                            <i class=\"action-icon fas fa-handshake\"></i>\n                            Agent Collaboration\n                        </button>\n                        <button class=\"action-btn\" id=\"devSessionBtn\">\n                            <i class=\"action-icon fas fa-code\"></i>\n                            Dev Session\n                        </button>\n                    </div>",
+    "css": "\n\n        /* Collaboration Controls */\n        .collaboration-controls {\n            display: flex;\n            gap: 12px;\n            margin-bottom: 16px;\n            flex-wrap: wrap;\n        }\n\n\n            \n            .collaboration-controls {\n                flex-wrap: wrap;\n                gap: 8px;\n            }"
+  },
+  "action-btn": {
+    "html": "<button class=\"action-btn\" id=\"taskDelegationBtn\">\n                            <i class=\"action-icon fas fa-project-diagram\"></i>\n                            Task Delegation\n                        </button>",
+    "css": "\n\n        .action-btn {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 10px 16px;\n            color: var(--light-300);\n            cursor: pointer;\n            transition: all 0.3s ease;\n            font-size: 13px;\n            font-weight: 500;\n        }\n\n\n\n        .action-btn:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            color: var(--light-100);\n            transform: translateY(-1px);\n        }\n\n\n\n        .action-btn.active {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }"
+  },
+  "action-icon": {
+    "html": "<i class=\"action-icon fas fa-project-diagram\"></i>",
+    "css": "\n\n        .action-icon {\n            font-size: 14px;\n        }"
+  },
+  "fa-layer-group": {
+    "html": "<i class=\"action-icon fas fa-layer-group\"></i>",
+    "css": ""
+  },
+  "fa-compress-arrows-alt": {
+    "html": "<i class=\"action-icon fas fa-compress-arrows-alt\"></i>",
+    "css": ""
+  },
+  "fa-handshake": {
+    "html": "<i class=\"action-icon fas fa-handshake\"></i>",
+    "css": ""
+  },
+  "fa-code": {
+    "html": "<i class=\"action-icon fas fa-code\"></i>",
+    "css": ""
+  },
+  "chat-input-area": {
+    "html": "<div class=\"chat-input-area\">\n                        <textarea \n                            class=\"input-field\" \n                            id=\"collaborationInput\"\n                            placeholder=\"Describe a complex task for the AI collaboration team to work on...\"\n                            rows=\"1\"\n                        ></textarea>\n                        \n                        <div class=\"quick-actions\">\n                            <button class=\"quick-action\" id=\"voiceInputBtn\" title=\"Voice Input\">\n                                <i class=\"fas fa-microphone\"></i>\n                            </button>\n                            <button class=\"quick-action\" id=\"fileUploadBtn\" title=\"Upload Files\">\n                                <i class=\"fas fa-paperclip\"></i>\n                            </button>\n                            <button class=\"quick-action\" id=\"orchestrationBtn\" title=\"Orchestration Mode\">\n                                <i class=\"fas fa-sitemap\"></i>\n                            </button>\n                            <button class=\"quick-action send-button\" id=\"sendCollaborationBtn\" title=\"Send to Collaboration Team\">\n                                <i class=\"fas fa-paper-plane\"></i>\n                            </button>\n                        </div>",
+    "css": "\n\n        /* Main Input Area */\n        .chat-input-area {\n            display: flex;\n            align-items: flex-end;\n            gap: 12px;\n            background: var(--dark-800);\n            border: 1px solid var(--glass-border);\n            border-radius: 20px;\n            padding: 16px;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .chat-input-area:focus-within {\n            border-color: var(--accent-cyan);\n            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);\n        }"
+  },
+  "input-field": {
+    "html": "<textarea \n                            class=\"input-field\" \n                            id=\"collaborationInput\"\n                            placeholder=\"Describe a complex task for the AI collaboration team to work on...\"\n                            rows=\"1\"\n                        ></textarea>",
+    "css": "\n\n        .input-field {\n            flex: 1;\n            background: transparent;\n            border: none;\n            color: var(--light-100);\n            font-size: 16px;\n            line-height: 1.5;\n            resize: none;\n            min-height: 24px;\n            max-height: 120px;\n            outline: none;\n            font-family: inherit;\n        }\n\n\n\n        .input-field::placeholder {\n            color: var(--light-400);\n        }"
+  },
+  "quick-actions": {
+    "html": "<div class=\"quick-actions\">\n                            <button class=\"quick-action\" id=\"voiceInputBtn\" title=\"Voice Input\">\n                                <i class=\"fas fa-microphone\"></i>\n                            </button>\n                            <button class=\"quick-action\" id=\"fileUploadBtn\" title=\"Upload Files\">\n                                <i class=\"fas fa-paperclip\"></i>\n                            </button>\n                            <button class=\"quick-action\" id=\"orchestrationBtn\" title=\"Orchestration Mode\">\n                                <i class=\"fas fa-sitemap\"></i>\n                            </button>\n                            <button class=\"quick-action send-button\" id=\"sendCollaborationBtn\" title=\"Send to Collaboration Team\">\n                                <i class=\"fas fa-paper-plane\"></i>\n                            </button>\n                        </div>",
+    "css": "\n\n        /* Quick Actions for Collaboration */\n        .quick-actions {\n            display: flex;\n            gap: 8px;\n            align-items: center;\n        }"
+  },
+  "quick-action": {
+    "html": "<button class=\"quick-action\" id=\"voiceInputBtn\" title=\"Voice Input\">\n                                <i class=\"fas fa-microphone\"></i>\n                            </button>",
+    "css": "\n\n        /* Quick Actions for Collaboration */\n        .quick-actions {\n            display: flex;\n            gap: 8px;\n            align-items: center;\n        }\n\n\n\n        .quick-action {\n            width: 36px;\n            height: 36px;\n            border: none;\n            background: var(--dark-700);\n            color: var(--light-300);\n            border-radius: 10px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 14px;\n        }\n\n\n\n        .quick-action:hover {\n            background: var(--dark-600);\n            color: var(--accent-cyan);\n            transform: translateY(-1px);\n        }"
+  },
+  "fa-microphone": {
+    "html": "<i class=\"fas fa-microphone\"></i>",
+    "css": ""
+  },
+  "fa-paperclip": {
+    "html": "<i class=\"fas fa-paperclip\"></i>",
+    "css": ""
+  },
+  "fa-sitemap": {
+    "html": "<i class=\"fas fa-sitemap\"></i>",
+    "css": ""
+  },
+  "send-button": {
+    "html": "<button class=\"quick-action send-button\" id=\"sendCollaborationBtn\" title=\"Send to Collaboration Team\">\n                                <i class=\"fas fa-paper-plane\"></i>\n                            </button>",
+    "css": "\n\n        .send-button {\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));\n            color: white;\n        }\n\n\n\n        .send-button:hover {\n            transform: translateY(-1px) scale(1.05);\n            box-shadow: 0 4px 16px rgba(6, 182, 212, 0.4);\n        }\n\n\n\n        .send-button:disabled {\n            opacity: 0.5;\n            cursor: not-allowed;\n            transform: none;\n        }"
+  },
+  "fa-paper-plane": {
+    "html": "<i class=\"fas fa-paper-plane\"></i>",
+    "css": ""
+  },
+  "orchestration-indicator": {
+    "html": "<div class=\"orchestration-indicator\" id=\"orchestrationIndicator\">\n        <div class=\"loading-dots\">\n            <div class=\"loading-dot\"></div>",
+    "css": "\n\n        /* Orchestration Indicators */\n        .orchestration-indicator {\n            position: fixed;\n            top: 20px;\n            left: 50%;\n            transform: translateX(-50%);\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border: 1px solid var(--glass-border);\n            border-radius: 20px;\n            padding: 8px 16px;\n            font-size: 12px;\n            color: var(--accent-cyan);\n            z-index: 1000;\n            display: none;\n            align-items: center;\n            gap: 8px;\n        }\n\n\n\n        .orchestration-indicator.active {\n            display: flex;\n        }"
+  },
+  "loading-dots": {
+    "html": "<div class=\"loading-dots\">\n            <div class=\"loading-dot\"></div>",
+    "css": "\n\n        /* Loading States */\n        .loading-dots {\n            display: inline-flex;\n            gap: 4px;\n        }"
+  },
+  "loading-dot": {
+    "html": "<div class=\"loading-dot\"></div>",
+    "css": "\n\n        /* Loading States */\n        .loading-dots {\n            display: inline-flex;\n            gap: 4px;\n        }\n\n\n\n        .loading-dot {\n            width: 6px;\n            height: 6px;\n            background: var(--accent-cyan);\n            border-radius: 50%;\n            animation: loading-bounce 1.4s ease-in-out infinite both;\n        }\n\n\n\n        .loading-dot:nth-child(1) { animation-delay: -0.32s; }\n\n\n        .loading-dot:nth-child(2) { animation-delay: -0.16s; }"
+  },
+  "fa-user": {
+    "html": "<i class=\"fas fa-user\"></i>",
+    "css": ""
+  },
+  "message-header": {
+    "html": "<div class=\"message-header\">\n                    <div class=\"message-type\">Task Delegation</div>",
+    "css": "\n\n        .message-header {\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            margin-bottom: 12px;\n            padding-bottom: 8px;\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "message-type": {
+    "html": "<div class=\"message-type\">Task Delegation</div>",
+    "css": "\n\n        .message-type {\n            font-size: 12px;\n            font-weight: 600;\n            color: var(--accent-purple);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "message-timestamp": {
+    "html": "<div class=\"message-timestamp\">${new Date().toLocaleTimeString()}</div>",
+    "css": "\n\n        .message-timestamp {\n            font-size: 11px;\n            color: var(--light-500);\n        }"
+  },
+  "task-delegation": {
+    "html": "<div class=\"task-delegation\">\n                    <div class=\"task-header\">\n                        <div class=\"task-title\">Multi-Agent Task Analysis</div>",
+    "css": "\n\n        .task-delegation {\n            background: rgba(59, 130, 246, 0.1);\n            border: 1px solid var(--accent-blue);\n            border-radius: 12px;\n            padding: 16px;\n            margin-top: 12px;\n        }"
+  },
+  "task-header": {
+    "html": "<div class=\"task-header\">\n                        <div class=\"task-title\">Multi-Agent Task Analysis</div>",
+    "css": "\n\n        .task-header {\n            display: flex;\n            align-items: center;\n            justify-content: between;\n            margin-bottom: 12px;\n        }"
+  },
+  "task-title": {
+    "html": "<div class=\"task-title\">Multi-Agent Task Analysis</div>",
+    "css": "\n\n        .task-title {\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--accent-blue);\n        }"
+  },
+  "task-status": {
+    "html": "<div class=\"task-status\">Active</div>",
+    "css": "\n\n        .task-status {\n            font-size: 11px;\n            padding: 4px 8px;\n            border-radius: 12px;\n            background: var(--accent-blue);\n            color: white;\n            margin-left: auto;\n        }"
+  },
+  "task-description": {
+    "html": "<div class=\"task-description\">${userInput}</div>",
+    "css": "\n\n        .task-description {\n            font-size: 13px;\n            color: var(--light-300);\n            line-height: 1.5;\n            margin-bottom: 12px;\n        }"
+  },
+  "task-participants": {
+    "html": "<div class=\"task-participants\">\n                        <div class=\"participant-badge\">\n                            <div class=\"participant-avatar\" style=\"background: var(--accent-purple);\"></div>",
+    "css": "\n\n        .task-participants {\n            display: flex;\n            gap: 8px;\n            margin-top: 12px;\n        }"
+  },
+  "participant-badge": {
+    "html": "<div class=\"participant-badge\">\n                            <div class=\"participant-avatar\" style=\"background: var(--accent-purple);\"></div>",
+    "css": "\n\n        .participant-badge {\n            display: flex;\n            align-items: center;\n            gap: 6px;\n            background: var(--dark-700);\n            padding: 4px 8px;\n            border-radius: 12px;\n            font-size: 11px;\n            color: var(--light-300);\n        }"
+  },
+  "participant-avatar": {
+    "html": "<div class=\"participant-avatar\" style=\"background: var(--accent-purple);\"></div>",
+    "css": "\n\n        .participant-avatar {\n            width: 16px;\n            height: 16px;\n            border-radius: 4px;\n            background: var(--accent-cyan);\n        }"
+  },
+  "progress-section": {
+    "html": "<div class=\"progress-section\">\n                        <div class=\"progress-header\">\n                            <div class=\"progress-label\">Task Progress</div>",
+    "css": "\n\n        /* Progress Tracking */\n        .progress-section {\n            margin-top: 16px;\n            padding: 12px;\n            background: var(--dark-700);\n            border-radius: 8px;\n        }"
+  },
+  "progress-header": {
+    "html": "<div class=\"progress-header\">\n                            <div class=\"progress-label\">Task Progress</div>",
+    "css": "\n\n        .progress-header {\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            margin-bottom: 8px;\n        }"
+  },
+  "progress-label": {
+    "html": "<div class=\"progress-label\">Task Progress</div>",
+    "css": "\n\n        .progress-label {\n            font-size: 12px;\n            font-weight: 500;\n            color: var(--light-300);\n        }"
+  },
+  "progress-percentage": {
+    "html": "<div class=\"progress-percentage\">25%</div>",
+    "css": "\n\n        .progress-percentage {\n            font-size: 12px;\n            color: var(--accent-cyan);\n            font-weight: 600;\n        }"
+  },
+  "progress-bar": {
+    "html": "<div class=\"progress-bar\">\n                            <div class=\"progress-fill\" style=\"width: 25%\"></div>",
+    "css": "\n\n        .progress-bar {\n            width: 100%;\n            height: 6px;\n            background: var(--dark-600);\n            border-radius: 3px;\n            overflow: hidden;\n        }"
+  },
+  "progress-fill": {
+    "html": "<div class=\"progress-fill\" style=\"width: 25%\"></div>",
+    "css": "\n\n        .progress-fill {\n            height: 100%;\n            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));\n            border-radius: 3px;\n            transition: width 0.3s ease;\n        }"
+  },
+  "agent-communication-content": {
+    "html": "<div class=\"agent-communication-content\">\n                    <div style=\"display: flex; align-items: center; gap: 8px; margin-bottom: 8px;\">\n                        <div style=\"width: 20px; height: 20px; background: ${agent.color}; border-radius: 6px;\"></div>",
+    "css": "\n\n        /* Agent Communication Specific */\n        .agent-communication-content {\n            margin-top: 12px;\n        }"
+  },
+  "synthesis-panel": {
+    "html": "<div class=\"synthesis-panel\">\n                    <div class=\"synthesis-header\">\n                        <div class=\"synthesis-icon\">\n                            <i class=\"fas fa-compress-arrows-alt\"></i>\n                        </div>",
+    "css": "\n\n        /* Synthesis Display */\n        .synthesis-panel {\n            background: rgba(16, 185, 129, 0.1);\n            border: 1px solid var(--accent-green);\n            border-radius: 12px;\n            padding: 16px;\n            margin-top: 12px;\n        }"
+  },
+  "synthesis-header": {
+    "html": "<div class=\"synthesis-header\">\n                        <div class=\"synthesis-icon\">\n                            <i class=\"fas fa-compress-arrows-alt\"></i>\n                        </div>",
+    "css": "\n\n        .synthesis-header {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            margin-bottom: 12px;\n        }"
+  },
+  "synthesis-icon": {
+    "html": "<div class=\"synthesis-icon\">\n                            <i class=\"fas fa-compress-arrows-alt\"></i>\n                        </div>",
+    "css": "\n\n        .synthesis-icon {\n            color: var(--accent-green);\n            font-size: 14px;\n        }"
+  },
+  "synthesis-title": {
+    "html": "<div class=\"synthesis-title\">Combining Agent Contributions</div>",
+    "css": "\n\n        .synthesis-title {\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--accent-green);\n        }"
+  },
+  "agent-contributions": {
+    "html": "<div class=\"agent-contributions\">\n                        <div class=\"contribution-item\">\n                            <div class=\"contribution-agent\">Research Specialist</div>",
+    "css": "\n\n        .agent-contributions {\n            display: grid;\n            gap: 8px;\n            margin-bottom: 12px;\n        }"
+  },
+  "contribution-item": {
+    "html": "<div class=\"contribution-item\">\n                            <div class=\"contribution-agent\">Research Specialist</div>",
+    "css": "\n\n        .contribution-item {\n            background: var(--dark-700);\n            border-radius: 8px;\n            padding: 10px;\n            font-size: 12px;\n        }"
+  },
+  "contribution-agent": {
+    "html": "<div class=\"contribution-agent\">Research Specialist</div>",
+    "css": "\n\n        .contribution-agent {\n            color: var(--accent-cyan);\n            font-weight: 600;\n            margin-bottom: 4px;\n        }"
+  },
+  "contribution-text": {
+    "html": "<div class=\"contribution-text\">Comprehensive research data and validated sources compiled</div>",
+    "css": "\n\n        .contribution-text {\n            color: var(--light-300);\n            line-height: 1.4;\n        }"
+  },
+  "fa-check-circle": {
+    "html": "<i class=\"fas fa-check-circle\"></i>",
+    "css": ""
+  }
+}

@@ -1,0 +1,46 @@
+/* Main Container */
+        .artifact-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: var(--dark-900);
+        }
+
+
+
+        /* Header */
+        .artifact-header {
+            height: 70px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            z-index: 1000;
+        }
+
+
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+
+
+        .artifact-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }

@@ -1,0 +1,119 @@
+.nav-bubble {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 20px;
+        }
+
+
+
+        .nav-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);
+        }
+
+
+
+        .nav-bubble.artifacts {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+        }
+
+
+
+        .nav-bubble.projects {
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            color: white;
+        }
+
+
+
+        .nav-bubble.training {
+            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-red));
+            color: white;
+        }
+
+
+
+        .nav-bubble.git {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            color: white;
+        }
+
+
+
+        .nav-bubble.research {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));
+            color: white;
+        }
+
+
+
+        .nav-bubble:hover .bubble-popover {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(-8px);
+        }
+
+
+            
+            .nav-bubble {
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+            }
+
+
+
+        .nav-bubble.artifacts {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+        }
+
+
+
+        /* Bubble Popover */
+        .bubble-popover {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 16px;
+            min-width: 220px;
+            box-shadow: var(--glass-shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .nav-bubble:hover .bubble-popover {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-50%) translateX(-8px);
+        }
+
+
+
+        .popover-header {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--light-100);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }

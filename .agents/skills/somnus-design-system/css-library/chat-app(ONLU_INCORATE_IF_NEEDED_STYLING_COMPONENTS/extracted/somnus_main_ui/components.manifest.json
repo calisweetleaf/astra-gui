@@ -1,0 +1,310 @@
+{
+  "chat-app": {
+    "html": "<div class=\"chat-app\">\n        <!-- Professional Header -->\n        <div class=\"chat-header\">\n            <div class=\"header-left\">\n                <div class=\"model-selector\" id=\"modelSelector\">\n                    <div class=\"model-indicator\"></div>",
+    "css": "\n\n        /* Modern Chat Container */\n        .chat-app {\n            display: flex;\n            flex-direction: column;\n            height: 100vh;\n            background: var(--dark-900);\n        }"
+  },
+  "chat-header": {
+    "html": "<div class=\"chat-header\">\n            <div class=\"header-left\">\n                <div class=\"model-selector\" id=\"modelSelector\">\n                    <div class=\"model-indicator\"></div>",
+    "css": "\n\n        /* Professional Header */\n        .chat-header {\n            height: 60px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border-bottom: 1px solid var(--glass-border);\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            padding: 0 24px;\n            box-shadow: var(--glass-shadow);\n            position: relative;\n        }"
+  },
+  "header-left": {
+    "html": "<div class=\"header-left\">\n                <div class=\"model-selector\" id=\"modelSelector\">\n                    <div class=\"model-indicator\"></div>",
+    "css": "\n\n        .header-left {\n            display: flex;\n            align-items: center;\n            gap: 16px;\n        }"
+  },
+  "model-selector": {
+    "html": "<div class=\"model-selector\" id=\"modelSelector\">\n                    <div class=\"model-indicator\"></div>",
+    "css": "\n\n        .model-selector {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 8px 16px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .model-selector:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-blue);\n        }"
+  },
+  "model-indicator": {
+    "html": "<div class=\"model-indicator\"></div>",
+    "css": "\n\n        .model-indicator {\n            width: 8px;\n            height: 8px;\n            background: var(--accent-green);\n            border-radius: 50%;\n            animation: pulse-dot 2s infinite;\n        }"
+  },
+  "model-name": {
+    "html": "<span class=\"model-name\">Gemma-3-4b-it</span>",
+    "css": "\n\n        .model-name {\n            font-size: 16px;\n            font-weight: 600;\n            color: var(--light-100);\n        }"
+  },
+  "fas": {
+    "html": "<i class=\"fas fa-chevron-down\" style=\"color: var(--light-400); font-size: 12px;\"></i>",
+    "css": ""
+  },
+  "fa-chevron-down": {
+    "html": "<i class=\"fas fa-chevron-down\" style=\"color: var(--light-400); font-size: 12px;\"></i>",
+    "css": ""
+  },
+  "system-status": {
+    "html": "<div class=\"system-status\">\n                    <div class=\"status-indicator\"></div>",
+    "css": "\n\n        .system-status {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            font-size: 12px;\n            color: var(--light-400);\n        }"
+  },
+  "status-indicator": {
+    "html": "<div class=\"status-indicator\"></div>",
+    "css": "\n\n        .status-indicator {\n            width: 6px;\n            height: 6px;\n            background: var(--accent-green);\n            border-radius: 50%;\n            display: inline-block;\n            margin-right: 4px;\n        }"
+  },
+  "header-controls": {
+    "html": "<div class=\"header-controls\">\n                <button class=\"settings-btn\" id=\"settingsBtn\" title=\"Instance Settings\">\n                    <i class=\"fas fa-cog\"></i>\n                </button>\n                <div class=\"header-badge\">Unlimited Power</div>",
+    "css": "\n\n        .header-controls {\n            display: flex;\n            align-items: center;\n            gap: 12px;\n        }"
+  },
+  "settings-btn": {
+    "html": "<button class=\"settings-btn\" id=\"settingsBtn\" title=\"Instance Settings\">\n                    <i class=\"fas fa-cog\"></i>\n                </button>",
+    "css": "\n\n        .settings-btn {\n            width: 36px;\n            height: 36px;\n            border: none;\n            background: var(--dark-700);\n            color: var(--light-300);\n            border-radius: 8px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n        }\n\n\n\n        .settings-btn:hover {\n            background: var(--dark-600);\n            color: var(--accent-blue);\n        }"
+  },
+  "fa-cog": {
+    "html": "<i class=\"fas fa-cog\"></i>",
+    "css": ""
+  },
+  "header-badge": {
+    "html": "<div class=\"header-badge\">Unlimited Power</div>",
+    "css": "\n\n        .header-badge {\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            color: white;\n            padding: 6px 12px;\n            border-radius: 16px;\n            font-size: 12px;\n            font-weight: 600;\n        }"
+  },
+  "chat-messages": {
+    "html": "<div class=\"chat-messages\" id=\"chatMessages\">\n            <!-- Welcome Screen -->\n            <div class=\"welcome-screen\" id=\"welcomeScreen\">\n                <div class=\"welcome-icon\">\n                    <i class=\"fas fa-brain\"></i>\n                </div>",
+    "css": "\n\n        /* Chat Messages Area */\n        .chat-messages {\n            flex: 1;\n            padding: 24px;\n            overflow-y: auto;\n            display: flex;\n            flex-direction: column;\n            gap: 24px;\n            background: linear-gradient(180deg, var(--dark-900) 0%, var(--dark-950) 100%);\n            position: relative;\n        }\n\n\n            \n            .chat-messages {\n                padding: 16px;\n            }"
+  },
+  "welcome-screen": {
+    "html": "<div class=\"welcome-screen\" id=\"welcomeScreen\">\n                <div class=\"welcome-icon\">\n                    <i class=\"fas fa-brain\"></i>\n                </div>",
+    "css": "\n\n        /* Welcome Screen */\n        .welcome-screen {\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            justify-content: center;\n            flex: 1;\n            text-align: center;\n            max-width: 700px;\n            margin: 0 auto;\n        }"
+  },
+  "welcome-icon": {
+    "html": "<div class=\"welcome-icon\">\n                    <i class=\"fas fa-brain\"></i>\n                </div>",
+    "css": "\n\n        .welcome-icon {\n            width: 120px;\n            height: 120px;\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            border-radius: 24px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            margin-bottom: 32px;\n            font-size: 48px;\n            color: white;\n            animation: gentle-glow 3s ease-in-out infinite;\n        }"
+  },
+  "fa-brain": {
+    "html": "<i class=\"fas fa-brain\"></i>",
+    "css": ""
+  },
+  "welcome-greeting": {
+    "html": "<div class=\"welcome-greeting\">Hello, User</div>",
+    "css": "\n\n        .welcome-greeting {\n            font-size: 42px;\n            font-weight: 700;\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n            margin-bottom: 16px;\n        }\n\n\n            \n            .welcome-greeting {\n                font-size: 32px;\n            }"
+  },
+  "welcome-subtitle": {
+    "html": "<div class=\"welcome-subtitle\">\n                    Your unlimited AI assistant is ready to help with anything you need.\n                    <br>No restrictions, no limits, just pure capability.\n                </div>",
+    "css": "\n\n        .welcome-subtitle {\n            font-size: 18px;\n            color: var(--light-400);\n            line-height: 1.6;\n            margin-bottom: 40px;\n        }\n\n\n            \n            .welcome-subtitle {\n                font-size: 16px;\n            }"
+  },
+  "recent-activity": {
+    "html": "<div class=\"recent-activity\">\n                    <div class=\"recent-header\">\n                        <i class=\"fas fa-clock\"></i>\n                        Quick Launch\n                    </div>",
+    "css": "\n\n        /* Recent Activity Section */\n        .recent-activity {\n            width: 100%;\n            max-width: 600px;\n            margin-top: 32px;\n        }"
+  },
+  "recent-header": {
+    "html": "<div class=\"recent-header\">\n                        <i class=\"fas fa-clock\"></i>\n                        Quick Launch\n                    </div>",
+    "css": "\n\n        .recent-header {\n            font-size: 16px;\n            font-weight: 600;\n            color: var(--light-200);\n            margin-bottom: 16px;\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }"
+  },
+  "fa-clock": {
+    "html": "<i class=\"fas fa-clock\"></i>",
+    "css": ""
+  },
+  "quick-launch-grid": {
+    "html": "<div class=\"quick-launch-grid\">\n                        <div class=\"quick-launch-card\" onclick=\"openNewArtifact()\">\n                            <div class=\"card-icon\" style=\"background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\">\n                                <i class=\"fas fa-rocket\"></i>\n                            </div>",
+    "css": "\n\n        .quick-launch-grid {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));\n            gap: 12px;\n            margin-bottom: 24px;\n        }\n\n\n            \n            .quick-launch-grid {\n                grid-template-columns: 1fr 1fr;\n            }"
+  },
+  "quick-launch-card": {
+    "html": "<div class=\"quick-launch-card\" onclick=\"openNewArtifact()\">\n                            <div class=\"card-icon\" style=\"background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\">\n                                <i class=\"fas fa-rocket\"></i>\n                            </div>",
+    "css": "\n\n        .quick-launch-card {\n            background: var(--glass-bg);\n            backdrop-filter: blur(10px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 16px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .quick-launch-card:hover {\n            background: rgba(59, 130, 246, 0.1);\n            border-color: var(--accent-blue);\n            transform: translateY(-2px);\n        }"
+  },
+  "card-icon": {
+    "html": "<div class=\"card-icon\" style=\"background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\">\n                                <i class=\"fas fa-rocket\"></i>\n                            </div>",
+    "css": "\n\n        .card-icon {\n            width: 32px;\n            height: 32px;\n            border-radius: 8px;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            margin-bottom: 8px;\n            font-size: 14px;\n        }"
+  },
+  "fa-rocket": {
+    "html": "<i class=\"fas fa-rocket\"></i>",
+    "css": ""
+  },
+  "card-title": {
+    "html": "<div class=\"card-title\">New Artifact</div>",
+    "css": "\n\n        .card-title {\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--light-100);\n            margin-bottom: 4px;\n        }"
+  },
+  "card-subtitle": {
+    "html": "<div class=\"card-subtitle\">Unlimited execution</div>",
+    "css": "\n\n        .card-subtitle {\n            font-size: 12px;\n            color: var(--light-400);\n        }"
+  },
+  "fa-play": {
+    "html": "<i class=\"fas fa-play\"></i>",
+    "css": ""
+  },
+  "fa-folder-open": {
+    "html": "<i class=\"fas fa-folder-open\"></i>",
+    "css": ""
+  },
+  "fa-search": {
+    "html": "<i class=\"fas fa-search\"></i>",
+    "css": ""
+  },
+  "floating-nav": {
+    "html": "<div class=\"floating-nav\">\n            <div class=\"nav-bubble artifacts\" title=\"Artifacts\">\n                <i class=\"fas fa-rocket\"></i>\n                <div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fas fa-rocket\"></i>\n                        Artifacts\n                    </div>",
+    "css": "\n\n        /* Floating Bubble Navigation */\n        .floating-nav {\n            position: fixed;\n            right: 24px;\n            top: 50%;\n            transform: translateY(-50%);\n            display: flex;\n            flex-direction: column;\n            gap: 16px;\n            z-index: 1000;\n        }\n\n\n            .floating-nav {\n                right: 16px;\n                gap: 12px;\n            }"
+  },
+  "nav-bubble": {
+    "html": "<div class=\"nav-bubble artifacts\" title=\"Artifacts\">\n                <i class=\"fas fa-rocket\"></i>\n                <div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fas fa-rocket\"></i>\n                        Artifacts\n                    </div>",
+    "css": "\n\n        .nav-bubble {\n            width: 56px;\n            height: 56px;\n            border-radius: 50%;\n            border: 1px solid var(--glass-border);\n            backdrop-filter: blur(20px);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            position: relative;\n            font-size: 20px;\n        }\n\n\n\n        .nav-bubble:hover {\n            transform: scale(1.1);\n            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);\n        }\n\n\n\n        .nav-bubble.artifacts {\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            color: white;\n        }\n\n\n\n        .nav-bubble.projects {\n            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));\n            color: white;\n        }\n\n\n\n        .nav-bubble.training {\n            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-red));\n            color: white;\n        }\n\n\n\n        .nav-bubble.git {\n            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));\n            color: white;\n        }\n\n\n\n        .nav-bubble.research {\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));\n            color: white;\n        }\n\n\n\n        .nav-bubble:hover .bubble-popover {\n            opacity: 1;\n            visibility: visible;\n            transform: translateY(-50%) translateX(-8px);\n        }\n\n\n            \n            .nav-bubble {\n                width: 48px;\n                height: 48px;\n                font-size: 18px;\n            }"
+  },
+  "artifacts": {
+    "html": "<div class=\"nav-bubble artifacts\" title=\"Artifacts\">\n                <i class=\"fas fa-rocket\"></i>\n                <div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fas fa-rocket\"></i>\n                        Artifacts\n                    </div>",
+    "css": "\n\n        .nav-bubble.artifacts {\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            color: white;\n        }"
+  },
+  "bubble-popover": {
+    "html": "<div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fas fa-rocket\"></i>\n                        Artifacts\n                    </div>",
+    "css": "\n\n        /* Bubble Popover */\n        .bubble-popover {\n            position: absolute;\n            right: 70px;\n            top: 50%;\n            transform: translateY(-50%);\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 16px;\n            min-width: 220px;\n            box-shadow: var(--glass-shadow);\n            opacity: 0;\n            visibility: hidden;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .nav-bubble:hover .bubble-popover {\n            opacity: 1;\n            visibility: visible;\n            transform: translateY(-50%) translateX(-8px);\n        }"
+  },
+  "popover-header": {
+    "html": "<div class=\"popover-header\">\n                        <i class=\"fas fa-rocket\"></i>\n                        Artifacts\n                    </div>",
+    "css": "\n\n        .popover-header {\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--light-100);\n            margin-bottom: 12px;\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }"
+  },
+  "popover-actions": {
+    "html": "<div class=\"popover-actions\">\n                        <div class=\"popover-action\" onclick=\"createNewArtifact()\">\n                            <i class=\"fas fa-plus\"></i>\n                            New Artifact\n                        </div>",
+    "css": "\n\n        .popover-actions {\n            display: flex;\n            flex-direction: column;\n            gap: 8px;\n        }"
+  },
+  "popover-action": {
+    "html": "<div class=\"popover-action\" onclick=\"createNewArtifact()\">\n                            <i class=\"fas fa-plus\"></i>\n                            New Artifact\n                        </div>",
+    "css": "\n\n        .popover-actions {\n            display: flex;\n            flex-direction: column;\n            gap: 8px;\n        }\n\n\n\n        .popover-action {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            padding: 8px 12px;\n            border-radius: 8px;\n            cursor: pointer;\n            transition: all 0.2s ease;\n            font-size: 13px;\n            color: var(--light-300);\n        }\n\n\n\n        .popover-action:hover {\n            background: var(--dark-600);\n            color: var(--light-100);\n        }"
+  },
+  "fa-plus": {
+    "html": "<i class=\"fas fa-plus\"></i>",
+    "css": ""
+  },
+  "fa-list": {
+    "html": "<i class=\"fas fa-list\"></i>",
+    "css": ""
+  },
+  "fa-history": {
+    "html": "<i class=\"fas fa-history\"></i>",
+    "css": ""
+  },
+  "popover-status": {
+    "html": "<div class=\"popover-status\">\n                        <span>5 Active</span>\n                        <span class=\"status-online\">\u25cf Online</span>\n                    </div>",
+    "css": "\n\n        .popover-status {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            font-size: 11px;\n            color: var(--light-400);\n            margin-top: 8px;\n            padding-top: 8px;\n            border-top: 1px solid var(--glass-border);\n        }"
+  },
+  "status-online": {
+    "html": "<span class=\"status-online\">\u25cf Online</span>",
+    "css": "\n\n        /* Status indicator */\n        .status-online {\n            color: var(--accent-green);\n        }"
+  },
+  "projects": {
+    "html": "<div class=\"nav-bubble projects\" title=\"Projects\">\n                <i class=\"fas fa-folder\"></i>\n                <div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fas fa-folder\"></i>\n                        Projects\n                    </div>",
+    "css": "\n\n        .nav-bubble.projects {\n            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));\n            color: white;\n        }"
+  },
+  "fa-folder": {
+    "html": "<i class=\"fas fa-folder-open\"></i>",
+    "css": ""
+  },
+  "fa-copy": {
+    "html": "<i class=\"fas fa-copy\"></i>",
+    "css": ""
+  },
+  "training": {
+    "html": "<div class=\"nav-bubble training\" title=\"AI Training\">\n                <i class=\"fas fa-brain\"></i>\n                <div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fas fa-brain\"></i>\n                        AI Training\n                    </div>",
+    "css": "\n\n        .nav-bubble.training {\n            background: linear-gradient(135deg, var(--accent-yellow), var(--accent-red));\n            color: white;\n        }"
+  },
+  "fa-database": {
+    "html": "<i class=\"fas fa-database\"></i>",
+    "css": ""
+  },
+  "fa-chart-line": {
+    "html": "<i class=\"fas fa-chart-line\"></i>",
+    "css": ""
+  },
+  "git": {
+    "html": "<div class=\"nav-bubble git\" title=\"Git Repositories\">\n                <i class=\"fab fa-git-alt\"></i>\n                <div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fab fa-git-alt\"></i>\n                        Git Repos\n                    </div>",
+    "css": "\n\n        .nav-bubble.git {\n            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));\n            color: white;\n        }"
+  },
+  "fab": {
+    "html": "<i class=\"fab fa-git-alt\"></i>",
+    "css": ""
+  },
+  "fa-git-alt": {
+    "html": "<i class=\"fab fa-git-alt\"></i>",
+    "css": ""
+  },
+  "fa-download": {
+    "html": "<i class=\"fas fa-download\"></i>",
+    "css": ""
+  },
+  "fa-sync": {
+    "html": "<i class=\"fas fa-sync\"></i>",
+    "css": ""
+  },
+  "research": {
+    "html": "<div class=\"nav-bubble research\" title=\"Research\">\n                <i class=\"fas fa-search\"></i>\n                <div class=\"bubble-popover\">\n                    <div class=\"popover-header\">\n                        <i class=\"fas fa-search\"></i>\n                        Research\n                    </div>",
+    "css": "\n\n        .nav-bubble.research {\n            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-green));\n            color: white;\n        }"
+  },
+  "fa-globe": {
+    "html": "<i class=\"fas fa-globe\"></i>",
+    "css": ""
+  },
+  "fa-bookmark": {
+    "html": "<i class=\"fas fa-bookmark\"></i>",
+    "css": ""
+  },
+  "fa-robot": {
+    "html": "<i class=\"fas fa-robot\"></i>",
+    "css": ""
+  },
+  "main-action": {
+    "html": "<button class=\"main-action\" onclick=\"toggleMainMenu()\" title=\"Create New\">\n            <i class=\"fas fa-plus\"></i>\n        </button>",
+    "css": "\n\n        /* Main Action Button */\n        .main-action {\n            position: fixed;\n            bottom: 100px;\n            right: 24px;\n            width: 64px;\n            height: 64px;\n            border-radius: 50%;\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            border: none;\n            color: white;\n            font-size: 24px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4);\n            z-index: 1001;\n        }\n\n\n\n        .main-action:hover {\n            transform: scale(1.1) rotate(90deg);\n            box-shadow: 0 12px 48px rgba(59, 130, 246, 0.6);\n        }\n\n\n            \n            .main-action {\n                right: 16px;\n                bottom: 80px;\n                width: 56px;\n                height: 56px;\n                font-size: 20px;\n            }"
+  },
+  "chat-input-container": {
+    "html": "<div class=\"chat-input-container\">\n            <div class=\"input-wrapper\">\n                <!-- Action Buttons Row -->\n                <div class=\"action-buttons\">\n                    <button class=\"action-btn\" id=\"webSearchBtn\">\n                        <i class=\"action-icon fas fa-globe\"></i>\n                        Web Search\n                    </button>\n                    <button class=\"action-btn\" id=\"uploadsBtn\">\n                        <i class=\"action-icon fas fa-paperclip\"></i>\n                        Uploads\n                    </button>\n                    <button class=\"action-btn\" id=\"pluginsBtn\">\n                        <i class=\"action-icon fas fa-puzzle-piece\"></i>\n                        Plugins\n                    </button>\n                    <button class=\"action-btn\" id=\"memoryBtn\">\n                        <i class=\"action-icon fas fa-brain\"></i>\n                        Memory\n                    </button>\n                    <button class=\"action-btn\" id=\"researchBtn\">\n                        <i class=\"action-icon fas fa-microscope\"></i>\n                        Research\n                    </button>\n                </div>",
+    "css": "\n\n        /* Modern Input Area */\n        .chat-input-container {\n            padding: 24px;\n            background: var(--glass-bg);\n            backdrop-filter: blur(20px);\n            border-top: 1px solid var(--glass-border);\n        }\n\n\n            \n            .chat-input-container {\n                padding: 16px;\n            }"
+  },
+  "input-wrapper": {
+    "html": "<div class=\"input-wrapper\">\n                <!-- Action Buttons Row -->\n                <div class=\"action-buttons\">\n                    <button class=\"action-btn\" id=\"webSearchBtn\">\n                        <i class=\"action-icon fas fa-globe\"></i>\n                        Web Search\n                    </button>\n                    <button class=\"action-btn\" id=\"uploadsBtn\">\n                        <i class=\"action-icon fas fa-paperclip\"></i>\n                        Uploads\n                    </button>\n                    <button class=\"action-btn\" id=\"pluginsBtn\">\n                        <i class=\"action-icon fas fa-puzzle-piece\"></i>\n                        Plugins\n                    </button>\n                    <button class=\"action-btn\" id=\"memoryBtn\">\n                        <i class=\"action-icon fas fa-brain\"></i>\n                        Memory\n                    </button>\n                    <button class=\"action-btn\" id=\"researchBtn\">\n                        <i class=\"action-icon fas fa-microscope\"></i>\n                        Research\n                    </button>\n                </div>",
+    "css": "\n\n        .input-wrapper {\n            max-width: 800px;\n            margin: 0 auto;\n            position: relative;\n        }"
+  },
+  "action-buttons": {
+    "html": "<div class=\"action-buttons\">\n                    <button class=\"action-btn\" id=\"webSearchBtn\">\n                        <i class=\"action-icon fas fa-globe\"></i>\n                        Web Search\n                    </button>\n                    <button class=\"action-btn\" id=\"uploadsBtn\">\n                        <i class=\"action-icon fas fa-paperclip\"></i>\n                        Uploads\n                    </button>\n                    <button class=\"action-btn\" id=\"pluginsBtn\">\n                        <i class=\"action-icon fas fa-puzzle-piece\"></i>\n                        Plugins\n                    </button>\n                    <button class=\"action-btn\" id=\"memoryBtn\">\n                        <i class=\"action-icon fas fa-brain\"></i>\n                        Memory\n                    </button>\n                    <button class=\"action-btn\" id=\"researchBtn\">\n                        <i class=\"action-icon fas fa-microscope\"></i>\n                        Research\n                    </button>\n                </div>",
+    "css": "\n\n        /* Action Buttons Row */\n        .action-buttons {\n            display: flex;\n            gap: 12px;\n            margin-bottom: 16px;\n            flex-wrap: wrap;\n        }\n\n\n            \n            .action-buttons {\n                flex-wrap: wrap;\n                gap: 8px;\n            }"
+  },
+  "action-btn": {
+    "html": "<button class=\"action-btn\" id=\"webSearchBtn\">\n                        <i class=\"action-icon fas fa-globe\"></i>\n                        Web Search\n                    </button>",
+    "css": "\n\n        .action-btn {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 10px 16px;\n            color: var(--light-300);\n            cursor: pointer;\n            transition: all 0.3s ease;\n            font-size: 13px;\n            font-weight: 500;\n        }\n\n\n\n        .action-btn:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-blue);\n            color: var(--light-100);\n            transform: translateY(-1px);\n        }\n\n\n\n        .action-btn.active {\n            background: var(--accent-blue);\n            border-color: var(--accent-blue);\n            color: white;\n        }"
+  },
+  "action-icon": {
+    "html": "<i class=\"action-icon fas fa-globe\"></i>",
+    "css": "\n\n        .action-icon {\n            font-size: 14px;\n        }"
+  },
+  "fa-paperclip": {
+    "html": "<i class=\"action-icon fas fa-paperclip\"></i>",
+    "css": ""
+  },
+  "fa-puzzle-piece": {
+    "html": "<i class=\"action-icon fas fa-puzzle-piece\"></i>",
+    "css": ""
+  },
+  "fa-microscope": {
+    "html": "<i class=\"action-icon fas fa-microscope\"></i>",
+    "css": ""
+  },
+  "chat-input-area": {
+    "html": "<div class=\"chat-input-area\">\n                    <textarea \n                        class=\"input-field\" \n                        id=\"messageInput\"\n                        placeholder=\"Ask Somnus anything...\"\n                        rows=\"1\"\n                    ></textarea>\n                    \n                    <div class=\"quick-actions\">\n                        <button class=\"quick-action\" id=\"voiceBtn\" title=\"Voice Input\">\n                            <i class=\"fas fa-microphone\"></i>\n                        </button>\n                        <button class=\"quick-action\" id=\"cameraBtn\" title=\"Camera\">\n                            <i class=\"fas fa-camera\"></i>\n                        </button>\n                        <button class=\"quick-action send-button\" id=\"sendBtn\" title=\"Send\">\n                            <i class=\"fas fa-paper-plane\"></i>\n                        </button>\n                    </div>",
+    "css": "\n\n        /* Main Input Area */\n        .chat-input-area {\n            display: flex;\n            align-items: flex-end;\n            gap: 12px;\n            background: var(--dark-800);\n            border: 1px solid var(--glass-border);\n            border-radius: 20px;\n            padding: 16px;\n            transition: all 0.3s ease;\n        }\n\n\n\n        .chat-input-area:focus-within {\n            border-color: var(--accent-blue);\n            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);\n        }"
+  },
+  "input-field": {
+    "html": "<textarea \n                        class=\"input-field\" \n                        id=\"messageInput\"\n                        placeholder=\"Ask Somnus anything...\"\n                        rows=\"1\"\n                    ></textarea>",
+    "css": "\n\n        .input-field {\n            flex: 1;\n            background: transparent;\n            border: none;\n            color: var(--light-100);\n            font-size: 16px;\n            line-height: 1.5;\n            resize: none;\n            min-height: 24px;\n            max-height: 120px;\n            outline: none;\n            font-family: inherit;\n        }\n\n\n\n        .input-field::placeholder {\n            color: var(--light-400);\n        }"
+  },
+  "quick-actions": {
+    "html": "<div class=\"quick-actions\">\n                        <button class=\"quick-action\" id=\"voiceBtn\" title=\"Voice Input\">\n                            <i class=\"fas fa-microphone\"></i>\n                        </button>\n                        <button class=\"quick-action\" id=\"cameraBtn\" title=\"Camera\">\n                            <i class=\"fas fa-camera\"></i>\n                        </button>\n                        <button class=\"quick-action send-button\" id=\"sendBtn\" title=\"Send\">\n                            <i class=\"fas fa-paper-plane\"></i>\n                        </button>\n                    </div>",
+    "css": "\n\n        .quick-actions {\n            display: flex;\n            gap: 8px;\n            align-items: center;\n        }"
+  },
+  "quick-action": {
+    "html": "<button class=\"quick-action\" id=\"voiceBtn\" title=\"Voice Input\">\n                            <i class=\"fas fa-microphone\"></i>\n                        </button>",
+    "css": "\n\n        .quick-actions {\n            display: flex;\n            gap: 8px;\n            align-items: center;\n        }\n\n\n\n        .quick-action {\n            width: 36px;\n            height: 36px;\n            border: none;\n            background: var(--dark-700);\n            color: var(--light-300);\n            border-radius: 10px;\n            cursor: pointer;\n            transition: all 0.3s ease;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 14px;\n        }\n\n\n\n        .quick-action:hover {\n            background: var(--dark-600);\n            color: var(--accent-blue);\n            transform: translateY(-1px);\n        }"
+  },
+  "fa-microphone": {
+    "html": "<i class=\"fas fa-microphone\"></i>",
+    "css": ""
+  },
+  "fa-camera": {
+    "html": "<i class=\"fas fa-camera\"></i>",
+    "css": ""
+  },
+  "send-button": {
+    "html": "<button class=\"quick-action send-button\" id=\"sendBtn\" title=\"Send\">\n                            <i class=\"fas fa-paper-plane\"></i>\n                        </button>",
+    "css": "\n\n        .send-button {\n            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));\n            color: white;\n        }\n\n\n\n        .send-button:hover {\n            transform: translateY(-1px) scale(1.05);\n            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);\n        }"
+  },
+  "fa-paper-plane": {
+    "html": "<i class=\"fas fa-paper-plane\"></i>",
+    "css": ""
+  },
+  "fa-user": {
+    "html": "<i class=\"fas fa-user\"></i>",
+    "css": ""
+  }
+}

@@ -1,0 +1,36 @@
+/* Source Cards */
+        .source-card {
+            background: var(--dark-700);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            transition: var(--transition-smooth);
+        }
+
+
+
+        .source-card:hover {
+            background: var(--dark-600);
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+        }
+
+
+
+        .source-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+
+
+        .source-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--light-100);
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }

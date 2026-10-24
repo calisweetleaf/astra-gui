@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css"></head>
+<body class="command">
+<style>
+  .grad-card { flex:1; height:100%; border-radius:var(--radius-md); border:1px solid var(--glass-border);
+               padding:14px; display:flex; flex-direction:column; justify-content:space-between; }
+  .grad-name { font-family:var(--font-mono); font-size:var(--text-2xs); text-transform:uppercase; letter-spacing:var(--tracking-wider); color:#fff; }
+  .grad-css  { font-family:var(--font-mono); font-size:10px; color:rgba(255,255,255,.85); line-height:1.4; }
+</style>
+<div class="card">
+  <div class="kicker">Signature gradients · brand + page bg</div>
+  <div class="row" style="flex:1; gap:12px;">
+    <div class="grad-card" style="background:linear-gradient(135deg,#3b82f6,#8b5cf6);">
+      <div class="grad-name">Somnus brand</div>
+      <div class="grad-css">linear-gradient(135deg, #3B82F6, #8B5CF6)</div>
+    </div>
+    <div class="grad-card" style="background:linear-gradient(135deg,#10b981,#06b6d4);">
+      <div class="grad-name">Sovereignty</div>
+      <div class="grad-css">linear-gradient(135deg, #10B981, #06B6D4)</div>
+    </div>
+    <div class="grad-card" style="background:radial-gradient(ellipse at 20% 30%, rgba(6,182,212,.45) 0%, transparent 60%), radial-gradient(ellipse at 80% 70%, rgba(139,92,246,.35) 0%, transparent 50%), linear-gradient(135deg,#060a10,#000);">
+      <div class="grad-name">REM-Core canvas</div>
+      <div class="grad-css">radial · cyan + violet · over near-black</div>
+    </div>
+  </div>
+</div>
+</body></html>

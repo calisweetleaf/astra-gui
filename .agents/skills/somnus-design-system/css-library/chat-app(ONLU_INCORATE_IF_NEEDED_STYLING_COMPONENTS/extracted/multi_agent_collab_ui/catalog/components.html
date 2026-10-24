@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Somnus Components Catalog</title>
+    <style>
+      :root{
+  --dark-950: #0a0a0f;
+  --dark-900: #0f0f1a;
+  --dark-800: #1a1a2e;
+  --dark-700: #16213e;
+  --dark-600: #1f2937;
+  --light-100: #f8fafc;
+  --light-200: #e2e8f0;
+  --light-300: #cbd5e1;
+  --light-400: #94a3b8;
+  --light-500: #64748b;
+  --accent-blue: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --accent-yellow: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-green: #10b981;
+  --accent-cyan: #06b6d4;
+  --glass-bg: rgba(31, 41, 55, 0.7);
+  --glass-border: rgba(148, 163, 184, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+      body{font-family:Inter,system-ui,sans-serif;background:var(--surface-0);color:var(--text-primary);}
+      .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;padding:24px;}
+      .comp{background:var(--surface-1);border:1px solid var(--border-subtle);border-radius:12px;padding:16px;}
+      .comp h2{font-size:14px;margin:0 0 12px;color:var(--text-secondary);}
+      .preview{background:var(--surface-0);border:1px dashed var(--border-subtle);border-radius:8px;padding:12px;}
+    </style>
+  </head>
+  <body>
+    <div class="grid"><section class="comp"><h2>AgentsList</h2><div class="preview"><div class="agents-list">
+                <!-- Active Agents -->
+                <div class="agent-section">
+                    <div class="agent-section-title">
+                        <i class="fas fa-users"></i>
+                        Active Agents
+                        <div class="agent-count">4</div></div></section><section class="comp"><h2>ChatHeader</h2><div class="preview"><div class="chat-header">
+                <div class="session-info">
+                    <div class="session-avatar">
+                        <i class="fas fa-project-diagram"></i>
+                    </div></div></section><section class="comp"><h2>CollaborationApp</h2><div class="preview"><div class="collaboration-app">
+        <!-- Agent Orchestration Sidebar -->
+        <div class="agents-sidebar">
+            <!-- Collaboration Header -->
+            <div class="agents-header">
+                <div class="collaboration-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div></div></section><section class="comp"><h2>CollaborationStats</h2><div class="preview"><div class="collaboration-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">4</div></div></section><section class="comp"><h2>QuickActions</h2><div class="preview"><div class="quick-actions">
+                            <button class="quick-action" id="voiceInputBtn" title="Voice Input">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="quick-action" id="fileUploadBtn" title="Upload Files">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button class="quick-action" id="orchestrationBtn" title="Orchestration Mode">
+                                <i class="fas fa-sitemap"></i>
+                            </button>
+                            <button class="quick-action send-button" id="sendCollaborationBtn" title="Send to Collaboration Team">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div></div></section><section class="comp"><h2>CollaborationControls</h2><div class="preview"><div class="collaboration-controls">
+                        <button class="action-btn" id="taskDelegationBtn">
+                            <i class="action-icon fas fa-project-diagram"></i>
+                            Task Delegation
+                        </button>
+                        <button class="action-btn" id="parallelProcessingBtn">
+                            <i class="action-icon fas fa-layer-group"></i>
+                            Parallel Processing
+                        </button>
+                        <button class="action-btn" id="responseSynthesisBtn">
+                            <i class="action-icon fas fa-compress-arrows-alt"></i>
+                            Response Synthesis
+                        </button>
+                        <button class="action-btn" id="agentCollaborationBtn">
+                            <i class="action-icon fas fa-handshake"></i>
+                            Agent Collaboration
+                        </button>
+                        <button class="action-btn" id="devSessionBtn">
+                            <i class="action-icon fas fa-code"></i>
+                            Dev Session
+                        </button>
+                    </div></div></section><section class="comp"><h2>ChatMessages</h2><div class="preview"><div class="chat-messages" id="collaborationMessages">
+                <!-- Welcome Screen -->
+                <div class="collaboration-welcome" id="collaborationWelcome">
+                    <div class="welcome-orchestration-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div></div></section><section class="comp"><h2>AgentCard</h2><div class="preview"><div class="agent-card active">
+                        <div class="agent-header">
+                            <div class="agent-avatar coordinator">CO</div></div></section><section class="comp"><h2>StatCard</h2><div class="preview"><div class="stat-card">
+                            <div class="stat-value">4</div></div></section><section class="comp"><h2>ChatMain</h2><div class="preview"><div class="chat-main">
+            <!-- Collaboration Header -->
+            <div class="chat-header">
+                <div class="session-info">
+                    <div class="session-avatar">
+                        <i class="fas fa-project-diagram"></i>
+                    </div></div></section><section class="comp"><h2>AgentsSidebar</h2><div class="preview"><div class="agents-sidebar">
+            <!-- Collaboration Header -->
+            <div class="agents-header">
+                <div class="collaboration-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div></div></section><section class="comp"><h2>ChatInputContainer</h2><div class="preview"><div class="chat-input-container">
+                <div class="input-wrapper">
+                    <!-- Collaboration Controls -->
+                    <div class="collaboration-controls">
+                        <button class="action-btn" id="taskDelegationBtn">
+                            <i class="action-icon fas fa-project-diagram"></i>
+                            Task Delegation
+                        </button>
+                        <button class="action-btn" id="parallelProcessingBtn">
+                            <i class="action-icon fas fa-layer-group"></i>
+                            Parallel Processing
+                        </button>
+                        <button class="action-btn" id="responseSynthesisBtn">
+                            <i class="action-icon fas fa-compress-arrows-alt"></i>
+                            Response Synthesis
+                        </button>
+                        <button class="action-btn" id="agentCollaborationBtn">
+                            <i class="action-icon fas fa-handshake"></i>
+                            Agent Collaboration
+                        </button>
+                        <button class="action-btn" id="devSessionBtn">
+                            <i class="action-icon fas fa-code"></i>
+                            Dev Session
+                        </button>
+                    </div></div></section><section class="comp"><h2>AgentsHeader</h2><div class="preview"><div class="agents-header">
+                <div class="collaboration-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div></div></section><section class="comp"><h2>SynthesisPanel</h2><div class="preview"><div class="synthesis-panel">
+                    <div class="synthesis-header">
+                        <div class="synthesis-icon">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                        </div></div></section><section class="comp"><h2>OrchestrationIndicator</h2><div class="preview"><div class="orchestration-indicator" id="orchestrationIndicator">
+        <div class="loading-dots">
+            <div class="loading-dot"></div></div></section><section class="comp"><h2>InputField</h2><div class="preview"><textarea 
+                            class="input-field" 
+                            id="collaborationInput"
+                            placeholder="Describe a complex task for the AI collaboration team to work on..."
+                            rows="1"
+                        ></textarea></div></section><section class="comp"><h2>SynthesisHeader</h2><div class="preview"><div class="synthesis-header">
+                        <div class="synthesis-icon">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                        </div></div></section><section class="comp"><h2>OrchestrationControls</h2><div class="preview"><div class="orchestration-controls">
+                    <button class="control-btn" id="pauseOrchestration" title="Pause Orchestration">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button class="control-btn active" id="realTimeMode" title="Real-time Mode">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </button>
+                    <button class="control-btn" id="collaborationSettings" title="Collaboration Settings">
+                        <i class="fas fa-cogs"></i>
+                    </button>
+                    <button class="control-btn" id="exportSession" title="Export Session">
+                        <i class="fas fa-download"></i>
+                    </button>
+                </div></div></section><section class="comp"><h2>QuickAction</h2><div class="preview"><button class="quick-action" id="voiceInputBtn" title="Voice Input">
+                                <i class="fas fa-microphone"></i>
+                            </button></div></section><section class="comp"><h2>SendButton</h2><div class="preview"><button class="quick-action send-button" id="sendCollaborationBtn" title="Send to Collaboration Team">
+                                <i class="fas fa-paper-plane"></i>
+                            </button></div></section></div>
+  </body>
+</html>

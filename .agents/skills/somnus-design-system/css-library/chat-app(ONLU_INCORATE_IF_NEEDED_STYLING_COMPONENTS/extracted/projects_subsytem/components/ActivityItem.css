@@ -1,0 +1,34 @@
+.activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+
+
+        .activity-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: white;
+            margin-top: 2px;
+        }
+
+
+
+        .activity-icon.vm { background: var(--accent-green); }
+
+
+        .activity-icon.collaboration { background: var(--accent-cyan); }
+
+
+        .activity-icon.intelligence { background: var(--accent-purple); }
+
+
+        .activity-icon.artifact { background: var(--accent-orange); }

@@ -1,0 +1,51 @@
+/* Agent List */
+        .agents-list {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+        }
+
+
+
+        .agent-section {
+            margin-bottom: 20px;
+        }
+
+
+
+        .agent-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--light-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+
+        .agent-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--light-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+
+        .agent-count {
+            background: var(--accent-blue);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 9px;
+            font-weight: 600;
+        }

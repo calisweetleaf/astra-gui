@@ -1,0 +1,23 @@
+{
+  "ExportPanel": ".export-panel",
+  "Tab": ".tab",
+  "MetricCard": ".metric-card",
+  "SidebarHeader": ".sidebar-header",
+  "TerminalContainer": ".terminal-container",
+  "ResearchHeader": ".research-header",
+  "KnowledgePanel": ".knowledge-panel",
+  "ResearchContainer": ".research-container",
+  "SourceCard": ".source-card",
+  "SidebarSections": ".sidebar-sections",
+  "KnowledgeGraphContainer": ".knowledge-graph-container",
+  "QuerySection": ".query-section",
+  "ProgressItem": ".progress-item",
+  "MetricsGrid": ".metrics-grid",
+  "ResearchWorkspace": ".research-workspace",
+  "ContradictionPanel": ".contradiction-panel",
+  "ResearchTabs": ".research-tabs",
+  "TerminalHeader": ".terminal-header",
+  "TerminalContent": ".terminal-content",
+  "ResearchSidebar": ".research-sidebar",
+  "QueryInputGroup": ".query-input-group"
+}

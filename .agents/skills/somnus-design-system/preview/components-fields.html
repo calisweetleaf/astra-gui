@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<style>
+  .field-label { font-family:var(--font-mono); font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:.16em; color:var(--light-400); margin-bottom:6px; display:block; }
+  .input { width:100%; box-sizing:border-box; background:var(--dark-700); border:1px solid var(--glass-border);
+           border-radius:8px; padding:11px 14px; color:var(--light-100); font-family:var(--font-interface);
+           font-size:14px; transition:all .3s var(--ease-smooth); }
+  .input.focus { border-color:var(--accent-cyan); box-shadow:0 0 0 3px rgba(6,182,212,.15); }
+  .composer { background:var(--dark-700); border:1px solid var(--glass-border); border-radius:14px;
+              padding:10px 12px; display:flex; gap:8px; align-items:center; }
+  .composer input { flex:1; background:transparent; border:0; outline:0; color:var(--light-100); font-family:var(--font-interface); font-size:14px; }
+  .composer button { width:32px; height:32px; border:0; border-radius:8px; background:transparent; color:var(--light-300); cursor:pointer; }
+  .composer button.send { background:var(--accent-cyan); color:#fff; }
+</style>
+<div class="card">
+  <div class="kicker">Form fields · inputs + composer</div>
+  <div>
+    <span class="field-label">Search query</span>
+    <input class="input" placeholder="Search corporate entities…" />
+  </div>
+  <div>
+    <span class="field-label">Threat level filter</span>
+    <input class="input focus" value="HIGH INFLUENCE" />
+  </div>
+  <div>
+    <span class="field-label">Composer</span>
+    <div class="composer">
+      <button title="Voice"><i class="fas fa-microphone"></i></button>
+      <button title="Camera"><i class="fas fa-camera"></i></button>
+      <input placeholder="Ask Somnus anything…" />
+      <button class="send" title="Send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+</div>
+</body></html>

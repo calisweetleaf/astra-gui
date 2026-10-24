@@ -1,0 +1,32 @@
+/* Execution Terminal */
+        .execution-terminal {
+            height: 300px;
+            background: var(--dark-950);
+            border-top: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Consolas', 'Monaco', monospace;
+            resize: vertical;
+            overflow: hidden;
+        }
+
+
+
+        .terminal-header {
+            height: 32px;
+            background: var(--dark-800);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            justify-content: space-between;
+        }
+
+
+
+        .terminal-title {
+            font-size: 11px;
+            color: var(--light-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://schemas.tokens.studio/schemas/brands.json",
+  "$description": "Somnus design tokens for Tokens Studio / Figma. Includes core palette, semantic roles, and glass effects with light/dark themes.",
+  "$themes": [
+    {
+      "id": "dark",
+      "name": "Dark",
+      "selectedTokenSets": {
+        "core": "source",
+        "semantic/dark": "enabled",
+        "semantic/light": "disabled",
+        "effects": "enabled"
+      },
+      "$figmaStyleReferences": {}
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "selectedTokenSets": {
+        "core": "source",
+        "semantic/dark": "disabled",
+        "semantic/light": "enabled",
+        "effects": "enabled"
+      },
+      "$figmaStyleReferences": {}
+    }
+  ],
+  "core": {
+    "color": {
+      "dark": {
+        "950": { "value": "#0a0a0f", "type": "color" },
+        "900": { "value": "#0f0f1a", "type": "color" },
+        "800": { "value": "#1a1a2e", "type": "color" },
+        "700": { "value": "#16213e", "type": "color" },
+        "600": { "value": "#1f2937", "type": "color" },
+        "500": { "value": "#334155", "type": "color" }
+      },
+      "light": {
+        "100": { "value": "#f8fafc", "type": "color" },
+        "200": { "value": "#e2e8f0", "type": "color" },
+        "300": { "value": "#cbd5e1", "type": "color" },
+        "400": { "value": "#94a3b8", "type": "color" },
+        "500": { "value": "#64748b", "type": "color" }
+      },
+      "accent": {
+        "blue":   { "value": "#3b82f6", "type": "color" },
+        "purple": { "value": "#8b5cf6", "type": "color" },
+        "yellow": { "value": "#f59e0b", "type": "color" },
+        "red":    { "value": "#ef4444", "type": "color" },
+        "green":  { "value": "#10b981", "type": "color" },
+        "cyan":   { "value": "#06b6d4", "type": "color" }
+      }
+    }
+  },
+  "semantic": {
+    "dark": {
+      "color": {
+        "surface": {
+          "0": { "value": "{core.color.dark.950}", "type": "color" },
+          "1": { "value": "{core.color.dark.900}", "type": "color" },
+          "2": { "value": "{core.color.dark.800}", "type": "color" },
+          "3": { "value": "{core.color.dark.700}", "type": "color" }
+        },
+        "text": {
+          "primary":   { "value": "{core.color.light.100}", "type": "color" },
+          "secondary": { "value": "{core.color.light.400}", "type": "color" },
+          "muted":     { "value": "{core.color.light.500}", "type": "color" }
+        },
+        "border": { "subtle": { "value": "rgba(148,163,184,0.10)", "type": "color" } },
+        "brand": {
+          "primary": { "value": "{core.color.accent.blue}", "type": "color" },
+          "success": { "value": "{core.color.accent.green}", "type": "color" },
+          "warning": { "value": "{core.color.accent.yellow}", "type": "color" },
+          "danger":  { "value": "{core.color.accent.red}", "type": "color" },
+          "info":    { "value": "{core.color.accent.cyan}", "type": "color" }
+        },
+        "link": {
+          "default": { "value": "{core.color.accent.blue}", "type": "color" },
+          "hover":   { "value": "#60a5fa", "type": "color" }
+        }
+      }
+    },
+    "light": {
+      "color": {
+        "surface": {
+          "0": { "value": "#ffffff", "type": "color" },
+          "1": { "value": "{core.color.light.100}", "type": "color" },
+          "2": { "value": "{core.color.light.200}", "type": "color" },
+          "3": { "value": "{core.color.light.300}", "type": "color" }
+        },
+        "text": {
+          "primary":   { "value": "#0f172a", "type": "color" },
+          "secondary": { "value": "#334155", "type": "color" },
+          "muted":     { "value": "#475569", "type": "color" }
+        },
+        "border": { "subtle": { "value": "rgba(15,23,42,0.12)", "type": "color" } },
+        "brand": {
+          "primary": { "value": "{core.color.accent.blue}", "type": "color" },
+          "success": { "value": "{core.color.accent.green}", "type": "color" },
+          "warning": { "value": "{core.color.accent.yellow}", "type": "color" },
+          "danger":  { "value": "{core.color.accent.red}", "type": "color" },
+          "info":    { "value": "{core.color.accent.cyan}", "type": "color" }
+        },
+        "link": {
+          "default": { "value": "#2563eb", "type": "color" },
+          "hover":   { "value": "#1d4ed8", "type": "color" }
+        }
+      }
+    }
+  },
+  "effects": {
+    "glass": {
+      "bg":     { "value": "rgba(31,41,55,0.70)", "type": "color" },
+      "border": { "value": "rgba(148,163,184,0.10)", "type": "color" },
+      "shadow": { "value": "0 8px 32px rgba(0,0,0,0.30)", "type": "boxShadow" }
+    }
+  }
+}
+

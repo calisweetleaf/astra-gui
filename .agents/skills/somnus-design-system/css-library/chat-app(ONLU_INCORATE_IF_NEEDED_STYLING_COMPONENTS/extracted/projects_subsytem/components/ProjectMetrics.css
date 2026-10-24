@@ -1,0 +1,20 @@
+.project-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+
+
+        .metric-item {
+            text-align: center;
+        }
+
+
+
+        .metric-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent-cyan);
+        }

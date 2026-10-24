@@ -1,0 +1,54 @@
+.vm-card {
+            background: var(--dark-700);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .vm-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+
+
+        .vm-card:hover {
+            background: var(--dark-600);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+
+
+        .vm-card:hover::before {
+            opacity: 1;
+        }
+
+
+
+        .vm-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+
+
+        .vm-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--light-100);
+        }

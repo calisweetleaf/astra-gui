@@ -1,0 +1,506 @@
+{
+  "projects-container": {
+    "html": "<div class=\"projects-container\">\n        <!-- Enhanced Projects Sidebar -->\n        <div class=\"projects-sidebar\">\n            <div class=\"sidebar-header\">\n                <div>\n                    <div class=\"sidebar-title\">Project Workspaces</div>",
+    "css": "\n\n        /* Main Layout Architecture */\n        .projects-container {\n            display: grid;\n            grid-template-areas: \n                \"sidebar header intelligence-panel\"\n                \"sidebar workspace intelligence-panel\"\n                \"sidebar workspace monitoring-panel\";\n            grid-template-columns: 380px 1fr 420px;\n            grid-template-rows: 80px 1fr 280px;\n            height: 100vh;\n            gap: 2px;\n            background: var(--dark-900);\n        }\n\n\n            .projects-container {\n                grid-template-columns: 320px 1fr 360px;\n            }\n\n\n            .projects-container {\n                grid-template-areas: \n                    \"header header\"\n                    \"sidebar workspace\"\n                    \"intelligence-panel monitoring-panel\";\n                grid-template-columns: 300px 1fr;\n                grid-template-rows: 80px 1fr 300px;\n            }\n\n\n            .projects-container {\n                grid-template-areas: \n                    \"header\"\n                    \"workspace\"\n                    \"sidebar\";\n                grid-template-columns: 1fr;\n                grid-template-rows: auto 1fr auto;\n            }"
+  },
+  "projects-sidebar": {
+    "html": "<div class=\"projects-sidebar\">\n            <div class=\"sidebar-header\">\n                <div>\n                    <div class=\"sidebar-title\">Project Workspaces</div>",
+    "css": "\n\n        /* Enhanced Sidebar */\n        .projects-sidebar {\n            grid-area: sidebar;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-right: 1px solid var(--glass-border);\n            padding: 24px;\n            overflow-y: auto;\n            scrollbar-width: thin;\n            scrollbar-color: var(--accent-cyan) transparent;\n        }\n\n\n            \n            .projects-sidebar,\n            .intelligence-panel,\n            .monitoring-panel {\n                position: relative;\n                height: auto;\n            }"
+  },
+  "sidebar-header": {
+    "html": "<div class=\"sidebar-header\">\n                <div>\n                    <div class=\"sidebar-title\">Project Workspaces</div>",
+    "css": "\n\n        .sidebar-header {\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            margin-bottom: 32px;\n            padding-bottom: 16px;\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "sidebar-title": {
+    "html": "<div class=\"sidebar-title\">Project Workspaces</div>",
+    "css": "\n\n        .sidebar-title {\n            font-size: 20px;\n            font-weight: 700;\n            color: var(--accent-cyan);\n        }"
+  },
+  "sidebar-subtitle": {
+    "html": "<div class=\"sidebar-subtitle\">Autonomous Intelligence</div>",
+    "css": "\n\n        .sidebar-subtitle {\n            font-size: 12px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n            margin-top: 2px;\n        }"
+  },
+  "create-project-btn": {
+    "html": "<button class=\"create-project-btn\" id=\"create-project\">\n                    <i class=\"fas fa-plus\"></i>\n                    Create\n                </button>",
+    "css": "\n\n        .create-project-btn {\n            background: var(--accent-cyan);\n            border: none;\n            border-radius: 12px;\n            padding: 12px 16px;\n            color: white;\n            font-size: 13px;\n            font-weight: 600;\n            cursor: pointer;\n            transition: var(--transition-spring);\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }\n\n\n\n        .create-project-btn:hover {\n            background: #0891b2;\n            transform: translateY(-2px) scale(1.05);\n            box-shadow: var(--shadow-elevated);\n        }"
+  },
+  "fas": {
+    "html": "<i class=\"fas fa-plus\"></i>",
+    "css": ""
+  },
+  "fa-plus": {
+    "html": "<i class=\"fas fa-plus\"></i>",
+    "css": ""
+  },
+  "project-categories": {
+    "html": "<div class=\"project-categories\">\n                <div class=\"category-header\">\n                    <i class=\"fas fa-filter\"></i>\n                    Filter by Type\n                </div>",
+    "css": "\n\n        /* Project Categories */\n        .project-categories {\n            margin-bottom: 24px;\n        }"
+  },
+  "category-header": {
+    "html": "<div class=\"category-header\">\n                    <i class=\"fas fa-filter\"></i>\n                    Filter by Type\n                </div>",
+    "css": "\n\n        .category-header {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--light-300);\n            margin-bottom: 12px;\n            padding: 8px 0;\n        }"
+  },
+  "fa-filter": {
+    "html": "<i class=\"fas fa-filter\"></i>",
+    "css": ""
+  },
+  "category-filter": {
+    "html": "<div class=\"category-filter\">\n                    <button class=\"filter-btn active\" data-type=\"all\">All</button>\n                    <button class=\"filter-btn\" data-type=\"research\">Research</button>\n                    <button class=\"filter-btn\" data-type=\"development\">Development</button>\n                    <button class=\"filter-btn\" data-type=\"analysis\">Analysis</button>\n                    <button class=\"filter-btn\" data-type=\"creative\">Creative</button>\n                </div>",
+    "css": "\n\n        .category-filter {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 8px;\n            margin-bottom: 16px;\n        }"
+  },
+  "filter-btn": {
+    "html": "<button class=\"filter-btn active\" data-type=\"all\">All</button>",
+    "css": "\n\n        .filter-btn {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 6px 12px;\n            color: var(--light-300);\n            font-size: 11px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n\n\n\n        .filter-btn:hover,\n        .filter-btn.active {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n            transform: translateY(-1px);\n        }"
+  },
+  "active": {
+    "html": "<button class=\"filter-btn active\" data-type=\"all\">All</button>",
+    "css": "\n\n        .filter-btn:hover,\n        .filter-btn.active {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n            transform: translateY(-1px);\n        }\n\n\n\n        .project-card.active {\n            border-color: var(--accent-cyan);\n            box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);\n        }\n\n\n\n        .project-card.active::before {\n            opacity: 1;\n        }\n\n\n\n        .workspace-tab.active {\n            color: var(--accent-cyan);\n            border-bottom-color: var(--accent-cyan);\n        }\n\n\n\n        .modal-overlay.active {\n            opacity: 1;\n            pointer-events: all;\n        }\n\n\n\n        .modal-overlay.active .modal-content {\n            transform: scale(1);\n        }"
+  },
+  "projects-list": {
+    "html": "<div class=\"projects-list\" id=\"projects-list\">\n                <!-- Projects will be populated here -->\n            </div>",
+    "css": "\n\n        /* Project Cards */\n        .projects-list {\n            display: flex;\n            flex-direction: column;\n            gap: 16px;\n        }"
+  },
+  "projects-header": {
+    "html": "<div class=\"projects-header\">\n            <div class=\"header-title\" id=\"header-title\">Quantum Research Project</div>",
+    "css": "\n\n        /* Main Header */\n        .projects-header {\n            grid-area: header;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-bottom: 1px solid var(--glass-border);\n            padding: 20px 32px;\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n        }"
+  },
+  "header-title": {
+    "html": "<div class=\"header-title\" id=\"header-title\">Quantum Research Project</div>",
+    "css": "\n\n        .header-title {\n            font-size: 24px;\n            font-weight: 700;\n            color: var(--light-100);\n        }"
+  },
+  "header-controls": {
+    "html": "<div class=\"header-controls\">\n                <div class=\"search-container\">\n                    <input type=\"text\" class=\"search-input\" placeholder=\"Search projects...\" id=\"project-search\">\n                    <i class=\"fas fa-search search-icon\"></i>\n                </div>",
+    "css": "\n\n        .header-controls {\n            display: flex;\n            align-items: center;\n            gap: 16px;\n        }"
+  },
+  "search-container": {
+    "html": "<div class=\"search-container\">\n                    <input type=\"text\" class=\"search-input\" placeholder=\"Search projects...\" id=\"project-search\">\n                    <i class=\"fas fa-search search-icon\"></i>\n                </div>",
+    "css": "\n\n        .search-container {\n            position: relative;\n        }"
+  },
+  "search-input": {
+    "html": "<input type=\"text\" class=\"search-input\" placeholder=\"Search projects...\" id=\"project-search\">\n                    <i class=\"fas fa-search search-icon\"></i>",
+    "css": "\n\n        .search-input {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 12px 16px 12px 40px;\n            color: var(--light-100);\n            font-size: 14px;\n            width: 280px;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .search-input:focus {\n            outline: none;\n            border-color: var(--accent-cyan);\n            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);\n        }"
+  },
+  "fa-search": {
+    "html": "<i class=\"fas fa-search search-icon\"></i>",
+    "css": ""
+  },
+  "search-icon": {
+    "html": "<i class=\"fas fa-search search-icon\"></i>",
+    "css": "\n\n        .search-icon {\n            position: absolute;\n            left: 12px;\n            top: 50%;\n            transform: translateY(-50%);\n            color: var(--light-400);\n        }"
+  },
+  "header-btn": {
+    "html": "<button class=\"header-btn\" id=\"sync-projects\">\n                    <i class=\"fas fa-sync\"></i>\n                    Sync\n                </button>",
+    "css": "\n\n        .header-btn {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 12px 16px;\n            color: var(--light-300);\n            font-size: 14px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }\n\n\n\n        .header-btn:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            color: var(--light-100);\n        }"
+  },
+  "fa-sync": {
+    "html": "<i class=\"fas fa-sync\"></i>",
+    "css": ""
+  },
+  "fa-cog": {
+    "html": "<i class=\"fas fa-cog\"></i>",
+    "css": ""
+  },
+  "projects-workspace": {
+    "html": "<div class=\"projects-workspace\">\n            <!-- Workspace Tabs -->\n            <div class=\"workspace-tabs\">\n                <div class=\"workspace-tab active\" data-tab=\"vm-dashboard\">\n                    <i class=\"fas fa-server\"></i>\n                    VM Dashboard\n                </div>",
+    "css": "\n\n        /* Main Workspace */\n        .projects-workspace {\n            grid-area: workspace;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            display: flex;\n            flex-direction: column;\n            overflow: hidden;\n        }"
+  },
+  "workspace-tabs": {
+    "html": "<div class=\"workspace-tabs\">\n                <div class=\"workspace-tab active\" data-tab=\"vm-dashboard\">\n                    <i class=\"fas fa-server\"></i>\n                    VM Dashboard\n                </div>",
+    "css": "\n\n        /* Workspace Tabs */\n        .workspace-tabs {\n            display: flex;\n            border-bottom: 1px solid var(--glass-border);\n            background: rgba(16, 23, 42, 0.6);\n        }"
+  },
+  "workspace-tab": {
+    "html": "<div class=\"workspace-tab active\" data-tab=\"vm-dashboard\">\n                    <i class=\"fas fa-server\"></i>\n                    VM Dashboard\n                </div>",
+    "css": "\n\n        /* Workspace Tabs */\n        .workspace-tabs {\n            display: flex;\n            border-bottom: 1px solid var(--glass-border);\n            background: rgba(16, 23, 42, 0.6);\n        }\n\n\n\n        .workspace-tab {\n            padding: 16px 24px;\n            font-size: 14px;\n            font-weight: 500;\n            color: var(--light-400);\n            cursor: pointer;\n            border-bottom: 2px solid transparent;\n            transition: var(--transition-smooth);\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }\n\n\n\n        .workspace-tab:hover {\n            color: var(--light-100);\n            background: var(--glass-hover);\n        }\n\n\n\n        .workspace-tab.active {\n            color: var(--accent-cyan);\n            border-bottom-color: var(--accent-cyan);\n        }"
+  },
+  "fa-server": {
+    "html": "<i class=\"fas fa-server\"></i>",
+    "css": ""
+  },
+  "fa-users": {
+    "html": "<i class=\"fas fa-users\"></i>",
+    "css": ""
+  },
+  "fa-code": {
+    "html": "<i class=\"fas fa-code\"></i>",
+    "css": ""
+  },
+  "fa-brain": {
+    "html": "<i class=\"fas fa-brain\"></i>",
+    "css": ""
+  },
+  "fa-robot": {
+    "html": "<i class=\"fas fa-robot\"></i>",
+    "css": ""
+  },
+  "workspace-content": {
+    "html": "<div class=\"workspace-content active\" id=\"vm-dashboard\">\n                <div class=\"vm-dashboard\">\n                    <div class=\"vm-overview\" id=\"vm-overview\">\n                        <!-- VM cards will be populated here -->\n                    </div>",
+    "css": ""
+  },
+  "vm-dashboard": {
+    "html": "<div class=\"vm-dashboard\">\n                    <div class=\"vm-overview\" id=\"vm-overview\">\n                        <!-- VM cards will be populated here -->\n                    </div>",
+    "css": "\n\n        /* VM Dashboard */\n        .vm-dashboard {\n            padding: 24px;\n            overflow-y: auto;\n        }"
+  },
+  "vm-overview": {
+    "html": "<div class=\"vm-overview\" id=\"vm-overview\">\n                        <!-- VM cards will be populated here -->\n                    </div>",
+    "css": "\n\n        .vm-overview {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n            gap: 20px;\n            margin-bottom: 32px;\n        }"
+  },
+  "collaboration-overview": {
+    "html": "<div class=\"collaboration-overview\">\n                        <h3 style=\"margin-bottom: 20px; color: var(--light-100);\">Active Collaboration Sessions</h3>\n                        <div id=\"collaboration-sessions\">\n                            <!-- Collaboration content will be populated here -->\n                        </div>",
+    "css": ""
+  },
+  "artifacts-overview": {
+    "html": "<div class=\"artifacts-overview\">\n                        <h3 style=\"margin-bottom: 20px; color: var(--light-100);\">Project Artifacts</h3>\n                        <div id=\"artifacts-grid\">\n                            <!-- Artifacts content will be populated here -->\n                        </div>",
+    "css": ""
+  },
+  "knowledge-overview": {
+    "html": "<div class=\"knowledge-overview\">\n                        <h3 style=\"margin-bottom: 20px; color: var(--light-100);\">Knowledge Base</h3>\n                        <div id=\"knowledge-content\">\n                            <!-- Knowledge content will be populated here -->\n                        </div>",
+    "css": ""
+  },
+  "automation-overview": {
+    "html": "<div class=\"automation-overview\">\n                        <h3 style=\"margin-bottom: 20px; color: var(--light-100);\">Automation Workflows</h3>\n                        <div id=\"automation-workflows\">\n                            <!-- Automation content will be populated here -->\n                        </div>",
+    "css": ""
+  },
+  "intelligence-panel": {
+    "html": "<div class=\"intelligence-panel\">\n            <div class=\"panel-header\">\n                <div class=\"panel-title\">AI Intelligence</div>",
+    "css": "\n\n        /* Intelligence Panel */\n        .intelligence-panel {\n            grid-area: intelligence-panel;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-left: 1px solid var(--glass-border);\n            padding: 24px;\n            overflow-y: auto;\n        }\n\n\n            \n            .projects-sidebar,\n            .intelligence-panel,\n            .monitoring-panel {\n                position: relative;\n                height: auto;\n            }"
+  },
+  "panel-header": {
+    "html": "<div class=\"panel-header\">\n                <div class=\"panel-title\">AI Intelligence</div>",
+    "css": "\n\n        .panel-header {\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            margin-bottom: 20px;\n            padding-bottom: 12px;\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "panel-title": {
+    "html": "<div class=\"panel-title\">AI Intelligence</div>",
+    "css": "\n\n        .panel-title {\n            font-size: 16px;\n            font-weight: 600;\n            color: var(--light-100);\n        }"
+  },
+  "intelligence-insights": {
+    "html": "<div class=\"intelligence-insights\">\n                <div class=\"category-header\">\n                    <i class=\"fas fa-lightbulb\"></i>\n                    Insights & Recommendations\n                </div>",
+    "css": "\n\n        .intelligence-insights {\n            margin-bottom: 24px;\n        }"
+  },
+  "fa-lightbulb": {
+    "html": "<i class=\"fas fa-lightbulb\"></i>",
+    "css": ""
+  },
+  "collaboration-section": {
+    "html": "<div class=\"collaboration-section\">\n                <div class=\"category-header\">\n                    <i class=\"fas fa-users\"></i>\n                    Active Collaborators\n                </div>",
+    "css": "\n\n        /* Collaboration Panel */\n        .collaboration-section {\n            margin-bottom: 24px;\n        }"
+  },
+  "collaborator-list": {
+    "html": "<div class=\"collaborator-list\" id=\"collaborator-list\">\n                    <!-- Collaborators will be populated here -->\n                </div>",
+    "css": "\n\n        .collaborator-list {\n            display: flex;\n            flex-direction: column;\n            gap: 8px;\n        }"
+  },
+  "intelligence-actions": {
+    "html": "<div class=\"intelligence-actions\" style=\"margin-top: 24px;\">\n                <button class=\"btn btn-primary\" style=\"width: 100%; margin-bottom: 8px;\" id=\"ai-analyze\">\n                    <i class=\"fas fa-search\"></i>\n                    Analyze Project\n                </button>\n                <button class=\"btn\" style=\"width: 100%; margin-bottom: 8px;\" id=\"ai-optimize\">\n                    <i class=\"fas fa-rocket\"></i>\n                    Optimize Workflow\n                </button>\n                <button class=\"btn\" style=\"width: 100%;\" id=\"ai-suggest\">\n                    <i class=\"fas fa-magic\"></i>\n                    Generate Suggestions\n                </button>\n            </div>",
+    "css": ""
+  },
+  "btn": {
+    "html": "<button class=\"create-project-btn\" id=\"create-project\">\n                    <i class=\"fas fa-plus\"></i>\n                    Create\n                </button>",
+    "css": "\n\n        .btn {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 12px 24px;\n            color: var(--light-300);\n            font-size: 14px;\n            font-weight: 500;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            gap: 8px;\n        }\n\n\n\n        .btn:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            color: var(--light-100);\n        }\n\n\n\n        .btn-primary {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .btn-primary:hover {\n            background: #0891b2;\n        }\n\n\n\n        .btn-secondary {\n            background: transparent;\n            border-color: var(--glass-border);\n            color: var(--light-400);\n        }\n\n\n\n        .btn-danger {\n            background: var(--accent-red);\n            border-color: var(--accent-red);\n            color: white;\n        }\n\n\n\n        .btn-danger:hover {\n            background: #dc2626;\n        }"
+  },
+  "btn-primary": {
+    "html": "<button class=\"btn btn-primary\" style=\"width: 100%; margin-bottom: 8px;\" id=\"ai-analyze\">\n                    <i class=\"fas fa-search\"></i>\n                    Analyze Project\n                </button>",
+    "css": "\n\n        .btn-primary {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .btn-primary:hover {\n            background: #0891b2;\n        }"
+  },
+  "fa-rocket": {
+    "html": "<i class=\"fas fa-rocket\"></i>",
+    "css": ""
+  },
+  "fa-magic": {
+    "html": "<i class=\"fas fa-magic\"></i>",
+    "css": ""
+  },
+  "monitoring-panel": {
+    "html": "<div class=\"monitoring-panel\">\n            <div class=\"panel-header\">\n                <div class=\"panel-title\">System Monitoring</div>",
+    "css": "\n\n        /* Monitoring Panel */\n        .monitoring-panel {\n            grid-area: monitoring-panel;\n            background: var(--glass-bg);\n            backdrop-filter: var(--blur-strength);\n            border-left: 1px solid var(--glass-border);\n            border-top: 1px solid var(--glass-border);\n            padding: 20px;\n            overflow-y: auto;\n        }\n\n\n            \n            .projects-sidebar,\n            .intelligence-panel,\n            .monitoring-panel {\n                position: relative;\n                height: auto;\n            }"
+  },
+  "fa-chart-line": {
+    "html": "<i class=\"fas fa-chart-line\"></i>",
+    "css": ""
+  },
+  "monitoring-charts": {
+    "html": "<div class=\"monitoring-charts\">\n                <div class=\"chart-container\">\n                    <div class=\"chart-title\">Resource Usage</div>",
+    "css": "\n\n        .monitoring-charts {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 16px;\n            margin-bottom: 20px;\n        }"
+  },
+  "chart-container": {
+    "html": "<div class=\"chart-container\">\n                    <div class=\"chart-title\">Resource Usage</div>",
+    "css": "\n\n        .chart-container {\n            background: var(--dark-700);\n            border-radius: 12px;\n            padding: 16px;\n            height: 200px;\n        }"
+  },
+  "chart-title": {
+    "html": "<div class=\"chart-title\">Resource Usage</div>",
+    "css": "\n\n        .chart-title {\n            font-size: 12px;\n            font-weight: 600;\n            color: var(--light-300);\n            margin-bottom: 12px;\n            text-align: center;\n        }"
+  },
+  "activity-feed": {
+    "html": "<div class=\"activity-feed\">\n                <div class=\"category-header\" style=\"margin-bottom: 12px;\">\n                    <i class=\"fas fa-stream\"></i>\n                    Recent Activity\n                </div>",
+    "css": "\n\n        /* Activity Feed */\n        .activity-feed {\n            max-height: 200px;\n            overflow-y: auto;\n        }"
+  },
+  "fa-stream": {
+    "html": "<i class=\"fas fa-stream\"></i>",
+    "css": ""
+  },
+  "modal-overlay": {
+    "html": "<div class=\"modal-overlay\" id=\"create-project-modal\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <div class=\"modal-title\">Create New Project</div>",
+    "css": "\n\n        /* Modal Styles */\n        .modal-overlay {\n            position: fixed;\n            top: 0;\n            left: 0;\n            right: 0;\n            bottom: 0;\n            background: rgba(0, 0, 0, 0.8);\n            backdrop-filter: blur(10px);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            z-index: 1000;\n            opacity: 0;\n            pointer-events: none;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .modal-overlay.active {\n            opacity: 1;\n            pointer-events: all;\n        }\n\n\n\n        .modal-overlay.active .modal-content {\n            transform: scale(1);\n        }"
+  },
+  "modal-content": {
+    "html": "<div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <div class=\"modal-title\">Create New Project</div>",
+    "css": "\n\n        .modal-content {\n            background: var(--dark-800);\n            border: 1px solid var(--glass-border);\n            border-radius: 20px;\n            padding: 32px;\n            max-width: 600px;\n            width: 90vw;\n            max-height: 80vh;\n            overflow-y: auto;\n            transform: scale(0.9);\n            transition: var(--transition-spring);\n        }\n\n\n\n        .modal-overlay.active .modal-content {\n            transform: scale(1);\n        }"
+  },
+  "modal-header": {
+    "html": "<div class=\"modal-header\">\n                <div class=\"modal-title\">Create New Project</div>",
+    "css": "\n\n        .modal-header {\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            margin-bottom: 24px;\n        }"
+  },
+  "modal-title": {
+    "html": "<div class=\"modal-title\">Create New Project</div>",
+    "css": "\n\n        .modal-title {\n            font-size: 20px;\n            font-weight: 700;\n            color: var(--light-100);\n        }"
+  },
+  "modal-close": {
+    "html": "<button class=\"modal-close\" id=\"close-modal\">\n                    <i class=\"fas fa-times\"></i>\n                </button>",
+    "css": "\n\n        .modal-close {\n            background: none;\n            border: none;\n            color: var(--light-400);\n            font-size: 24px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .modal-close:hover {\n            color: var(--light-100);\n        }"
+  },
+  "fa-times": {
+    "html": "<i class=\"fas fa-times\"></i>",
+    "css": ""
+  },
+  "form-group": {
+    "html": "<div class=\"form-group\">\n                    <label class=\"form-label\">Project Name</label>\n                    <input type=\"text\" class=\"form-input\" id=\"project-name\" placeholder=\"Enter project name...\" required>\n                </div>",
+    "css": "\n\n        /* Form Styles */\n        .form-group {\n            margin-bottom: 20px;\n        }"
+  },
+  "form-label": {
+    "html": "<label class=\"form-label\">Project Name</label>",
+    "css": "\n\n        .form-label {\n            display: block;\n            font-size: 12px;\n            font-weight: 600;\n            color: var(--light-300);\n            margin-bottom: 8px;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "form-input": {
+    "html": "<input type=\"text\" class=\"form-input\" id=\"project-name\" placeholder=\"Enter project name...\" required>\n                </div>\n                <div class=\"form-group\">\n                    <label class=\"form-label\">Description</label>\n                    <textarea class=\"form-input form-textarea\" id=\"project-description\" placeholder=\"Describe your project...\"></textarea>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label class=\"form-label\">Project Type</label>\n                        <select class=\"form-input form-select\" id=\"project-type\">\n                            <option value=\"research\">Research</option>\n                            <option value=\"development\">Development</option>\n                            <option value=\"analysis\">Analysis</option>\n                            <option value=\"creative\">Creative</option>\n                        </select>\n                    </div>\n                    <div class=\"form-group\">\n                        <label class=\"form-label\">VM Configuration</label>\n                        <select class=\"form-input form-select\" id=\"vm-config\">\n                            <option value=\"standard\">Standard (4GB RAM, 2 CPU)</option>\n                            <option value=\"enhanced\">Enhanced (8GB RAM, 4 CPU)</option>\n                            <option value=\"powerful\">Powerful (16GB RAM, 8 CPU)</option>\n                        </select>\n                    </div>\n                </div>\n                <div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label class=\"form-label\">\n                            <input type=\"checkbox\" id=\"enable-collaboration\" style=\"margin-right: 8px;\">\n                            Enable Collaboration\n                        </label>\n                    </div>\n                    <div class=\"form-group\">\n                        <label class=\"form-label\">\n                            <input type=\"checkbox\" id=\"enable-automation\" style=\"margin-right: 8px;\">\n                            Enable Automation\n                        </label>\n                    </div>\n                </div>\n                <div class=\"form-actions\">\n                    <button type=\"button\" class=\"btn btn-secondary\" id=\"cancel-create\">Cancel</button>\n                    <button type=\"submit\" class=\"btn btn-primary\">\n                        <i class=\"fas fa-plus\"></i>",
+    "css": "\n\n        .form-input {\n            width: 100%;\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 12px;\n            padding: 14px 16px;\n            color: var(--light-100);\n            font-size: 14px;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .form-input:focus {\n            outline: none;\n            border-color: var(--accent-cyan);\n            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);\n        }"
+  },
+  "form-textarea": {
+    "html": "<textarea class=\"form-input form-textarea\" id=\"project-description\" placeholder=\"Describe your project...\"></textarea>",
+    "css": "\n\n        .form-textarea {\n            min-height: 100px;\n            resize: vertical;\n        }"
+  },
+  "form-row": {
+    "html": "<div class=\"form-row\">\n                    <div class=\"form-group\">\n                        <label class=\"form-label\">Project Type</label>\n                        <select class=\"form-input form-select\" id=\"project-type\">\n                            <option value=\"research\">Research</option>\n                            <option value=\"development\">Development</option>\n                            <option value=\"analysis\">Analysis</option>\n                            <option value=\"creative\">Creative</option>\n                        </select>\n                    </div>",
+    "css": "\n\n        .form-row {\n            display: grid;\n            grid-template-columns: 1fr 1fr;\n            gap: 16px;\n        }"
+  },
+  "form-select": {
+    "html": "<select class=\"form-input form-select\" id=\"project-type\">\n                            <option value=\"research\">Research</option>\n                            <option value=\"development\">Development</option>\n                            <option value=\"analysis\">Analysis</option>\n                            <option value=\"creative\">Creative</option>\n                        </select>",
+    "css": "\n\n        .form-select {\n            appearance: none;\n            background-image: url(\"data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e\");\n            background-repeat: no-repeat;\n            background-position: right 12px center;\n            background-size: 16px;\n            padding-right: 40px;\n        }"
+  },
+  "form-actions": {
+    "html": "<div class=\"form-actions\">\n                    <button type=\"button\" class=\"btn btn-secondary\" id=\"cancel-create\">Cancel</button>\n                    <button type=\"submit\" class=\"btn btn-primary\">\n                        <i class=\"fas fa-plus\"></i>\n                        Create Project\n                    </button>\n                </div>",
+    "css": "\n\n        .form-actions {\n            display: flex;\n            gap: 12px;\n            margin-top: 24px;\n            padding-top: 24px;\n            border-top: 1px solid var(--glass-border);\n        }"
+  },
+  "btn-secondary": {
+    "html": "<button type=\"button\" class=\"btn btn-secondary\" id=\"cancel-create\">Cancel</button>",
+    "css": "\n\n        .btn-secondary {\n            background: transparent;\n            border-color: var(--glass-border);\n            color: var(--light-400);\n        }"
+  },
+  "project-card": {
+    "html": "",
+    "css": "\n\n        .project-card {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 16px;\n            padding: 20px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n            position: relative;\n            overflow: hidden;\n        }\n\n\n\n        .project-card::before {\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 0;\n            right: 0;\n            height: 3px;\n            background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));\n            opacity: 0;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .project-card:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            transform: translateY(-4px);\n            box-shadow: var(--shadow-elevated);\n        }\n\n\n\n        .project-card:hover::before {\n            opacity: 1;\n        }\n\n\n\n        .project-card.active {\n            border-color: var(--accent-cyan);\n            box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);\n        }\n\n\n\n        .project-card.active::before {\n            opacity: 1;\n        }"
+  },
+  "fade-in": {
+    "html": "",
+    "css": "\n\n        .fade-in {\n            animation: slideIn 0.5s ease-out;\n        }"
+  },
+  "project-header": {
+    "html": "<div class=\"project-header\">\n                            <div class=\"project-info\">\n                                <div class=\"project-name\">${project.name}</div>",
+    "css": "\n\n        .project-header {\n            display: flex;\n            align-items: flex-start;\n            justify-content: space-between;\n            margin-bottom: 12px;\n        }"
+  },
+  "project-info": {
+    "html": "<div class=\"project-info\">\n                                <div class=\"project-name\">${project.name}</div>",
+    "css": "\n\n        .project-info {\n            flex: 1;\n        }"
+  },
+  "project-name": {
+    "html": "<div class=\"project-name\">${project.name}</div>",
+    "css": "\n\n        .project-name {\n            font-size: 16px;\n            font-weight: 600;\n            color: var(--light-100);\n            margin-bottom: 4px;\n        }"
+  },
+  "project-description": {
+    "html": "<div class=\"project-description\">${project.description}</div>",
+    "css": "\n\n        .project-description {\n            font-size: 13px;\n            color: var(--light-400);\n            line-height: 1.4;\n            margin-bottom: 8px;\n        }"
+  },
+  "project-type": {
+    "html": "<div class=\"project-type ${project.type}\">\n                                    <i class=\"fas fa-${this.getTypeIcon(project.type)}\"></i>\n                                    ${project.type}\n                                </div>",
+    "css": "\n\n        .project-type {\n            display: inline-flex;\n            align-items: center;\n            gap: 4px;\n            background: var(--dark-800);\n            border-radius: 6px;\n            padding: 4px 8px;\n            font-size: 10px;\n            font-weight: 600;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }\n\n\n\n        .project-type.research { color: var(--accent-cyan); }\n\n\n        .project-type.development { color: var(--accent-green); }\n\n\n        .project-type.analysis { color: var(--accent-purple); }\n\n\n        .project-type.creative { color: var(--accent-pink); }"
+  },
+  "project-status": {
+    "html": "<div class=\"project-status\">\n                                <div class=\"status-indicator ${project.status}\"></div>",
+    "css": "\n\n        .project-status {\n            display: flex;\n            align-items: center;\n            gap: 6px;\n            font-size: 12px;\n            font-weight: 500;\n        }"
+  },
+  "status-indicator": {
+    "html": "<div class=\"status-indicator ${project.status}\"></div>",
+    "css": "\n\n        .status-indicator {\n            width: 8px;\n            height: 8px;\n            border-radius: 50%;\n        }\n\n\n\n        .status-indicator.running { background: var(--accent-green); animation: pulse 2s infinite; }\n\n\n        .status-indicator.suspended { background: var(--accent-amber); }\n\n\n        .status-indicator.stopped { background: var(--light-400); }\n\n\n        .status-indicator.error { background: var(--accent-red); }"
+  },
+  "project-metrics": {
+    "html": "<div class=\"project-metrics\">\n                            <div class=\"metric-item\">\n                                <div class=\"metric-value\">${project.metrics.artifacts}</div>",
+    "css": "\n\n        .project-metrics {\n            display: grid;\n            grid-template-columns: repeat(3, 1fr);\n            gap: 12px;\n            margin-top: 16px;\n        }"
+  },
+  "metric-item": {
+    "html": "<div class=\"metric-item\">\n                                <div class=\"metric-value\">${project.metrics.artifacts}</div>",
+    "css": "\n\n        .metric-item {\n            text-align: center;\n        }"
+  },
+  "metric-value": {
+    "html": "<div class=\"metric-value\">${project.metrics.artifacts}</div>",
+    "css": "\n\n        .metric-value {\n            font-size: 14px;\n            font-weight: 600;\n            color: var(--accent-cyan);\n        }"
+  },
+  "metric-label": {
+    "html": "<div class=\"metric-label\">Artifacts</div>",
+    "css": "\n\n        .metric-label {\n            font-size: 10px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n            margin-top: 2px;\n        }"
+  },
+  "project-actions": {
+    "html": "<div class=\"project-actions\">\n                            <button class=\"action-btn primary\" onclick=\"event.stopPropagation(); projectsManager.openProject('${project.id}')\">\n                                <i class=\"fas fa-play\"></i>\n                                Open\n                            </button>\n                            <button class=\"action-btn\" onclick=\"event.stopPropagation(); projectsManager.manageVM('${project.id}')\">\n                                <i class=\"fas fa-server\"></i>\n                                VM\n                            </button>\n                            <button class=\"action-btn\" onclick=\"event.stopPropagation(); projectsManager.shareProject('${project.id}')\">\n                                <i class=\"fas fa-share\"></i>\n                                Share\n                            </button>\n                        </div>",
+    "css": "\n\n        .project-actions {\n            display: flex;\n            gap: 8px;\n            margin-top: 16px;\n            padding-top: 16px;\n            border-top: 1px solid var(--glass-border);\n        }"
+  },
+  "action-btn": {
+    "html": "<button class=\"action-btn primary\" onclick=\"event.stopPropagation(); projectsManager.openProject('${project.id}')\">\n                                <i class=\"fas fa-play\"></i>\n                                Open\n                            </button>",
+    "css": "\n\n        .action-btn {\n            flex: 1;\n            background: var(--dark-800);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 8px 12px;\n            color: var(--light-300);\n            font-size: 11px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            gap: 4px;\n        }\n\n\n\n        .action-btn:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            color: var(--light-100);\n        }\n\n\n\n        .action-btn.primary {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .action-btn.primary:hover {\n            background: #0891b2;\n        }"
+  },
+  "primary": {
+    "html": "<button class=\"btn btn-primary\" style=\"width: 100%; margin-bottom: 8px;\" id=\"ai-analyze\">\n                    <i class=\"fas fa-search\"></i>\n                    Analyze Project\n                </button>",
+    "css": "\n\n        .action-btn.primary {\n            background: var(--accent-cyan);\n            border-color: var(--accent-cyan);\n            color: white;\n        }\n\n\n\n        .action-btn.primary:hover {\n            background: #0891b2;\n        }"
+  },
+  "fa-play": {
+    "html": "<i class=\"fas fa-play\"></i>",
+    "css": ""
+  },
+  "fa-share": {
+    "html": "<i class=\"fas fa-share\"></i>",
+    "css": ""
+  },
+  "vm-card": {
+    "html": "<div class=\"vm-card\">\n                        <div class=\"vm-header\">\n                            <div class=\"vm-name\">${project.name} VM</div>",
+    "css": "\n\n        .vm-card {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-radius: 16px;\n            padding: 24px;\n            transition: var(--transition-smooth);\n            position: relative;\n            overflow: hidden;\n        }\n\n\n\n        .vm-card::before {\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 0;\n            right: 0;\n            height: 4px;\n            background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));\n            opacity: 0;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .vm-card:hover {\n            background: var(--dark-600);\n            transform: translateY(-2px);\n            box-shadow: var(--shadow-elevated);\n        }\n\n\n\n        .vm-card:hover::before {\n            opacity: 1;\n        }"
+  },
+  "vm-header": {
+    "html": "<div class=\"vm-header\">\n                            <div class=\"vm-name\">${project.name} VM</div>",
+    "css": "\n\n        .vm-header {\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n            margin-bottom: 16px;\n        }"
+  },
+  "vm-name": {
+    "html": "<div class=\"vm-name\">${project.name} VM</div>",
+    "css": "\n\n        .vm-name {\n            font-size: 16px;\n            font-weight: 600;\n            color: var(--light-100);\n        }"
+  },
+  "vm-status": {
+    "html": "<div class=\"vm-status ${project.status}\">\n                                <div class=\"status-indicator ${project.status}\"></div>",
+    "css": "\n\n        .vm-status {\n            display: flex;\n            align-items: center;\n            gap: 6px;\n            font-size: 12px;\n            font-weight: 500;\n            padding: 4px 8px;\n            border-radius: 6px;\n        }\n\n\n\n        .vm-status.running {\n            background: rgba(16, 185, 129, 0.2);\n            color: var(--accent-green);\n        }\n\n\n\n        .vm-status.suspended {\n            background: rgba(245, 158, 11, 0.2);\n            color: var(--accent-amber);\n        }"
+  },
+  "vm-metrics-grid": {
+    "html": "<div class=\"vm-metrics-grid\">\n                            <div class=\"vm-metric\">\n                                <div class=\"vm-metric-value\">${project.vmStatus.cpu}%</div>",
+    "css": "\n\n        .vm-metrics-grid {\n            display: grid;\n            grid-template-columns: repeat(2, 1fr);\n            gap: 16px;\n            margin-bottom: 20px;\n        }"
+  },
+  "vm-metric": {
+    "html": "<div class=\"vm-metric\">\n                                <div class=\"vm-metric-value\">${project.vmStatus.cpu}%</div>",
+    "css": "\n\n        .vm-metrics-grid {\n            display: grid;\n            grid-template-columns: repeat(2, 1fr);\n            gap: 16px;\n            margin-bottom: 20px;\n        }\n\n\n\n        .vm-metric {\n            text-align: center;\n        }\n\n\n\n        .vm-metric-value {\n            font-size: 18px;\n            font-weight: 700;\n            color: var(--accent-cyan);\n            margin-bottom: 4px;\n        }\n\n\n\n        .vm-metric-label {\n            font-size: 11px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "vm-metric-value": {
+    "html": "<div class=\"vm-metric-value\">${project.vmStatus.cpu}%</div>",
+    "css": "\n\n        .vm-metric-value {\n            font-size: 18px;\n            font-weight: 700;\n            color: var(--accent-cyan);\n            margin-bottom: 4px;\n        }"
+  },
+  "vm-metric-label": {
+    "html": "<div class=\"vm-metric-label\">CPU Usage</div>",
+    "css": "\n\n        .vm-metric-label {\n            font-size: 11px;\n            color: var(--light-400);\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "vm-actions": {
+    "html": "<div class=\"vm-actions\">\n                            <button class=\"vm-action\" onclick=\"projectsManager.connectToVM('${project.id}')\">\n                                <i class=\"fas fa-terminal\"></i>\n                                Connect\n                            </button>\n                            <button class=\"vm-action\" onclick=\"projectsManager.suspendVM('${project.id}')\">\n                                <i class=\"fas fa-pause\"></i>\n                                Suspend\n                            </button>\n                            <button class=\"vm-action\" onclick=\"projectsManager.restartVM('${project.id}')\">\n                                <i class=\"fas fa-redo\"></i>\n                                Restart\n                            </button>\n                        </div>",
+    "css": "\n\n        .vm-actions {\n            display: flex;\n            gap: 8px;\n        }"
+  },
+  "vm-action": {
+    "html": "<button class=\"vm-action\" onclick=\"projectsManager.connectToVM('${project.id}')\">\n                                <i class=\"fas fa-terminal\"></i>\n                                Connect\n                            </button>",
+    "css": "\n\n        .vm-actions {\n            display: flex;\n            gap: 8px;\n        }\n\n\n\n        .vm-action {\n            flex: 1;\n            background: var(--dark-800);\n            border: 1px solid var(--glass-border);\n            border-radius: 8px;\n            padding: 8px 12px;\n            color: var(--light-300);\n            font-size: 11px;\n            cursor: pointer;\n            transition: var(--transition-smooth);\n            text-align: center;\n        }\n\n\n\n        .vm-action:hover {\n            background: var(--dark-600);\n            border-color: var(--accent-cyan);\n            color: var(--light-100);\n        }"
+  },
+  "fa-terminal": {
+    "html": "<i class=\"fas fa-terminal\"></i>",
+    "css": ""
+  },
+  "fa-pause": {
+    "html": "<i class=\"fas fa-pause\"></i>",
+    "css": ""
+  },
+  "fa-redo": {
+    "html": "<i class=\"fas fa-redo\"></i>",
+    "css": ""
+  },
+  "fa-download": {
+    "html": "<i class=\"fas fa-download\"></i>",
+    "css": ""
+  },
+  "running": {
+    "html": "<div class=\"vm-status running\">\n                                    <div class=\"status-indicator running\"></div>",
+    "css": "\n\n        .status-indicator.running { background: var(--accent-green); animation: pulse 2s infinite; }\n\n\n\n        .vm-status.running {\n            background: rgba(16, 185, 129, 0.2);\n            color: var(--accent-green);\n        }"
+  },
+  "collaborator-item": {
+    "html": "<div class=\"collaborator-item\" style=\"margin-bottom: 8px;\">\n                                    <div class=\"collaborator-avatar\">AI</div>",
+    "css": "\n\n        .collaborator-item {\n            display: flex;\n            align-items: center;\n            gap: 12px;\n            padding: 8px 12px;\n            background: var(--dark-700);\n            border-radius: 8px;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .collaborator-item:hover {\n            background: var(--dark-600);\n        }"
+  },
+  "collaborator-avatar": {
+    "html": "<div class=\"collaborator-avatar\">AI</div>",
+    "css": "\n\n        .collaborator-avatar {\n            width: 32px;\n            height: 32px;\n            border-radius: 50%;\n            background: var(--accent-cyan);\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            color: white;\n            font-weight: 600;\n            font-size: 12px;\n        }"
+  },
+  "collaborator-info": {
+    "html": "<div class=\"collaborator-info\">\n                                        <div class=\"collaborator-name\">Research Assistant</div>",
+    "css": "\n\n        .collaborator-info {\n            flex: 1;\n        }"
+  },
+  "collaborator-name": {
+    "html": "<div class=\"collaborator-name\">Research Assistant</div>",
+    "css": "\n\n        .collaborator-name {\n            font-size: 13px;\n            font-weight: 500;\n            color: var(--light-100);\n        }"
+  },
+  "collaborator-role": {
+    "html": "<div class=\"collaborator-role\">Autonomous Agent</div>",
+    "css": "\n\n        .collaborator-role {\n            font-size: 11px;\n            color: var(--light-400);\n        }"
+  },
+  "collaborator-status": {
+    "html": "<div class=\"collaborator-status\"></div>",
+    "css": "\n\n        .collaborator-status {\n            width: 8px;\n            height: 8px;\n            border-radius: 50%;\n            background: var(--accent-green);\n        }"
+  },
+  "fa-desktop": {
+    "html": "<i class=\"fas fa-desktop\"></i>",
+    "css": ""
+  },
+  "fa-chart-bar": {
+    "html": "<i class=\"fas fa-chart-bar\" style=\"font-size: 24px; color: var(--accent-green); margin-bottom: 8px;\"></i>",
+    "css": ""
+  },
+  "fa-eye": {
+    "html": "<i class=\"fas fa-eye\"></i>",
+    "css": ""
+  },
+  "insight-card": {
+    "html": "<div class=\"insight-card\">\n                        <div class=\"insight-header\">\n                            <div class=\"insight-type\">${insight.type}</div>",
+    "css": "\n\n        .insight-card {\n            background: var(--dark-700);\n            border: 1px solid var(--glass-border);\n            border-left: 4px solid var(--accent-purple);\n            border-radius: 12px;\n            padding: 16px;\n            margin-bottom: 12px;\n            transition: var(--transition-smooth);\n        }\n\n\n\n        .insight-card:hover {\n            background: var(--dark-600);\n            transform: translateX(4px);\n        }"
+  },
+  "insight-header": {
+    "html": "<div class=\"insight-header\">\n                            <div class=\"insight-type\">${insight.type}</div>",
+    "css": "\n\n        .insight-header {\n            display: flex;\n            align-items: center;\n            gap: 8px;\n            margin-bottom: 8px;\n        }"
+  },
+  "insight-type": {
+    "html": "<div class=\"insight-type\">${insight.type}</div>",
+    "css": "\n\n        .insight-type {\n            color: var(--accent-purple);\n            font-size: 12px;\n            font-weight: 600;\n            text-transform: uppercase;\n            letter-spacing: 0.5px;\n        }"
+  },
+  "insight-confidence": {
+    "html": "<div class=\"insight-confidence\">${insight.confidence}%</div>",
+    "css": "\n\n        .insight-confidence {\n            background: var(--accent-purple);\n            color: white;\n            font-size: 10px;\n            font-weight: 600;\n            padding: 2px 6px;\n            border-radius: 4px;\n        }"
+  },
+  "insight-text": {
+    "html": "<div class=\"insight-text\">${insight.text}</div>",
+    "css": "\n\n        .insight-text {\n            font-size: 13px;\n            color: var(--light-300);\n            line-height: 1.4;\n        }"
+  },
+  "activity-item": {
+    "html": "<div class=\"activity-item\">\n                        <div class=\"activity-icon ${activity.type}\">\n                            <i class=\"fas fa-${this.getActivityIcon(activity.type)}\"></i>\n                        </div>",
+    "css": "\n\n        .activity-item {\n            display: flex;\n            align-items: flex-start;\n            gap: 12px;\n            padding: 8px 0;\n            border-bottom: 1px solid var(--glass-border);\n        }"
+  },
+  "activity-icon": {
+    "html": "<div class=\"activity-icon ${activity.type}\">\n                            <i class=\"fas fa-${this.getActivityIcon(activity.type)}\"></i>\n                        </div>",
+    "css": "\n\n        .activity-icon {\n            width: 24px;\n            height: 24px;\n            border-radius: 50%;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            font-size: 10px;\n            color: white;\n            margin-top: 2px;\n        }\n\n\n\n        .activity-icon.vm { background: var(--accent-green); }\n\n\n        .activity-icon.collaboration { background: var(--accent-cyan); }\n\n\n        .activity-icon.intelligence { background: var(--accent-purple); }\n\n\n        .activity-icon.artifact { background: var(--accent-orange); }"
+  },
+  "activity-content": {
+    "html": "<div class=\"activity-content\">\n                            <div class=\"activity-text\">${activity.text}</div>",
+    "css": "\n\n        .activity-content {\n            flex: 1;\n        }"
+  },
+  "activity-text": {
+    "html": "<div class=\"activity-text\">${activity.text}</div>",
+    "css": "\n\n        .activity-text {\n            font-size: 12px;\n            color: var(--light-300);\n            line-height: 1.4;\n            margin-bottom: 2px;\n        }"
+  },
+  "activity-time": {
+    "html": "<div class=\"activity-time\">${activity.time}</div>",
+    "css": "\n\n        .activity-time {\n            font-size: 10px;\n            color: var(--light-400);\n        }"
+  },
+  "type": {
+    "html": "<div class=\"project-type ${project.type}\">\n                                    <i class=\"fas fa-${this.getTypeIcon(project.type)}\"></i>\n                                    ${project.type}\n                                </div>",
+    "css": ""
+  }
+}

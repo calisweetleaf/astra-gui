@@ -1,0 +1,25 @@
+.query-section {
+            flex: 1;
+            display: flex;
+            gap: 16px;
+            align-items: flex-end;
+        }
+
+
+
+        /* Advanced Control Elements */
+        .query-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+
+        .query-input-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--light-400);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }

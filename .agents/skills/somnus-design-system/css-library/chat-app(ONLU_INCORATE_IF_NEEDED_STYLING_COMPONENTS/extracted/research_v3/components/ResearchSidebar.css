@@ -1,0 +1,35 @@
+/* Enhanced Sidebar */
+        .research-sidebar {
+            grid-area: sidebar;
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-strength);
+            border-right: 1px solid var(--glass-border);
+            padding: 24px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-cyan) transparent;
+        }
+
+
+            
+            .research-sidebar,
+            .knowledge-panel,
+            .export-panel {
+                position: relative;
+                height: auto;
+            }
+
+
+
+        .sidebar-header {
+            margin-bottom: 32px;
+        }
+
+
+
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 4px;
+        }
